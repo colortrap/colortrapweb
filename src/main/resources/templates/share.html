@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="bg-BG" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      class="sr js_active vc_desktop vc_transform vc_transform ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <title>COLORTRAP - Доведи приятел и сподели арт преживяване</title>
+    <meta name="description" content="Споделете незабравими арт моменти с приятели в COLORTRAP. Повече творчество, повече усмивки и вдъхновение за всички.">
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "COLORTRAP",
+      "image": "pictures/logo/loge_with_name.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Петко Каравелов 20",
+        "addressLocality": "Пловдив",
+        "addressCountry": "BG"
+      },
+      "email": "colortrap.ltd@gmail.com",
+      "telephone": "0894 793 440",
+      "url": "https://www.colortrap.bg",
+      "sameAs": ["https://www.facebook.com/people/Colortrap/61583353547226/"]
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+    <th:block>
+        <div th:replace="~{fragments/nav}"></div>
+    </th:block>
+
+    <div class="main-wraper">
+        <h1 class="a-title center">Повече творчество, повече усмивки в Пловдив</h1>
+        <div class="art down">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/share_image.png" alt="Приятели се наслаждават на арт събитие в COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <p class="text-justify">В COLORTRAP вярваме, че изкуството не е просто хоби или забавление – то е преживяване, което свързва, вдъхновява и носи радост. А когато създаваме заедно с хората, които обичаме, цветовете стават по-ярки, усмивките – по-широки, а спомените – по-живи.</p>
+                    <p class="text-justify">Затова решихме да направим тези споделени моменти още по-специални. Ако изберете да закупите повече от едно участия заедно, ние ще ви изненадаме с малък жест, който да направи творческото приключение още по-вълнуващо. Не можем да разкрием подробности – част от магията е в това сами да я откриете. Но можем да ви уверим, че изненадите ни винаги носят усмивки и топло чувство за внимание.</p>
+                    <p class="text-justify">Дали ще е подарък, специално отношение или нещо съвсем различно – ще разберете, когато ни попитате на място при закупуването на участието. Защото някои неща е най-хубаво да се споделят лично, а радостта от неочакваното е част от преживяването.</p>
+                    <p class="text-justify">Ние от COLORTRAP обичаме да показваме признателност към хората, които избират да бъдат част от нашия свят на цветове и вдъхновение. И вярваме, че хубавите моменти трябва да бъдат поощрявани – особено когато са споделени.</p>
+                    <p class="text-justify">Творете заедно. Радвайте се заедно. Откривайте заедно.</p>
+                    <p class="text-justify">Понякога най-хубавите подаръци се появяват точно тогава, когато просто решиш да се забавляваш с приятна компания.</p>
+                </div>
+                <div class="btn-list">
+                    <div>
+                        <a class="btn" th:href="@{/}" >Начало</a>
+                    </div>
+                    <div>
+                        <a class="btn" th:href="@{/calendar}" >Календар</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <th:block>
+            <div th:replace="~{fragments/foot}"></div>
+        </th:block>
+    </div>
+
+</div>
+
+</body>
+</html>

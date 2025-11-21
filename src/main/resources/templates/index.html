@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="bg-BG" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      class="sr js_active vc_desktop vc_transform vc_transform ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <title>COLORTRAP - Арт работилници, рисуване и вино, арт вечери, изложби и творчески преживявания</title>
+    <meta name="description" content="Посетете COLORTRAP в Пловдив – арт работилници, рисуване и вино, арт вечери, изкуство за деца и творчески преживявания. Открийте магията на цветовете и вдъхновението.">
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "COLORTRAP",
+      "image": "pictures/logo/loge_with_name.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Петко Каравелов 20",
+        "addressLocality": "Пловдив",
+        "addressCountry": "BG"
+      },
+      "email": "colortrap.ltd@gmail.com",
+      "telephone": "0894 793 440",
+      "url": "https://www.colortrap.bg",
+      "sameAs": ["https://www.facebook.com/people/Colortrap/61583353547226/"]
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+    <th:block>
+        <div th:replace="~{fragments/nav}"></div>
+    </th:block>
+
+    <div class="main-wraper"> 
+        <h1 class="a-title center">COLORTRAP – където изкуството оживява</h1>
+        <div class="art">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/index_welcome_image.png" alt="Цветна арт декорация COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <p class="text-justify">Представете си място, където цветовете говорят, формите разказват истории, а въображението няма граници. Добре дошли в COLORTRAP – арт галерия и творчески оазис в сърцето на Пловдив.</p>
+                    <p class="text-justify">Тук всеки момент е покана за откритие: от интерактивни арт работилници, през изложби на гостуващи творци, до вдъхновяващи срещи с изкуството. COLORTRAP не е просто галерия – това е преживяване, което ви позволява да се свържете със себе си, с другите и с магията на творчеството.</p>
+                    <p class="text-justify">Стъпете вътре и открийте свят, където границите между реалност и въображение изчезват.</p>
+                </div>
+                <div>
+                    <h2 class="a-title center">Сподели вдъхновението с приятели</h2>
+                    <div>
+                        <p class="text-justify">Има ли нещо по-вълнуващо от това да преживееш красотата заедно с приятели? В COLORTRAP вярваме, че изкуството разцъфтява, когато се споделя. Поканете свой приятел и се потопете заедно в свят на цветове, въображение и радост от творчеството.</p>
+                        <p class="text-justify">За да направим момента още по-специален, сме подготвили изненади, отстъпки и малки подаръци – защото красивите споделени преживявания остават в сърцата за дълго.</p>
+                    </div>
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/share}" >Виж повече</a>
+                        </div>                            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="a-title center">Календар</h1>
+        <div class="event-wraper up">
+            <div class="event-des">
+                <h2 class="a-title center">Избери своята вечер на вдъхновение</h2>
+                <div>
+                    <p class="text-justify">Не е нужно да сте художник, за да се потопите в магията на творчеството. В арт вечерите на COLORTRAP в Пловдив всичко, от което се нуждаете, е добро настроение и желание да преживеете нещо ново.</p>
+                    <p class="text-justify">Нашите професионални художници ще ви водят стъпка по стъпка, а вечерта завършва с ваш собствен шедьовър, който можете да отнесете у дома. Ние ще се погрижим за уютната атмосфера, топлото посрещане и всички материали – от вас се иска само усмивка и любопитство.</p>
+                    <p class="text-justify">Изберете вечерта, която ви вдъхновява и подарете си часове, изпълнени с цветове, творчество и незабравими спомени.</p>
+                </div>
+                <div class="btn-list">
+                    <div>
+                        <a class="btn" th:href="@{/calendar}" >Към календар</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar">
+                <ul class="week">
+                    <li class="day" th:each="workshop:${workshops}">
+                        <section>
+                            <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP">
+                            <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP">
+                            <div class="picture">
+                                <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP">
+                            </div>
+                            <div class="workshop">
+                                <div>
+                                    <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                    <h2 th:text ="${workshop.title}" class="normal"></h2>
+                                </div>
+                                <p th:text = "${workshop.suitableFor}"></p>
+                                <p th:text = "${workshop.price}"></p>
+                                <div class="btn-list">
+                                    <div>
+                                        <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h1 class="a-title center">Подари арт преживяване</h1>
+        <div class="art">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/index_giftCard_image.png" alt="Арт подарък ваучер COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <p class="text-justify">Най-ценните подаръци не се побират в кутия – те се остават в сърцето. С арт ваучер на COLORTRAP подарявате цветове, усмивки и вдъхновение. Получателят ще се потопи в магията на изкуството, ще създаде своя собствен шедьовър и ще преживее моменти, които остават за дълго.</p>
+                    <p class="text-justify">Изберете своя подарък и подарете не просто вещ, а спомен, емоция и часове, изпълнени с творчество и радост – подходящо както за приятели, така и за познати, колеги или всеки, на когото искате да подарите вдъхновение.</p>
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/girtCard}" >Виж повече</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/}" >Начало</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция: Арт вечер с приятели -->
+        <h1 class="a-title center">Арт вечер с приятели</h1>
+        <div class="art down">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/index_share_image.png" alt="Арт вечер с приятели COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <p class="text-justify">Най-хубавите моменти са тези, които споделяме. В арт вечерите на COLORTRAP ще се потопите в цветове, вдъхновение и добро настроение – без значение дали имате опит или просто искате да опитате нещо ново.</p>
+                    <p class="text-justify">Можете да поканите приятел, колега или познат, а може и да дойдете сами и да срещнете нови хора, с които да създадете красиви спомени.</p>
+                    <p class="text-justify">И най-хубавото? Творбата, която създадете, остава за вас – като личен знак от една вечер, изпълнена с цвят, емоции и творчество.</p>                    
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/calendar}" >Към календар</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/}" >Начало</a>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <!-- Секция: Рисуване и вино -->
+        <h1 class="a-title center">Рисуване и вино</h1>
+        <div class="art">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/index_paintAndSip_image.png" alt="Рисуване и вино COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <p class="text-justify">Представете си вечер, в която времето спира. Усмивките се оглеждат в цветовете, а ароматът на вино изпълва атмосферата. В арт вечерта „Рисуване и вино“ в COLORTRAP ще се потопите в магията на творчеството – дори да не сте държали четка отдавна.</p>
+                    <p class="text-justify">В уютна и непринудена обстановка ще рисувате, ще се смеете и ще откривате нови страни от себе си и хората около вас. Виното ще ви помогне да се отпуснете и да позволите на въображението си да води всяка линия и цвят.</p>
+                    <p class="text-justify">Най-хубавото? Вашата картина остава за вас – личен спомен от една вечер, изпълнена с творчество, настроение и истински емоции. Елате сами, с приятел или с компания и се потопете в изживяване, което оставя следа в сърцето.</p>
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/calendar}" >Към календар</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/}" >Начало</a>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <!-- Секция: Арт работилници -->
+        <h1 class="a-title center">Арт работилници</h1>
+        <div class="art down">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/index_workshops_image.png" alt="Арт работилници COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <p class="text-justify">В COLORTRAP организираме арт работилници за всички възрасти – от деца до възрастни, за начинаещи и напреднали. Нашата цел е да предоставим място, където всеки може да открие радостта от създаването и да се потопи в процеса на изкуството.</p>
+                    <p class="text-justify">Работилниците включват разнообразни техники – живопис, акварел, акрил, смесени техники и креативни проекти за деца. Всеки участник получава всички необходими материали и индивидуално внимание, така че преживяването да бъде пълноценно и вдъхновяващо.</p>
+                    <p class="text-justify">Подходящи за семейства, приятели, колеги или индивидуално преживяване, арт работилниците в COLORTRAP са място за създаване на спомени и нови умения.</p>
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/calendar}" >Към календар</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/}" >Начало</a>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <!-- Секция: Частно парти -->
+        <h1 class="a-title center">Създайте своя специална арт вечер</h1>
+        <div class="art">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/index_privateParty_image.png" alt="Декоративно изображение – частно арт парти COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <p class="text-justify">Някои моменти заслужават повече от обикновен празник – те заслужават спомени, които остават. В COLORTRAP можете да организирате частна арт вечер, създадена специално за вас и вашия повод.</p>
+                    <p class="text-justify">Под ръководството на нашите художници ще творите заедно в уютна и вдъхновяваща атмосфера – ще се смеете, ще споделяте и ще откривате нови страни от себе си и другите. На края на вечерта няма да си тръгнете само с творбата, която сте създали, а със споделени усмивки, истории и усещането, че сте създали нещо истинско – заедно.</p>
+                    <p class="text-justify">Подарете си вечер, която превръща всеки повод в изкуство и оставя трайни спомени.</p>                    
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/privateParty}" >Виж повече</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/}" >Начало</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция: Арт занимания за деца -->
+        <h1 class="a-title center">Арт занимания за деца</h1>
+        <div class="art down">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/index_kidsWorkshops_image.png" alt="Арт занимания за деца COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <p class="text-justify">Децата са най-естествените творци, а в COLORTRAP сме създали арт занимания, където въображението има пълна свобода, а ученето и играта вървят ръка за ръка.</p>
+                    <p class="text-justify">Нашите художници подкрепят и вдъхновяват всяко дете, като насърчават любопитството и творческата му индивидуалност. Децата под 7 години участват задължително с възрастен придружител, за да могат заедно да се забавляват и откриват радостта от творчеството.</p>
+                    <p class="text-justify">Арт заниманията в COLORTRAP са перфектен начин за развитие на креативност, увереност и радост от създаването – преживяване, което остава в сърцето на малките творци.</p>
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/calendar}" >Към календар</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/}" >Начало</a>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <!-- Секция: Изложбена зала -->
+        <h1 class="a-title center">Изложбена зала COLORTRAP</h1>
+        <div class="art">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/index_gallery_image.png" alt="Изложбена зала COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <p class="text-justify">В сърцето на Пловдив COLORTRAP е пространство, където изкуството оживява. Тук местни и гостуващи творци могат да представят своите произведения, а посетителите да се потопят в разнообразие от стилове, идеи и емоции.</p>
+                    <p class="text-justify">Пространството е отворено за всеки творец, който иска да сподели своето творчество, а гостите могат да се насладят на красотата и вдъхновението, които всяка изложба носи. COLORTRAP е място за срещи с изкуство и преживявания, които остават.</p>
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/calendar}" >Към календар</a>
+                        </div>                       
+                        <div>
+                            <a class="btn" th:href="@{/}" >Начало</a>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        <th:block>
+            <div th:replace="~{fragments/foot}"></div>
+        </th:block>
+
+    </div>
+</div>
+
+</body>
+</html>

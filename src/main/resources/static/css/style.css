@@ -1,0 +1,419 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    display: flex;  
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100vh;
+    min-width: fit-content;
+    justify-content: space-between;
+    background-image: url("background.png" );
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+li{
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+
+.navigation {  
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 130px; 
+    margin: 0;
+    background-color:black;    
+    padding: 0;
+    text-align: right;
+}
+
+.navigation ul{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.title {
+    padding: 5%;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.a-title{
+    text-decoration:wavy underline;
+    padding-bottom: 3%;
+    margin: 0;
+}
+
+img.a-title-img{
+    width: 100%; 
+}
+
+.decor-img{    
+    float:inline-start;
+    padding: 1%;
+    justify-self: center;
+    align-self: center;
+    width: 40%;
+}
+
+.decor-des{
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+}
+
+.down{
+    flex-direction: row-reverse;
+}
+.up{
+    flex-direction: row;
+}
+
+.workshop {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 300px;
+}
+
+.error-img{
+    width: 40%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+.main{
+    position: relative;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    height: auto;
+}
+
+.main-wraper{
+    overflow: hidden;
+    padding-top: 2%;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+    width: stretch;
+    height: stretch;
+    min-height: 100vh;
+    padding-left: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div.footer{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 10px;
+    margin: 0;   
+    
+}
+
+div.sig{
+    text-align: center;
+    width: auto;
+}
+
+.month{
+    display: flex;
+    flex-direction: column; 
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    width: auto;
+    align-items: center;
+}
+
+.month li{
+    margin: 0;
+    padding: 0;
+}
+
+.week{
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    margin-top: 5%;   
+    width: 100%; 
+}
+
+.day{
+    display: flex;
+    padding: 5px;
+    margin: 5px;   
+}
+
+.dayVew{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+}
+
+.day section {
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    border-bottom: solid 1px black;
+    border-left: solid 1px black;
+}
+
+.dayVew section{
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    max-width: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.day section div.picture{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+}
+
+.dayVew section div.picture{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60vw;
+    height: 60vw;
+    overflow: hidden;
+}
+
+.day section div.picture img.img{
+    justify-self: center;
+    align-self: center;
+    max-width: 280px;
+    max-height: 280px;
+}
+
+.dayVew section div.picture img.img{
+    justify-self: center;
+    align-self: center;
+    max-width: 60vw;
+    max-height: 60vw;
+}
+
+.date{
+    display: flex;
+    padding: 0px;
+    margin: 0;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 15px;
+    height: fit-content;
+}
+
+.nav-btn{
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.menu li{
+    padding-bottom: 1vh;
+}
+
+.logo{        
+    padding-bottom: 20vh;
+    padding-top: 1vh;
+}
+
+a.logo-btn{
+    background-color: transparent;
+    border: none;
+}
+
+.nav-img{
+    width: 30px;
+    padding: 5px;
+}
+
+.logo-img{
+    width: 100%;
+}
+
+.btn-list{
+    display: flex;
+    justify-content: center;
+    justify-self: end;
+    margin-bottom: 2px;
+    padding-top: 10px;
+    max-width: 300px;
+}
+
+.btn-list div{   
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+    background-image: url("button_image.png");
+    background-size: 100% 200%;
+    background-position: center;
+    width: 140px;
+    height: 80px;
+    
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    padding: 0px;
+    margin: 0;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-menu{
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.footer-menu div h2{
+    text-decoration:wavy underline;
+}
+
+.menu-line{
+    display: flex;
+    font-size: 0.8em;
+}
+
+.line-space{
+    font-size: 1.2em;
+    padding-bottom: 1px;
+}
+
+.art{
+    display: flex;
+    gap: 2%;
+    width: 70%;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    justify-content:space-around;
+    justify-self: center;
+}
+
+.center{
+    text-align: center;
+    padding: 0;
+}
+
+.normal{
+    font-weight: normal;
+    margin: 0;
+}
+
+.calendar{
+    justify-self: center;
+    align-self: center; 
+    width: fit-content;  
+}
+
+.calendar-date{
+    position: absolute;
+    left: 0;
+    text-align: end;
+    width: 20%;
+}
+.calendar-type{
+    position: absolute;
+    right: 0;
+    text-align: end;
+    width: 20%;
+}
+
+.event-wraper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 1%;
+}
+
+.event-des{
+    align-self: center;
+    justify-self: center;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.text-justify {
+    text-align: justify;
+}

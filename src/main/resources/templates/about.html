@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="bg-BG" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      class="sr js_active vc_desktop vc_transform vc_transform ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <title>COLORTRAP - За нас | Арт работилници и изложби</title>
+    <meta name="description" content="Научете повече за COLORTRAP в Пловдив – арт работилници, рисуванес и вино, изложби и творчески преживявания за всички възрасти. Добре дошли в света на цветове и вдъхновение.">
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "COLORTRAP",
+      "image": "pictures/logo/loge_with_name.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Петко Каравелов 20",
+        "addressLocality": "Пловдив",
+        "addressCountry": "BG"
+      },
+      "email": "colortrap.ltd@gmail.com",
+      "telephone": "0894 793 440",
+      "url": "https://www.colortrap.bg",
+      "sameAs": ["https://www.facebook.com/people/Colortrap/61583353547226/"]
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+    <th:block>
+        <div th:replace="~{fragments/nav}"></div>
+    </th:block>
+
+    <div class="main-wraper"> 
+        <h1 class="a-title center">За нас</h1>        
+        <div class="art">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/about_image.png"  alt="Арт работилници и творчески изживявания в COLORTRAP">
+            </div>
+            <div class="decor-des">
+                <div>                    
+                    <p class="text-justify">COLORTRAP започна като една идея – малка искра, родена от сблъсъка между сърцето и разума. Дълго време тя търсеше своето място, докато не намери дом в тиха уличка в сърцето на Пловдив – град, където изкуството пулсира във въздуха. Тук, сред старинните фасади и съвременните вдъхновения, COLORTRAP оживя като пространство за свобода, цветове и споделяне.</p>
+                    <p class="text-justify">Нашата мисия е проста, но дълбока – да дадем на всеки възможността да твори, да се изразява и да открива радостта в съзиданието. Вярваме, че изкуството не е привилегия, а естествен език на човека – начин да общуваме, да се свързваме и да разбираме света около нас.</p>
+                    <p class="text-justify">В COLORTRAP събираме хора от различни посоки, които ги обединява едно – любовта към творчеството. Нашите арт работилници са място за експерименти, за споделяне и вдъхновение. Те не просто учат техники – те отключват въображението и събуждат увереността, че всеки може да бъде творец.</p>
+                    <p class="text-justify">Освен това COLORTRAP е и сцена за изложби, където гостуващи артисти представят своите произведения и споделят своята гледна точка към света. Пространството диша чрез техните истории и се превръща в жив диалог между авторите и публиката.</p>
+                    <p class="text-justify">За нас COLORTRAP е повече от творческо кътче – това е среща. Среща между хора, между стилове, между енергии. Място, в което се създават не само картини, но и приятелства, спомени и вдъхновения, които продължават да живеят дълго след последния щрих.</p>
+                    <p class="text-justify">Добре дошли в нашия свят – свят, в който цветът е свобода, а изкуството – начин на живот.</p>
+                </div>
+                <div class="btn-list">
+                    <div>
+                        <a class="btn" th:href="@{/}" >Начало</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <th:block>
+            <div th:replace="~{fragments/foot}"></div>
+        </th:block>
+    </div>
+
+</div>
+
+</body>
+</html>

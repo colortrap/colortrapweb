@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="bg-BG" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      class="sr js_active vc_desktop vc_transform vc_transform ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+ 
+    <title>COLORTRAP - Подарете вдъхновение | Gift Card за арт преживявания</title>
+    <meta name="description" content="Подарете вдъхновение с Gift Card на COLORTRAP в Пловдив– арт работилници, рисуванес и вино, творчески вечери и уникални изживявания. Перфектният подарък за всички възрасти и поводи.">
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "COLORTRAP",
+      "image": "pictures/logo/loge_with_name.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Петко Каравелов 20",
+        "addressLocality": "Пловдив",
+        "addressCountry": "BG"
+      },
+      "email": "colortrap.ltd@gmail.com",
+      "telephone": "0894 793 440",
+      "url": "https://www.colortrap.bg",
+      "sameAs": ["https://www.facebook.com/people/Colortrap/61583353547226/"]
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+    <th:block>
+        <div th:replace="~{fragments/nav}"></div>
+    </th:block>
+
+    <div class="main-wraper">
+        <h1 class="a-title center">Подарете вдъхновение с COLORTRAP</h1>
+
+        <div class="art down">            
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/giftCard_image.png" 
+                     alt="Gift Card за арт преживяване в COLORTRAP Пловдив">
+            </div>
+            <div class="decor-des">
+                <div>                    
+                    <p class="text-justify">Най-хубавите подаръци не са винаги най-скъпите – те са онези, които идват от сърце и носят усмивка. В <strong>COLORTRAP</strong> вярваме, че изкуството е един от най-красивите начини да подариш преживяване. Затова създадохме нашата Gift Card – персонален подарък, с който давате възможност на някого да се потопи в света на цветовете, въображението и творчеството.</p>
+                    <p class="text-justify">Ваучерът може да бъде използван за участие в арт вечери, работилници или други творчески събития в COLORTRAP. Той е чудесен избор за рожден ден, имен ден, празник или просто като мил жест без специален повод – защото вдъхновението винаги е подходящ подарък.</p>                    
+                </div>
+            </div>
+        </div>
+        <div class="art down">            
+            <div class="decor-des">
+                <div>                    
+                    <h3 class="a-title">Как да създадете своя Gift Card</h3>
+                    <p class="text-justify">1. Посетете ни на място.</p>
+                    <p class="text-justify">Ще ви посрещнем с усмивка и ще ви помогнем да изберете най-подходящия вариант на ваучера.</p>
+                    <p class="text-justify">2. Изберете сумата.</p>
+                    <p class="text-justify">Определете стойността на картата според вашето желание – независимо дали искате да подарите едно участие или няколко вдъхновяващи вечери.</p>
+                    <p class="text-justify">3. Получете своя ваучер готов за подарък.</p>
+                    <p class="text-justify">Ще получите Gift Card, готов да зарадва човека, за когото е предназначен.</p>
+                    <p class="text-justify">Всяка Gift Card на COLORTRAP е малък символ на вдъхновение, внимание и споделена радост. Тя не просто подарява участие в творческо събитие – тя подарява момент на откриване, изразяване и усмивка.</p>
+                    <p class="text-justify">Подарете преживяване, не предмет. Подарете цвят, настроение и вдъхновение.</p>
+                    <p class="text-justify">Gift Card от COLORTRAP – защото изкуството е най-красивият подарък.</p>
+                </div>
+                <div class="btn-list">
+                    <div>
+                        <a class="btn" th:href="@{/}" >Начало</a>
+                    </div>
+                    <div>
+                        <a class="btn" th:href="@{/calendar}" >Календар</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <th:block>
+            <div th:replace="~{fragments/foot}"></div>
+        </th:block>
+    </div>
+</div>
+
+</body>
+</html>
