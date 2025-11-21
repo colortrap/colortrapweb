@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy JAR app to Azure Web App - colortrap
 
 on:
@@ -49,9 +46,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2E4CDFDF294C4AAFB069B2487DD0876D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8DF5451F38E649E8836D06D9C8210033 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3F7E9D151DCF48E296D132F1E4B2D187 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2388887E7CBE4CD6A5BA3E517795729B }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A9C62F0EAB42442E9601B966A9D92B29 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_EE7E7E33926B419CA683EECCC951220E }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -60,4 +57,5 @@ jobs:
           app-name: 'colortrap'
           slot-name: 'Production'
           package: '*.jar'
+
           
