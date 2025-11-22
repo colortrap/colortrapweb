@@ -64,7 +64,6 @@ img.a-title-img{
 }
 
 .decor-img{    
-    float:inline-start;
     padding: 1%;
     justify-self: center;
     align-self: center;
@@ -85,8 +84,8 @@ img.a-title-img{
 }
 
 .workshop {
-    margin-left: 10px;
     margin-right: 10px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -160,7 +159,7 @@ div.sig{
     flex-direction: row;
     justify-content: center;
     flex-wrap:wrap;
-    width: auto;
+    width: fit-content;
     padding: 0;
     margin: 0;
     margin-top: 5%;   
@@ -175,6 +174,8 @@ div.sig{
 
 .dayVew{
     display: flex;
+    align-content: center;
+    justify-content: center;
     padding: 5px;
     margin: 5px;
     width: 80%;
@@ -233,6 +234,15 @@ div.sig{
     align-self: center;
     max-width: 60vw;
     max-height: 60vw;
+}
+
+.view{    
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
 }
 
 .date{
@@ -294,7 +304,8 @@ a.logo-btn{
 .btn-list{
     display: flex;
     justify-content: center;
-    justify-self: end;
+    justify-self: center;
+    align-self: center;
     margin-bottom: 2px;
     padding-top: 10px;
     max-width: 300px;
@@ -399,7 +410,7 @@ a.logo-btn{
 
 .event-wraper{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: center;
     align-self: center;
     margin-bottom: 1%;

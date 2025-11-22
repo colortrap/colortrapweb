@@ -1,4 +1,35 @@
 /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1500px) {
+    .event-wraper{
+        flex-direction: column;
+    }
+    .mobile{
+        display: none;
+    }
+    .event-des{
+        width: 60%;
+        align-content: end;
+    }
+    
+    .btn-list{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 2px;
+        padding-top: 10px;
+    }
+
+    .view{    
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+}
+        
 @media only screen and (max-width: 900px) {
 .body{
     font-size: small;
@@ -83,6 +114,7 @@
     align-content: center;
     align-self: center;
     justify-self: center;
+    width: 100%;;
 }
 
 .decor-img{
@@ -101,6 +133,7 @@
     padding: 2%;
     align-self: center;
     justify-self: center;
+    justify-items: center;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -135,5 +168,8 @@
     justify-self: center;
     margin-bottom: 2px;
     padding-top: 10px;
+}
+.mobile{
+    display: none;
 }
 }
