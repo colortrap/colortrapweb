@@ -61,10 +61,10 @@
             <li class="dayVew">
                 
                 <section>
-                    <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP">
-                    <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP">
+                    <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                    <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
                     <div class="picture">
-                        <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP">
+                        <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
                     </div>
                     <div class="view">
 
@@ -79,23 +79,23 @@
                              Нашият художник ще Ви покаже как да нарисувате Вашия собствен шедьовър, който да отнесете с гордост вкъщи.                             
                              Опит не е необходим! Запишете се и резервирайте своето място сега. Очакваме Ви!</p>
                         <div>
-                            <p>ПОДЖОДЯЩО ЗА</p>
+                            <p>Подходящо:</p>
                             <p th:text = "${workshop.suitableFor}"></p>
                         </div>
                         <div>
-                            <p>ЦЕНА ЗА УЧАСТИЕ</p>
+                            <p>Цена на участие:</p>
                              <p th:text="${workshop.price}">40лв. (20.45 &isin;)</p>
                         </div>
                         <div>
-                            <p>МЯСТО - COLORTRAP</p>
+                            <p>Място - COLORTRAP</p>
                             <p>Пловдив, ул. Петко Каравелов 20</p>
                         </div>
                         <div>
-                            <p>НАЧАЛО</p>
+                            <p>Начало:</p>
                             <p th:text="${workshop.startAt}">18:30</p>
                         </div>
                         <div>
-                            <p>ОРГАНИЗАТОР</p>
+                            <p>Организатор</p>
                             <p>COLORTRAP</p>
                         </div>
                         <div class="btn-list">

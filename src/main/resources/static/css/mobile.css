@@ -17,7 +17,6 @@
         justify-self: center;
         align-self: center;
         margin-bottom: 2px;
-        padding-top: 10px;
     }
 
     .view{    
@@ -110,7 +109,7 @@
 }
 
 .art{
-    display: block;
+    flex-direction: column;
     align-content: center;
     align-self: center;
     justify-self: center;
@@ -167,9 +166,13 @@
     justify-content: center;
     justify-self: center;
     margin-bottom: 2px;
-    padding-top: 10px;
 }
+
 .mobile{
     display: none;
 }
+.no-gab{
+    margin-top: 0;
+}
+
 }

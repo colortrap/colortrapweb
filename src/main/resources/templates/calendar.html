@@ -61,10 +61,10 @@
         <ul class="week">
             <li class="day" th:each="workshop:${workshops}">
                 <section>
-                    <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на събитието COLORTRAP">
-                    <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP">
+                    <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на събитието COLORTRAP" onContextMenu="return false;">
+                    <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
                     <div class="picture">
-                        <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение от арт събитие в COLORTRAP">
+                        <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение от арт събитие в COLORTRAP" onContextMenu="return false;">
                     </div>
                     <div class="workshop">
                         <div>

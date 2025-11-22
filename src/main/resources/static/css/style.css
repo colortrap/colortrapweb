@@ -63,8 +63,7 @@ img.a-title-img{
     width: 100%; 
 }
 
-.decor-img{    
-    padding: 1%;
+.decor-img{   
     justify-self: center;
     align-self: center;
     width: 40%;
@@ -88,8 +87,13 @@ img.a-title-img{
     margin-left: 10px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 1px;
     width: 300px;
+}
+
+.workshop p {
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .error-img{
@@ -245,6 +249,16 @@ div.sig{
     width: 80%;
 }
 
+.view div p{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.view p{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
 .date{
     display: flex;
     padding: 0px;
@@ -307,7 +321,6 @@ a.logo-btn{
     justify-self: center;
     align-self: center;
     margin-bottom: 2px;
-    padding-top: 10px;
     max-width: 300px;
 }
 
@@ -370,7 +383,6 @@ a.logo-btn{
 
 .art{
     display: flex;
-    gap: 2%;
     width: 70%;
     align-content: center;
     align-self: center;
