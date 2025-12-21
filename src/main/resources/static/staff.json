@@ -13,6 +13,538 @@
       "description": "Юболейна изложба живопис 2025 на Теодора Узунова",
       "isActive": true,
       "price": "Вход безплатен"
+    },
+    
+    {
+      "day": 18,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Есен в парка",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 19,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Червена наслада",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 20,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Букет златна пръчица",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 21,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Суета в цветове",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 22,
+      "month": 11,
+      "year": 2025,
+      "startAt": "14:00 - 16:30 ч.",
+      "suitableFor": "CHILDREN",
+      "eventType": "Арт занимание за деца",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Светулки",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "30лв. (15.34 ∈)"
+    },
+
+    {
+      "day": 22,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Импресия в танц",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 23,
+      "month": 11,
+      "year": 2025,
+      "startAt": "14:00 - 16:30 ч.",
+      "suitableFor": "CHILDREN",
+      "eventType": "Арт занимание за деца",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Спомени от праисторията",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "30лв. (15.34 ∈)"
+    },
+
+    {
+      "day": 23,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Шепотът на цветята",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 25,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Залез край морето",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 26,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Тикви в градината",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 27,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Бяла тишина",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 28,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Есенни фенери",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 29,
+      "month": 11,
+      "year": 2025,
+      "startAt": "14:00 - 16:30 ч.",
+      "suitableFor": "CHILDREN",
+      "eventType": "Арт занимание за деца",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Криеница в полето",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "30лв. (15.34 ∈)"
+    },
+
+    {
+      "day": 29,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Между цвят и небе",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 30,
+      "month": 11,
+      "year": 2025,
+      "startAt": "14:00 - 16:30 ч.",
+      "suitableFor": "CHILDREN",
+      "eventType": "Арт занимание за деца",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Падащи жълъди",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "30лв. (15.34 ∈)"
+    },
+
+    {
+      "day": 30,
+      "month": 11,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Огнени корони",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 2,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Заник над морето",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 3,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Цветно утро",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 4,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Шепот от сатен",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 5,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Дъх на пролет",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 6,
+      "month": 12,
+      "year": 2025,
+      "startAt": "14:00 - 16:30 ч.",
+      "suitableFor": "CHILDREN",
+      "eventType": "Арт занимание за деца",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Игра с есента",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "30лв. (15.34 ∈)"
+    },
+
+    {
+      "day": 6,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Листа в нощта",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 7,
+      "month": 12,
+      "year": 2025,
+      "startAt": "14:00 - 16:30 ч.",
+      "suitableFor": "CHILDREN",
+      "eventType": "Арт занимание за деца",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Снежен човек",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "30лв. (15.34 ∈)"
+    },
+
+    {
+      "day": 7,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Целувката",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 9,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Макове във ваза",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 10,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Мечтите на малката сърна",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 11,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Сред огледалните води",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 12,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Събор",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 13,
+      "month": 12,
+      "year": 2025,
+      "startAt": "14:00 - 16:30 ч.",
+      "suitableFor": "CHILDREN",
+      "eventType": "Арт занимание за деца",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Цветна премяна",
+      "description": "Криеница в полето",
+      "isActive": true,
+      "price": "30лв. (15.34 ∈)"
+    },
+    
+    {
+      "day": 13,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Първи сняг",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 14,
+      "month": 12,
+      "year": 2025,
+      "startAt": "14:00 - 16:30 ч.",
+      "suitableFor": "CHILDREN",
+      "eventType": "Арт занимание за деца",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Коледна окраса под снега",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "30лв. (15.34 ∈)"
+    },
+
+    {
+      "day": 14,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Сияние отвътре",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 16,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Чай с рози",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 17,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Сълзата",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 18,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Дивото зове",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+
+    {
+      "day": 19,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Пияно до прозореца",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
+    },
+    
+    {
+      "day": 20,
+      "month": 12,
+      "year": 2025,
+      "startAt": "14:00 - 16:30 ч.",
+      "suitableFor": "CHILDREN",
+      "eventType": "Арт занимание за деца",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Коледен гном",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "30лв. (15.34 ∈)"
+    },
+
+    {
+      "day": 20,
+      "month": 12,
+      "year": 2025,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ADULTS",
+      "eventType": "Рисуване и вино",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Тайна градина",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "40лв. (20.45 ∈)"
     },    
 
     {
