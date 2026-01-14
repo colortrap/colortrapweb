@@ -62,9 +62,10 @@ public class DefaultContentProvider {
         switch (eventType) {
             case "Рожден ден" -> url += "birthday-cake" + ".png";
             case "Моминско парти" -> url += "marriage" + ".png";
-            case "Арт занимание за деца" -> url += "drawing" + ".png";
-            case "Рисуване и вино" -> url += "paint" + ".png";
-            case "Изложба" -> url += "red-carpet" + ".png";
+            case "Арт занимание за деца" -> url += "paint-palette" + ".png";
+            case "Рисуване и вино" -> url += "wine" + ".png";
+            case "Рисуване и вино за двама" -> url += "for2" + ".png";
+            case "Изложба" -> url += "gallery" + ".png";
             case "Тимбилдинг" -> url += "lecture" + ".png";
             case "Работилница" -> url += "inspiration" + ".png";
             default -> url += "rejected" + ".png";
