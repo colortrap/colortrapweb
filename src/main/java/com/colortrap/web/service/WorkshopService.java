@@ -36,8 +36,8 @@ public class WorkshopService {
         if (views.isEmpty()){
             views.add(contentProvider.getDefaultWorkshopVew("notfound"));
         }
-        while (views.size() > 33){
-            views.remove(33);
+        while (views.size() > 36){
+            views.remove(36);
         }
         return views;
     }
