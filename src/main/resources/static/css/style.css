@@ -463,3 +463,28 @@ a.logo-btn{
 .flow{
     display: block;
 }
+
+.section1{
+    color:rgb(214, 214, 214);
+    width: 100%;
+    background-color:black;
+}
+
+.back-img{
+    align-self: center;
+    justify-self: center;
+    background-image: url("index_giftCard_image.png");
+    background-size: 100% auto;
+    background-attachment:local;
+    background-position: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    background-color: rgb(129, 129, 129, 0.6);
+}
