@@ -32,7 +32,7 @@ ul{
     left: 0;
     top: 0;
     height: 100%;
-    width: 130px; 
+    width: 150px; 
     margin: 0;
     background-color:black;    
     padding: 0;
@@ -292,6 +292,13 @@ div.sig{
     justify-items: center;
 }
 
+.menu-img{
+    width: 30px;
+}
+.open-img{
+    height: 1em;
+}
+
 .menu li{
     padding-bottom: 1vh;
 }
@@ -439,4 +446,8 @@ a.logo-btn{
 
 .text-justify {
     text-align: justify;
+}
+
+.hidden{
+    display: none;
 }
