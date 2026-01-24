@@ -57,33 +57,29 @@
     </th:block>
 
     <div class="main-wraper"> 
-        <!-- Секция: Арт работилници -->
-        
-        <div class="art down">
+        <!-- Секция: Рисуване и вино -->
+        <h1 class="a-title center">Рисуване и вино</h1>
+        <div class="art">
             <div class="decor-img">
-                <img class="a-title-img" src="pictures/decor/index_workshops_image.png" alt="Арт работилници COLORTRAP" onContextMenu="return false;">
+                <img class="a-title-img" src="pictures/decor/index_paintAndSip_image.png" alt="Рисуване и вино COLORTRAP" onContextMenu="return false;">
             </div>
             <div class="decor-des">
-                <h2 class="a-title center">Арт работилници</h2>
                 <div>
-                    <p class="text-justify no-gab">В COLORTRAP организираме арт работилници за всички възрасти – от деца до възрастни, за начинаещи и напреднали. Нашата цел е да предоставим място, където всеки може да открие радостта от създаването и да се потопи в процеса на изкуството.</p>
-                    <p class="text-justify mobile">Работилниците включват разнообразни техники – живопис, акварел, акрил, смесени техники и креативни проекти за деца. Всеки участник получава всички необходими материали и индивидуално внимание, така че преживяването да бъде пълноценно и вдъхновяващо.</p>
-                    <p class="text-justify mobile">Подходящи за семейства, приятели, колеги или индивидуално преживяване, арт работилниците в COLORTRAP са място за създаване на спомени и нови умения.</p>
+                    <p class="text-justify no-gab">Представете си вечер, в която времето спира. Усмивките се оглеждат в цветовете, а ароматът на вино изпълва атмосферата. В арт вечерта „Рисуване и вино“ в COLORTRAP ще се потопите в магията на творчеството – дори да не сте държали четка отдавна.</p>
+                    <p class="text-justify mobile">В уютна и непринудена обстановка ще рисувате, ще се смеете и ще откривате нови страни от себе си и хората около вас. Виното ще ви помогне да се отпуснете и да позволите на въображението си да води всяка линия и цвят.</p>
+                    <p class="text-justify mobile">Най-хубавото? Вашата картина остава за вас – личен спомен от една вечер, изпълнена с творчество, настроение и истински емоции. Елате сами, с приятел или с компания и се потопете в изживяване, което оставя следа в сърцето.</p>
                     <div class="btn-list">
                         <div>
-                            <a class="btn" th:href="@{/}" >За деца</a>
+                            <a class="btn" th:href="@{/calendar}" >Към календар</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/}" >За възрастни</a>
-                        </div>
-                        <div>
-                            <a class="btn" th:href="@{/}" >Изложбена зала</a>
+                            <a class="btn" th:href="@{/}" >Начало</a>
                         </div>
                     </div>
                 </div>
             </div>       
         </div>
-         <h1 class="a-title center">Календар</h1>
+
         <ul class="week">
             <li class="day" th:each="workshop:${workshops}">
                 <section>

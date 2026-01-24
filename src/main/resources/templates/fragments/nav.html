@@ -7,9 +7,13 @@
         </li>
         <li>
             <ul class="menu" id="menu">
-                <li id="btn-menu"><img class="menu-img" th:src="@{pictures/nav/application.png}" alt="Меню бутон COLORTRAP" onContextMenu="return false;"></li>
-                <li><a class="nav-btn" th:href="@{/}">НАЧАЛО</a></li>
-                <li><a class="nav-btn" id="btn-up-down">КАЛЕНДАР <img class="open-img" id="img-up-down" th:src="@{pictures/nav/down.png}" alt="Меню бутон COLORTRAP" onContextMenu="return false;"></a></li>
+                <li id="btn-menu">
+                    <a class="nav-btn" href="">
+                        <img class="menu-img desk" th:src="@{pictures/nav/application.png}" alt="Меню бутон COLORTRAP" onContextMenu="return false;">
+                    </a>
+                </li>
+                <li class="flow"><a class="nav-btn" th:href="@{/}">НАЧАЛО</a></li>
+                <li class="flow" id="btn-up-down"><a class="nav-btn" href="">КАЛЕНДАР <img class="open-img" id="img-up-down" th:src="@{pictures/nav/down.png}" alt="Меню бутон COLORTRAP" onContextMenu="return false;"></a></li>
                 <li class="hidden" id="menu-up-down">
                     <ul>
                         <li><a class="nav-btn" th:href="@{/calendar}">ЗА ВЪЗРАСТНИ</a></li>
@@ -18,9 +22,9 @@
                         <li><a class="nav-btn" th:href="@{/calendar}">ВИЖ ВСИЧКИ</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-btn" th:href="@{/girtCard}">ВАУЧЕРИ</a></li>
-                <li><a class="nav-btn" th:href="@{/girtCard}">ЧАСТНИ СЪБИТИЯ</a></li>
-                <li><a class="nav-btn" th:href="@{/girtCard}">ПРОМОЦИ</a></li>
+                <li class="flow"><a class="nav-btn" th:href="@{/girtCard}">ВАУЧЕРИ</a></li>
+                <li class="flow"><a class="nav-btn" th:href="@{/girtCard}">ЧАСТНИ СЪБИТИЯ</a></li>
+                <li class="flow"><a class="nav-btn" th:href="@{/girtCard}">ПРОМОЦИ</a></li>
             </ul>
         </li>
     </ul>
