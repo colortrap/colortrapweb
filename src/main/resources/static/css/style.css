@@ -91,7 +91,7 @@ img.a-title-img{
     display: flex;
     flex-direction: column;
     gap: 1px;
-    width: 300px;
+    width: 220px;
 }
 
 .workshop p {
@@ -109,6 +109,7 @@ img.a-title-img{
 .main{
     position: relative;
     display: flex;
+    flex-direction: column;
     padding: 0;
     align-items: center;
     height: auto;
@@ -116,30 +117,40 @@ img.a-title-img{
 
 .main-wraper{
     overflow: hidden;
-    padding-top: 2%;
     justify-self: center;
     align-self: center;
     align-items: center;
     justify-items: center;
+    align-content: center;
+    justify-content: center;
     width: stretch;
     height: stretch;
     min-height: 100vh;
-    padding-left: 130px;
+    padding-left: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around;    
+    gap: 30px;
 }
 
-div.footer{
+.footer{
     display: flex;
     justify-content: space-around;
     align-content: center;
     padding: 10px;
-    margin: 0;   
-    
+    margin: 0;
+    gap: 1%;
 }
 
-div.sig{
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.sig{
     text-align: center;
     width: auto;
 }
@@ -168,15 +179,14 @@ div.sig{
     flex-wrap:wrap;
     width: fit-content;
     padding: 0;
-    margin: 0;
-    margin-top: 5%;   
+    margin: 0;  
     width: 100%; 
 }
 
 .day{
     display: flex;
     padding: 5px;
-    margin: 5px;   
+    margin: 5px; 
 }
 
 .dayVew{
@@ -215,8 +225,8 @@ div.sig{
     display: flex;
     justify-content: center;
     align-content: center;
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -232,8 +242,8 @@ div.sig{
 .day section div.picture img.img{
     justify-self: center;
     align-self: center;
-    max-width: 280px;
-    max-height: 280px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .dayVew section div.picture img.img{
@@ -328,11 +338,12 @@ a.logo-btn{
 
 .btn-list{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     justify-self: center;
     align-self: center;
     margin-bottom: 2px;
-    max-width: 300px;
+    width: fit-content;
 }
 
 .btn-list div{   
@@ -367,15 +378,18 @@ a.logo-btn{
 }
 
 .footer-menu{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 150px;
     padding-top: 5vh;
     padding-bottom: 2vh;
-    width: 70vw;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
     font-size: 1rem;
     text-decoration: none;
+    text-align: center;   
 }
 
 .footer-menu div h2{
@@ -433,10 +447,13 @@ a.logo-btn{
 
 .event-wraper{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
     align-self: center;
     margin-bottom: 1%;
+    overflow: hidden;
+
 }
 
 .event-des{
@@ -470,6 +487,52 @@ a.logo-btn{
     background-color:black;
 }
 
+.section2{
+    flex-direction: column;
+}
+
+.section3{
+    display: flex;
+    width: 95%;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nowrap{    
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.section-art{
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    justify-content: space-between;
+    justify-self: center;
+    width: 30%;
+}
+
+.section-decor-img{
+    width: 100%;
+}
+
+.section-decor-des{
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile1{
+    max-width: 68%;
+    overflow: hidden;
+}
+
 .back-img{
     align-self: center;
     justify-self: center;
@@ -481,10 +544,31 @@ a.logo-btn{
     padding-bottom: 70px;
 }
 
+.about-img{
+    align-self: center;
+    justify-self: center;
+    background-image: url("index_workshops_image.png");
+    background-size: 100% auto;
+    background-attachment:local;
+    background-position: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
 .banner{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 5px;
-    background-color: rgb(129, 129, 129, 0.6);
+    padding: 15px;
+    background-color: rgb(129, 129, 129, 0.8);
+}
+
+.title-section{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column{
+    flex-direction: column;
 }

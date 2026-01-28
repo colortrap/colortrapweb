@@ -57,6 +57,7 @@
 
     <div class="main-wraper"> 
         
+        <!-- Секция: добре дошли --> 
         <div class="art">
             <div class="decor-img">
                 <img class="a-title-img" src="pictures/decor/index_welcome_image.png" alt="Цветна арт декорация COLORTRAP" onContextMenu="return false;">
@@ -67,18 +68,23 @@
                     <p class="text-justify no-gab">Представете си място, където цветовете говорят, формите разказват истории, а въображението няма граници. Добре дошли в COLORTRAP – арт галерия и творчески оазис в сърцето на Пловдив.</p>
                     <p class="text-justify mobile">Тук всеки момент е покана за откритие: от интерактивни арт работилници, през изложби на гостуващи творци, до вдъхновяващи срещи с изкуството. COLORTRAP не е просто галерия – това е преживяване, което ви позволява да се свържете със себе си, с другите и с магията на творчеството.</p>
                     <p class="text-justify mobile">Стъпете вътре и открийте свят, където границите между реалност и въображение изчезват.</p>
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/share}" >Специални предложения</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="btn-list">
-                    <div>
-                        <a class="btn" th:href="@{/calendar}" >Към Календар</a>
-                    </div> 
-                </div>                
             </div>
         </div>
-
-        <h1 class="a-title center">Днес предстои:</h1>
-        <div class="event-wraper up">
-
+        <div class="title-section">
+            <h1 class="a-title center">Предстоящи събития</h1>
+            <div class="btn-list">
+                <div>
+                    <a class="btn" th:href="@{/calendar}" >Разгледай календара</a>
+                </div>
+            </div>
+        </div>
+        <div class="event-wraper up">           
             <div class="calendar">
                 <ul class="week">
                     <li class="day" th:each="workshop:${workshops}">
@@ -91,7 +97,6 @@
                             <div class="workshop">
                                 <div>
                                     <h2 th:text ="${workshop.eventType}" class="normal"></h2>
-                                    <h2 th:text ="${workshop.title}" class="normal"></h2>
                                 </div>
                                 <p th:text = "${workshop.suitableFor}"></p>
                                 <p th:text = "${workshop.price}"></p>
@@ -109,77 +114,235 @@
 
          <!-- Секция: Ваучери -->    
         <div class="section1">
-            <div class="back-img">  
-        <div class="art">
-            <div class="decor-des">
-                <div class="banner">
-                    <h2 class="a-title center">Подари арт преживяване</h2>
-                    <div>
-                        <p class="text-justify no-gab">Най-ценните подаръци не се побират в кутия – те се остават в сърцето. С арт ваучер на COLORTRAP подарявате цветове, усмивки и вдъхновение. Получателят ще се потопи в магията на изкуството, ще създаде своя собствен шедьовър и ще преживее моменти, които остават за дълго.</p>
-                        <p class="text-justify mobile">Изберете своя подарък и подарете не просто вещ, а спомен, емоция и часове, изпълнени с творчество и радост – подходящо както за приятели, така и за познати, колеги или всеки, на когото искате да подарите вдъхновение.</p>
-                        <div class="btn-list">
+            <div class="back-img">
+                <div class="art">
+                    <div class="decor-des">
+                        <div class="banner">
+                            <h2 class="a-title center">Подари арт преживяване</h2>
                             <div>
-                                <a class="btn" th:href="@{/girtCard}" >Виж повече</a>
+                                <p class="text-justify no-gab">Най-ценните подаръци не се побират в кутия – те се остават в сърцето. С арт ваучер на COLORTRAP подарявате цветове, усмивки и вдъхновение. Получателят ще се потопи в магията на изкуството, ще създаде своя собствен шедьовър и ще преживее моменти, които остават за дълго.</p>
+                                <p class="text-justify mobile">Изберете своя подарък и подарете не просто вещ, а спомен, емоция и часове, изпълнени с творчество и радост – подходящо както за приятели, така и за познати, колеги или всеки, на когото искате да подарите вдъхновение.</p>
+                                <div class="btn-list">
+                                    <div>
+                                        <a class="btn" th:href="@{/girtCard}" >Закупи ваучер</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
-        </div>
-        </div> 
         </div> 
 
-        <!-- Секция: Арт вечер с приятели -->
-        <div class="art down">
-            <div class="decor-img">
-                <img class="a-title-img" src="pictures/decor/index_share_image.png" alt="Арт вечер с приятели COLORTRAP" onContextMenu="return false;">
-            </div>
-            <div class="decor-des">
-                <h2 class="a-title center">Сподели вдъхновението с приятели</h2>
-                <div>
+        <!-- Секция: категории работилници -->
+        <div class="section3">
+            <div class="section-art down column"> 
+                <div class="section-decor-des">
+                    <h2 class="a-title center">Сподели вдъхновението с приятели</h2>
                     <div>
-                        <p class="text-justify mobile">Има ли нещо по-вълнуващо от това да преживееш красотата заедно с приятели? В COLORTRAP вярваме, че изкуството разцъфтява, когато се споделя. Поканете свой приятел и се потопете заедно в свят на цветове, въображение и радост от творчеството.</p>
-                        <p class="text-justify">За да направим момента още по-специален, сме подготвили изненади, отстъпки и малки подаръци – защото красивите споделени преживявания остават в сърцата за дълго.</p>
+                        <div>
+                            <p class="text-justify mobile">Има ли нещо по-вълнуващо от това да преживееш красотата заедно с приятели? В COLORTRAP вярваме, че изкуството разцъфтява, когато се споделя. Поканете свой приятел и се потопете заедно в свят на цветове, въображение и радост от творчеството.</p>
+                            <p class="text-justify">За да направим момента още по-специален, сме подготвили изненади, отстъпки и малки подаръци – защото красивите споделени преживявания остават в сърцата за дълго.</p>
+                        </div>
                     </div>
                     <div class="btn-list">
                         <div>
-                            <a class="btn" th:href="@{/share}" >Виж повече</a>
-                        </div> 
-                    </div>
+                            <a class="btn" th:href="@{/calendar/forkids}" >Работилници за деца</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar/foradults}" >Работилници за възрастни</a>
+                        </div>
+                    </div> 
                 </div>
-            </div>       
+                <div class="section-decor-img">
+                    <img class="a-title-img" src="pictures/decor/index_share_image.png" alt="Арт вечер с приятели COLORTRAP" onContextMenu="return false;">
+                </div> 
+                
+            </div>
+        
+            <div class="mobile1">
+                <div>
+                    <!-- Секция: категория за деца -->
+                    <div class="event-wraper up">                                           
+                        <div class="calendar">
+                            <ul class="week nowrap">
+                                <li class="day" th:each="workshop:${workshops}">
+                                    <section>
+                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <div class="picture">
+                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                        </div>
+                                        <div class="workshop">
+                                            <div>
+                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                            </div>
+                                            <p th:text = "${workshop.suitableFor}"></p>
+                                            <p th:text = "${workshop.price}"></p>
+                                            <div class="btn-list">
+                                                <div>
+                                                    <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Секция: категория за възрастни -->
+                    <div class="event-wraper up">
+                        <div class="calendar">
+                            <ul class="week nowrap">
+                                <li class="day" th:each="workshop:${workshops}">
+                                    <section>
+                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <div class="picture">
+                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                        </div>
+                                        <div class="workshop">
+                                            <div>
+                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                            </div>
+                                            <p th:text = "${workshop.suitableFor}"></p>
+                                            <p th:text = "${workshop.price}"></p>
+                                            <div class="btn-list">
+                                                <div>
+                                                    <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
               
 
-        <!-- Секция: Частно парти -->        
-        <div class="art">
-            <div class="decor-img">
-                <img class="a-title-img" src="pictures/decor/index_privateParty_image.png" alt="Декоративно изображение – частно арт парти COLORTRAP" onContextMenu="return false;">
+        <!-- Секция: Частно парти -->
+         <div class="section3">
+            <div class="section-art down column">
+                <div class="section-decor-des">
+                    <h2 class="a-title center">Създайте своя специална арт вечер</h2>
+                    <div>
+                        <p class="text-justify no-gab">Някои моменти заслужават повече от обикновен празник – те заслужават спомени, които остават. В COLORTRAP можете да организирате частна арт вечер, създадена специално за вас и вашия повод.</p>
+                        <p class="text-justify mobile">Под ръководството на нашите художници ще творите заедно в уютна и вдъхновяваща атмосфера – ще се смеете, ще споделяте и ще откривате нови страни от себе си и другите. На края на вечерта няма да си тръгнете само с творбата, която сте създали, а със споделени усмивки, истории и усещането, че сте създали нещо истинско – заедно.</p>
+                        <p class="text-justify mobile">Подарете си вечер, която превръща всеки повод в изкуство и оставя трайни спомени.</p>
+                        <div class="btn-list">
+                            <div>
+                                <a class="btn" th:href="@{/gallery}" >Изложбена зала</a>
+                            </div>
+                            <div>
+                                <a class="btn" th:href="@{/privateParty}" >Частни събития</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-decor-img">
+                    <img class="a-title-img" src="pictures/decor/index_privateParty_image.png" alt="Декоративно изображение – частно арт парти COLORTRAP" onContextMenu="return false;">
+                </div>
             </div>
-            <div class="decor-des">
-                <h2 class="a-title center">Създайте своя специална арт вечер</h2>
+
+            <div class="mobile1">
                 <div>
-                    <p class="text-justify no-gab">Някои моменти заслужават повече от обикновен празник – те заслужават спомени, които остават. В COLORTRAP можете да организирате частна арт вечер, създадена специално за вас и вашия повод.</p>
-                    <p class="text-justify mobile">Под ръководството на нашите художници ще творите заедно в уютна и вдъхновяваща атмосфера – ще се смеете, ще споделяте и ще откривате нови страни от себе си и другите. На края на вечерта няма да си тръгнете само с творбата, която сте създали, а със споделени усмивки, истории и усещането, че сте създали нещо истинско – заедно.</p>
-                    <p class="text-justify mobile">Подарете си вечер, която превръща всеки повод в изкуство и оставя трайни спомени.</p>                    
-                    <div class="btn-list">
-                        <div>
-                            <a class="btn" th:href="@{/privateParty}" >Виж повече</a>
+                    <!-- Секция: категория частно събитие -->
+                    <div class="event-wraper up">                                           
+                        <div class="calendar">
+                            <ul class="week">
+                                <li class="day" th:each="workshop:${workshops}">
+                                    <section>
+                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <div class="picture">
+                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                        </div>
+                                        <div class="workshop">
+                                            <div>
+                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                            </div>
+                                            <p th:text = "${workshop.suitableFor}"></p>
+                                            <p th:text = "${workshop.price}"></p>
+                                            <div class="btn-list">
+                                                <div>
+                                                    <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Секция: категория частно събитие -->
+                    <div class="event-wraper up">                                           
+                        <div class="calendar">
+                            <ul class="week">
+                                <li class="day" th:each="workshop:${workshops}">
+                                    <section>
+                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <div class="picture">
+                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                        </div>
+                                        <div class="workshop">
+                                            <div>
+                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                            </div>
+                                            <p th:text = "${workshop.suitableFor}"></p>
+                                            <p th:text = "${workshop.price}"></p>
+                                            <div class="btn-list">
+                                                <div>
+                                                    <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+                 <!-- Секция: За нас -->    
+        <div class="section1">
+            <div class="about-img">
+                <div class="art">
+                    <div class="decor-des">
+                        <div class="banner">
+                            <h2 class="a-title center">За нас</h2>
+                            <div>
+                               <p class="text-justify">Нашата мисия е проста, но дълбока – да дадем на всеки възможността да твори, да се изразява и да открива радостта в съзиданието. Вярваме, че изкуството не е привилегия, а естествен език на човека – начин да общуваме, да се свързваме и да разбираме света около нас.</p>
+                                <p class="text-justify mobile">В COLORTRAP събираме хора от различни посоки, които ги обединява едно – любовта към творчеството. Нашите арт работилници са място за експерименти, за споделяне и вдъхновение. Те не просто учат техники – те отключват въображението и събуждат увереността, че всеки може да бъде творец.</p>
+                                <p class="text-justify">Добре дошли в нашия свят – свят, в който цветът е свобода, а изкуството – начин на живот.</p>
+                
+                                <div class="btn-list">
+                                    <div>
+                                        <a class="btn" th:href="@{/calendar}" >Разгледай календара</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+        </div> 
         
-
-        
-        <th:block>
-            <div th:replace="~{fragments/foot}"></div>
-        </th:block>
-
     </div>
+    
 </div>
-
+<th:block>
+    <div th:replace="~{fragments/foot}"></div>
+</th:block>
 </body>
 </html>
