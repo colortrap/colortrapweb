@@ -35,6 +35,10 @@ public class WorkshopView{
 
     private String price;
 
+    private String price2;
+
+    private String price5;
+
     private boolean isActive;
 
     public boolean getIsActive() {

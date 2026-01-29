@@ -70,10 +70,10 @@
                     </div>
                 <div class="btn-list">
                     <div>
-                        <a class="btn" th:href="@{/}" >Начало</a>
+                        <a class="btn" th:href="@{/2+}" >За двама или повече</a>
                     </div>
                     <div>
-                        <a class="btn" th:href="@{/calendar}" >Календар</a>
+                        <a class="btn" th:href="@{/5+}" >За петима или повече</a>
                     </div>
                 </div>
             </div>
@@ -89,11 +89,33 @@
                     </div>
                     <div class="workshop">
                         <div>
+                            <h3 class="normal">Две или повече участия</h3>
                             <h3 th:text ="${workshop.eventType}" class="normal">Тип събитие</h3>
                             <h3 th:text ="${workshop.title}" class="normal">Заглавие на събитие</h3>
                         </div>
                         <p th:text = "${workshop.suitableFor}">Подходящо за</p>
-                        <p th:text = "${workshop.price}">цена</p>
+                        <p th:text = "${workshop.price2}">цена</p>
+                        <div class="btn-list">
+                            <div>
+                                <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на събитието COLORTRAP" onContextMenu="return false;">
+                    <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                    <div class="picture">
+                        <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение от арт събитие в COLORTRAP" onContextMenu="return false;">
+                    </div>
+                    <div class="workshop">
+                        <div>
+                            <h3 class="normal">Пет или повече участия</h3>
+                            <h3 th:text ="${workshop.eventType}" class="normal">Тип събитие</h3>
+                            <h3 th:text ="${workshop.title}" class="normal">Заглавие на събитие</h3>
+                        </div>
+                        <p th:text = "${workshop.suitableFor}">Подходящо за</p>
+                        <p th:text = "${workshop.price5}">цена</p>
                         <div class="btn-list">
                             <div>
                                 <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>

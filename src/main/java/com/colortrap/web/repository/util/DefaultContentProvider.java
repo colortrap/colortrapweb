@@ -24,7 +24,7 @@ public class DefaultContentProvider {
     }
 
     public String getDefaultDescription(){
-        return "Няма арт вечери за деня.";
+        return "Няма намерено събитие.";
     }
 
     public String getDefaultNoContentText(){
@@ -88,7 +88,11 @@ public class DefaultContentProvider {
         return suitableForString;
     }
 
-    public String getPictureUrlByType(String title) {
+    public String getPictureUrlByType(String eventType) {
+        return "works/" + eventType + ".png";
+    }
+
+    public String getPictureUrlByTitle(String title) {
         return "works/" + title + ".jpg";
     }
 

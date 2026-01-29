@@ -23,20 +23,27 @@ public class HomeControllerImpl implements HomeController {
     public ModelAndView index() throws BadRequestException, ObjectNotFoundException {
 
         List<WorkshopView> workshops = workshopService.getWorkshopsForIndex();
+        List<WorkshopView> kids = workshopService.getWorkshopsForKidsIndex();
+        List<WorkshopView> adults = workshopService.getWorkshopsForAdultsIndex();
+        List<WorkshopView> rentItems = workshopService.getRentItemsForIndex();
+        List<WorkshopView> workshopItems = workshopService.getWorkshopItemsForIndex();
 
         ModelAndView model = new ModelAndView("index");
         model.addObject("workshops", workshops);
+        model.addObject("kids", kids);
+        model.addObject("adults", adults);
+        model.addObject("rentItems", rentItems);
+        model.addObject("workshopItems", workshopItems);
         return model;
     }
 
     @Override
-    public ModelAndView about() {
-        return new ModelAndView("about");
-    }
-
-    @Override
     public ModelAndView share() {
-        return new ModelAndView("share");
+        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendar();
+
+        ModelAndView model =  new ModelAndView("share");
+        model.addObject("workshops", workshops);
+        return model;
     }
 
     @Override
@@ -46,7 +53,11 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView privateParty() {
-        return new ModelAndView("privateParty");
+        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendar();
+
+        ModelAndView model = new ModelAndView("privateParty");
+        model.addObject("workshops", workshops);
+        return model;
     }
 
     @Override

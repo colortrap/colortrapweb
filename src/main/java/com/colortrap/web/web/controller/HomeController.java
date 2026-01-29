@@ -11,9 +11,6 @@ public interface HomeController {
     @GetMapping("/")
     ModelAndView index();
 
-    @GetMapping("/about")
-    ModelAndView about();
-
     @GetMapping("/share")
     ModelAndView share();
 

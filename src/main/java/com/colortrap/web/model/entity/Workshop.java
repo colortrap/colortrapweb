@@ -33,6 +33,10 @@ public class Workshop extends  BaseEntity{
 
     private String price;
 
+    private String price2;
+
+    private String price5;
+
     public boolean getIsActive() {
         return isActive;
     }

@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="title-section">
-            <h1 class="a-title center">Предстоящи събития</h1>
+            <h1 class="a-title center">Предстоящо днес</h1>
             <div class="btn-list">
                 <div>
                     <a class="btn" th:href="@{/calendar}" >Разгледай календара</a>
@@ -166,22 +166,22 @@
                     <div class="event-wraper up">                                           
                         <div class="calendar">
                             <ul class="week nowrap">
-                                <li class="day" th:each="workshop:${workshops}">
+                                <li class="day" th:each="kid:${kids}">
                                     <section>
-                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
-                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-date" th:src="${kid.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-type" th:src="${kid.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
                                         <div class="picture">
-                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                            <img class="img" th:src="${kid.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
                                         </div>
                                         <div class="workshop">
                                             <div>
-                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                                <h2 th:text ="${kid.eventType}" class="normal"></h2>
                                             </div>
-                                            <p th:text = "${workshop.suitableFor}"></p>
-                                            <p th:text = "${workshop.price}"></p>
+                                            <p th:text = "${kid.suitableFor}"></p>
+                                            <p th:text = "${kid.price}"></p>
                                             <div class="btn-list">
                                                 <div>
-                                                    <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                                                    <a class="btn" th:href="@{|/${kid.id}|}" >Виж повече</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -195,22 +195,22 @@
                     <div class="event-wraper up">
                         <div class="calendar">
                             <ul class="week nowrap">
-                                <li class="day" th:each="workshop:${workshops}">
+                                <li class="day" th:each="adult:${adults}">
                                     <section>
-                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
-                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-date" th:src="${adult.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-type" th:src="${adult.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
                                         <div class="picture">
-                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                            <img class="img" th:src="${adult.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
                                         </div>
                                         <div class="workshop">
                                             <div>
-                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                                <h2 th:text ="${adult.eventType}" class="normal"></h2>
                                             </div>
-                                            <p th:text = "${workshop.suitableFor}"></p>
-                                            <p th:text = "${workshop.price}"></p>
+                                            <p th:text = "${adult.suitableFor}"></p>
+                                            <p th:text = "${adult.price}"></p>
                                             <div class="btn-list">
                                                 <div>
-                                                    <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                                                    <a class="btn" th:href="@{|/${adult.id}|}" >Виж повече</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -253,26 +253,24 @@
 
             <div class="mobile1">
                 <div>
-                    <!-- Секция: категория частно събитие -->
+                    <!-- Секция: категория частно събитие наем зала -->
                     <div class="event-wraper up">                                           
                         <div class="calendar">
                             <ul class="week">
-                                <li class="day" th:each="workshop:${workshops}">
+                                <li class="day" th:each="rentItem:${rentItems}">
                                     <section>
-                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
-                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
-                                        <div class="picture">
-                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                       <div class="picture">
+                                            <img class="img" th:src="${rentItem.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
                                         </div>
                                         <div class="workshop">
                                             <div>
-                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                                <h2 th:text ="${rentItem.title}" class="normal"></h2>
                                             </div>
-                                            <p th:text = "${workshop.suitableFor}"></p>
-                                            <p th:text = "${workshop.price}"></p>
+                                            <p th:text = "${rentItem.suitableFor}"></p>
+                                            <p th:text = "${rentItem.price}"></p>
                                             <div class="btn-list">
                                                 <div>
-                                                    <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                                                    <a class="btn" th:href="@{|/${rentItem.id}|}" >Виж повече</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -281,26 +279,24 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Секция: категория частно събитие -->
+                    <!-- Секция: категория частно събитие работилниц-->
                     <div class="event-wraper up">                                           
                         <div class="calendar">
                             <ul class="week">
-                                <li class="day" th:each="workshop:${workshops}">
+                                <li class="day" th:each="workshopItem:${workshopItems}">
                                     <section>
-                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
-                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
                                         <div class="picture">
-                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                            <img class="img" th:src="${workshopItem.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
                                         </div>
                                         <div class="workshop">
                                             <div>
-                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                                <h2 th:text ="${workshopItem.title}" class="normal"></h2>
                                             </div>
-                                            <p th:text = "${workshop.suitableFor}"></p>
-                                            <p th:text = "${workshop.price}"></p>
+                                            <p th:text = "${workshopItem.suitableFor}"></p>
+                                            <p th:text = "${workshopItem.price}"></p>
                                             <div class="btn-list">
                                                 <div>
-                                                    <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
+                                                    <a class="btn" th:href="@{|/${workshopItem.id}|}" >Виж повече</a>
                                                 </div>
                                             </div>
                                         </div>
