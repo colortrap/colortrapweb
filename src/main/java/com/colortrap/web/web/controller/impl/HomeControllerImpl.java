@@ -39,10 +39,12 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView share() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendar();
+        List<WorkshopView> workshops = workshopService.getWorkshopsForShare();
+        List<WorkshopView> promos = workshopService.getPromosForShare();
 
         ModelAndView model =  new ModelAndView("share");
         model.addObject("workshops", workshops);
+        model.addObject("promos", promos);
         return model;
     }
 

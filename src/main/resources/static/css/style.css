@@ -185,7 +185,7 @@ img.a-title-img{
 
 .day{
     display: flex;
-    padding: 5px;
+    flex-wrap: wrap;
     margin: 5px; 
 }
 
@@ -493,9 +493,9 @@ a.logo-btn{
 
 .section3{
     display: flex;
-    width: 95%;
+    width: 98%;
     justify-content: space-evenly;
-    align-content: space-evenly;
+    align-content: space-evenly;    
     justify-items: center;
     align-items: center;
     overflow: hidden;
@@ -510,8 +510,10 @@ a.logo-btn{
     flex-direction: column;
     align-content: center;
     align-self: center;
+    align-items: center;
     justify-content: space-between;
     justify-self: center;
+    justify-items: center;
     width: 30%;
 }
 

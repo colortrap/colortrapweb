@@ -85,6 +85,10 @@
                         <div>
                             <p>Цена на участие:</p>
                              <p th:text="${workshop.price}">40лв. (20.45 &isin;)</p>
+                             <p>За две участия или повече</p>
+                             <p th:text="${workshop.price2}">40лв. (20.45 &isin;)</p>
+                             <p>За пет участия или повече</p>
+                             <p th:text="${workshop.price5}">40лв. (20.45 &isin;)</p>
                         </div>
                         <div>
                             <p>Място - COLORTRAP</p>
@@ -111,13 +115,11 @@
             </li>
         
         </ul>
-         
-        <th:block>
-            <div th:replace="~{fragments/foot}"></div>
-        </th:block>
     </div>
 
 </div>
-
+<th:block>
+    <div th:replace="~{fragments/foot}"></div>
+</th:block>
 </body>
 </html>

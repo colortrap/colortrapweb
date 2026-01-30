@@ -37,6 +37,16 @@ public class Workshop extends  BaseEntity{
 
     private String price5;
 
+    private boolean isPromo;
+
+    public boolean getIsPromo() {
+        return isPromo;
+    }
+
+    public void setIsPromo(boolean isPromo) {
+        this.isPromo = isPromo;
+    }
+
     public boolean getIsActive() {
         return isActive;
     }

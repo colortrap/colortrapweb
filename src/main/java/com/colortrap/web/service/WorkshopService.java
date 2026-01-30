@@ -41,6 +41,38 @@ public class WorkshopService {
         }
         return views;
     }
+    
+        public List<WorkshopView> getWorkshopsForShare(){
+        checkIsActiveWorkshopsUpToNow();
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
+        for (int i = 0; i < views.size(); i++) {
+            if (views.get(i).getEventType().equals("Изложба") ||
+        views.get(i).getIsPromo()
+        ) {
+                views.remove(i); 
+                i--;               
+            }            
+        }
+        while (views.size() > 3){
+            views.remove(3);
+        }
+        return views;
+    }
+    
+    public List<WorkshopView> getPromosForShare(){
+        checkIsActiveWorkshopsUpToNow();
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
+        for (int i = 0; i < views.size(); i++) {
+            if (!views.get(i).getIsPromo()){
+                views.remove(i);
+                i--;               
+            }            
+        }
+        while (views.size() > 3){
+            views.remove(3);
+        }
+        return views;
+    }
 
     public List<WorkshopView> getWorkshopsForIndex(){
         List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));

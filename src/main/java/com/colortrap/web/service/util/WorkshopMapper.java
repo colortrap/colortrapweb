@@ -45,6 +45,7 @@ public class WorkshopMapper {
         view.setPrice2(workshop.getPrice2() + " на участие");
         view.setPrice5(workshop.getPrice5() + " на участие");
         view.setDescription(workshop.getDescription());
+        view.setIsPromo(workshop.getIsPromo());
         view.setIsActive(workshop.getIsActive());
 
         return view;
