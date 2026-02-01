@@ -57,28 +57,29 @@
     </th:block>
 
     <div class="main-wraper"> 
-        <!-- Секция: Изложбена зала -->
-        <h1 class="a-title center">Изложбена зала COLORTRAP</h1>
+        <!-- Секция: Рисуване и вино -->
         <div class="art">
             <div class="decor-img">
-                <img class="a-title-img" src="pictures/decor/index_gallery_image.png" alt="Изложбена зала COLORTRAP" onContextMenu="return false;">
+                <img class="a-title-img" src="pictures/decor/index_paintAndSip_image.png" alt="Рисуване и вино COLORTRAP" onContextMenu="return false;">
             </div>
             <div class="decor-des">
                 <div>
-                    <p class="text-justify no-gab">В сърцето на Пловдив COLORTRAP е пространство, където изкуството оживява. Тук местни и гостуващи творци могат да представят своите произведения, а посетителите да се потопят в разнообразие от стилове, идеи и емоции.</p>
-                    <p class="text-justify mobile">Пространството е отворено за всеки творец, който иска да сподели своето творчество, а гостите могат да се насладят на красотата и вдъхновението, които всяка изложба носи. COLORTRAP е място за срещи с изкуство и преживявания, които остават.</p>
+                    <h1 class="a-title center">Арт работилници за възрастни</h1>
+                    <p class="text-justify no-gab">Представете си вечер, в която времето спира. Усмивките се оглеждат в цветовете, а ароматът на вино изпълва атмосферата. В арт работилниците за възрастни в COLORTRAP ще се потопите в магията на творчеството – дори да не сте държали четка отдавна.</p>
+                    <p class="text-justify mobile">В уютна и непринудена обстановка ще творите, ще се смеете и ще откривате нови страни от себе си и хората около вас. Виното ще ви помогне да се отпуснете и да позволите на въображението си да води всяка линия и цвят.</p>
+                    <p class="text-justify mobile">Най-хубавото? Вашата творба остава за вас – личен спомен от една вечер, изпълнена с творчество, настроение и истински емоции. Елате сами, с приятел или с компания и се потопете в изживяване, което оставя следа в сърцето.</p>
                     <div class="btn-list">
-                        <div>
-                            <a class="btn" th:href="@{/calendar-pfc-forkids}" >Работилници за деца</a>
+                       <div>
+                            <a class="btn" th:href="@{/calendar-pnc-foradults}" >Цени за 1 участие</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Работилници за възрастни</a>
+                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Цени за 5+ участия</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-ptc-forkids}" >Работилници за деца</a>
                         </div>
                         <div>
                             <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
-                        </div>
-                        <div>
-                            <a class="btn" th:href="@{/promo}" >Специални предложения</a>
                         </div>
                     </div>
                 </div>
@@ -86,10 +87,10 @@
         </div>
         
         <th:block>
-            <ul th:replace="~{fragments/itemlist}"></ul>
+            <ul th:replace="~{fragments/itemlist2}"></ul>
         </th:block>
-        
     </div>
+    
 
 </div>
 <th:block>

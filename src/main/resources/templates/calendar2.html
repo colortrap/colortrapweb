@@ -57,38 +57,42 @@
     </th:block>
 
     <div class="main-wraper"> 
-        <!-- Секция: Изложбена зала -->
-        <h1 class="a-title center">Изложбена зала COLORTRAP</h1>
-        <div class="art">
+        <!-- Секция: Арт работилници -->
+        
+        <div class="art down">
             <div class="decor-img">
-                <img class="a-title-img" src="pictures/decor/index_gallery_image.png" alt="Изложбена зала COLORTRAP" onContextMenu="return false;">
+                <img class="a-title-img" src="pictures/decor/index_workshops_image.png" alt="Арт работилници COLORTRAP" onContextMenu="return false;">
             </div>
             <div class="decor-des">
+                <h2 class="a-title center">Календар арт работилници</h2>
                 <div>
-                    <p class="text-justify no-gab">В сърцето на Пловдив COLORTRAP е пространство, където изкуството оживява. Тук местни и гостуващи творци могат да представят своите произведения, а посетителите да се потопят в разнообразие от стилове, идеи и емоции.</p>
-                    <p class="text-justify mobile">Пространството е отворено за всеки творец, който иска да сподели своето творчество, а гостите могат да се насладят на красотата и вдъхновението, които всяка изложба носи. COLORTRAP е място за срещи с изкуство и преживявания, които остават.</p>
-                    <div class="btn-list">
-                        <div>
-                            <a class="btn" th:href="@{/calendar-pfc-forkids}" >Работилници за деца</a>
-                        </div>
-                        <div>
-                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Работилници за възрастни</a>
-                        </div>
-                        <div>
-                            <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
-                        </div>
-                        <div>
-                            <a class="btn" th:href="@{/promo}" >Специални предложения</a>
-                        </div>
-                    </div>
+                    <p class="text-justify no-gab">В COLORTRAP организираме арт работилници за всички възрасти – от деца до възрастни, за начинаещи и напреднали. Нашата цел е да предоставим място, където всеки може да открие радостта от създаването и да се потопи в процеса на изкуството.</p>
+                    <p class="text-justify mobile">Работилниците включват разнообразни техники – живопис, акварел, акрил, смесени техники и креативни проекти за деца. Всеки участник получава всички необходими материали и индивидуално внимание, така че преживяването да бъде пълноценно и вдъхновяващо.</p>
+                    <p class="text-justify mobile">Подходящи за семейства, приятели, колеги или индивидуално преживяване, арт работилниците в COLORTRAP са място за създаване на спомени и нови умения.</p>
                 </div>
             </div>       
         </div>
-        
+        <div class="btn-list">
+            <div>
+                <a class="btn" th:href="@{/calendar-ptc-forkids}" >Работилници за деца</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/calendar-ptc-foradults}" >Работилници за възрастни</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/promo}" >Специални предложения</a>
+            </div>
+        </div>
+
         <th:block>
-            <ul th:replace="~{fragments/itemlist}"></ul>
+            <ul th:replace="~{fragments/itemlist2}"></ul>
         </th:block>
-        
     </div>
 
 </div>

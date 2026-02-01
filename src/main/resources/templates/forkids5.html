@@ -57,19 +57,23 @@
     </th:block>
 
     <div class="main-wraper"> 
-        <!-- Секция: Изложбена зала -->
-        <h1 class="a-title center">Изложбена зала COLORTRAP</h1>
-        <div class="art">
+        <!-- Секция: Арт занимания за деца -->
+        <h1 class="a-title center">Арт работилници за деца</h1>
+        <div class="art down">
             <div class="decor-img">
-                <img class="a-title-img" src="pictures/decor/index_gallery_image.png" alt="Изложбена зала COLORTRAP" onContextMenu="return false;">
+                <img class="a-title-img" src="pictures/decor/index_kidsWorkshops_image.png" alt="Арт занимания за деца COLORTRAP" onContextMenu="return false;">
             </div>
             <div class="decor-des">
                 <div>
-                    <p class="text-justify no-gab">В сърцето на Пловдив COLORTRAP е пространство, където изкуството оживява. Тук местни и гостуващи творци могат да представят своите произведения, а посетителите да се потопят в разнообразие от стилове, идеи и емоции.</p>
-                    <p class="text-justify mobile">Пространството е отворено за всеки творец, който иска да сподели своето творчество, а гостите могат да се насладят на красотата и вдъхновението, които всяка изложба носи. COLORTRAP е място за срещи с изкуство и преживявания, които остават.</p>
+                    <p class="text-justify no-gab">Децата са най-естествените творци, а в COLORTRAP сме създали арт занимания, където въображението има пълна свобода, а ученето и играта вървят ръка за ръка.</p>
+                    <p class="text-justify mobile">Нашите художници подкрепят и вдъхновяват всяко дете, като насърчават любопитството и творческата му индивидуалност. Децата под 7 години участват задължително с възрастен придружител, за да могат заедно да се забавляват и откриват радостта от творчеството.</p>
+                    <p class="text-justify mobile">Арт заниманията в COLORTRAP са перфектен начин за развитие на креативност, увереност и радост от създаването – преживяване, което остава в сърцето на малките творци.</p>
                     <div class="btn-list">
                         <div>
-                            <a class="btn" th:href="@{/calendar-pfc-forkids}" >Работилници за деца</a>
+                            <a class="btn" th:href="@{/calendar-pnc-forkids}" >Цени за 1 участиe</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{calendar-ptc-forkids}" >Цени за 2+ участия</a>
                         </div>
                         <div>
                             <a class="btn" th:href="@{/calendar-pfc-foradults}" >Работилници за възрастни</a>
@@ -77,19 +81,16 @@
                         <div>
                             <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
                         </div>
-                        <div>
-                            <a class="btn" th:href="@{/promo}" >Специални предложения</a>
-                        </div>
                     </div>
                 </div>
             </div>       
         </div>
         
         <th:block>
-            <ul th:replace="~{fragments/itemlist}"></ul>
+            <ul th:replace="~{fragments/itemlist5}"></ul>
         </th:block>
-        
     </div>
+    
 
 </div>
 <th:block>

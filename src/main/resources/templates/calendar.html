@@ -74,16 +74,19 @@
         </div>
         <div class="btn-list">
             <div>
-                <a class="btn" th:href="@{/forkids}" >За деца</a>
+                <a class="btn" th:href="@{/calendar-pnc-forkids}" >Работилници за деца</a>
             </div>
             <div>
-                <a class="btn" th:href="@{/foradults}" >За възрастни</a>
+                <a class="btn" th:href="@{/calendar-pnc-foradults}" >Работилници за възрастни</a>
             </div>
             <div>
-                <a class="btn" th:href="@{/share}" >Специални предложения</a>
+                <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/promo}" >Специални предложения</a>
             </div>
         </div>
-
+        
         <th:block>
             <ul th:replace="~{fragments/itemlist}"></ul>
         </th:block>

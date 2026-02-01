@@ -86,6 +86,14 @@ public class WorkshopRepo {
                 }
             }
         }
+        if(!items.isEmpty()){
+            for (Workshop item : items) {
+                String workshopId = item.getId();
+                if (workshopId.equals(id)) {
+                    return item;
+                }
+            }
+        }
         return null;
     }
 }

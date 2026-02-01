@@ -56,68 +56,118 @@
     </th:block>
 
     <div class="main-wraper">
-
         <ul class="week">
             <li class="dayVew">
-                
                 <section>
-                    <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
-                    <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
-                    <div class="picture">
-                        <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
-                    </div>
-                    <div class="view">
-
-                        <div>
-                            <h2 th:text="${workshop.eventType}" class="normal">Рисуване и вино</h2>
-                            <h2 th:text="${workshop.title}" class="normal">Име на картината</h2>
+                    <div>
+                        <img class="calendar-date2" th:src="|/${workshop.datePicUrl}|" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                        <div class="picture">
+                            <img class="img" th:src="|/${workshop.pictureUrl}|" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
                         </div>
-                        
-                        <p class="text-justify" th:text="${workshop.description}">Colortrap ви кани да нарисуваме заедно "име на картината".
+                    </div>
+                    <div>
+                        <div class="view">
+                            <div>
+                                <h2 th:text="${workshop.eventType}" class="normal">Рисуване и вино</h2>
+                                <h2 th:text="${workshop.title}" class="normal">Име на картината</h2>
+                            </div>
+                            <p class="text-justify" th:text="${workshop.description}">Colortrap ви кани да нарисуваме заедно "име на картината".
                             Всеки посетител ще получи всички необходими материали на място и единствено е необходимо да 
                             дойдете с настроение за едно незабравимо изживяване.
                              Нашият художник ще Ви покаже как да нарисувате Вашия собствен шедьовър, който да отнесете с гордост вкъщи.                             
                              Опит не е необходим! Запишете се и резервирайте своето място сега. Очакваме Ви!</p>
-                        <div>
-                            <p>Подходящо:</p>
-                            <p th:text = "${workshop.suitableFor}"></p>
-                        </div>
-                        <div>
-                            <p>Цена на участие:</p>
-                             <p th:text="${workshop.price}">40лв. (20.45 &isin;)</p>
-                             <p>За две участия или повече</p>
-                             <p th:text="${workshop.price2}">40лв. (20.45 &isin;)</p>
-                             <p>За пет участия или повече</p>
-                             <p th:text="${workshop.price5}">40лв. (20.45 &isin;)</p>
-                        </div>
-                        <div>
-                            <p>Място - COLORTRAP</p>
-                            <p>Пловдив, ул. Петко Каравелов 20</p>
-                        </div>
-                        <div>
-                            <p>Начало:</p>
-                            <p th:text="${workshop.startAt}">18:30</p>
-                        </div>
-                        <div>
-                            <p>Организатор</p>
-                            <p>COLORTRAP</p>
-                        </div>
-                        <div class="btn-list">
-                            <div>
-                                <a class="btn" th:href="@{/reservation}" >Начало</a>
+                             <div>
+                                <p>Подходящо:</p>
+                                <p th:text = "${workshop.suitableFor}"></p>
                             </div>
                             <div>
-                                <a class="btn" th:href="@{/calendar}" >Календар</a>
+                                <p>Място - COLORTRAP</p>
+                                <p>Пловдив, ул. Петко Каравелов 20</p>
+                            </div>
+                            <div>
+                                <p>Начало:</p>
+                                <p th:text="${workshop.startAt}">18:30</p>
+                            </div>
+                            <div>
+                                <p>Организатор</p>
+                                <p>COLORTRAP</p>
                             </div>
                         </div>
+                    
+                        <form th:action="@{/register}" th:method="POST" th:object="${registrationDTO}">
+                            <div>
+                                <div>
+                                    <label for="inputUsername" >Име и фамилия</label>
+                                </div>
+                                <div>
+                                    <input name="username" th:field="*{username}" th:value="*{username}" th:errorclass="is-invalid" required minlength="5" maxlength="100" type="text" id="inputUsername" class="form-control" aria-describedby="usernameHelpInline"/>
+                                    <small th:errors="*{username}" th:class="'invalid-feedback rounded'">error message</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="inputEmail">Email</label>
+                                </div>
+                                <div>
+                                    <input name="email" th:field="*{email}" th:errorclass="is-invalid" type="email" id="inputEmail" class="form-control" aria-describedby="emailHelpInline">
+                                    <small th:errors="*{email}" th:class="'invalid-feedback rounded'">error message</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="inputTel">Телефон</label>
+                                </div>
+                                <div>
+                                    <input name="tel" th:field="*{tel}" required minlength="10" maxlength="10" type="tel" id="inputTel" class="form-control" aria-describedby="telHelpInline">
+                                    <small th:errors="*{tel}" th:class="'invalid-feedback rounded'">error message</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="inputCount">Избери брой участия</label>
+                                </div>
+                                <div>
+                                    <select name="count" th:field="*{count}" type="count" id="inputCount" onfocus='this.size=6;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                                        <option th:value="1" th:text="|1 участие - ${workshop.price}">1</option>
+                                        <option th:value="2" th:text="|2 участия - ${workshop.price2}">2</option>
+                                        <option th:value="3" th:text="|3 участия - ${workshop.price2}">3</option>
+                                        <option th:value="4" th:text="|4 участия - ${workshop.price2}">4</option>
+                                        <option th:value="5" th:text="|5 участия - ${workshop.price5}">5</option>
+                                        <option th:value="6" th:text="|6 участия - ${workshop.price5}">6</option>
+                                        <option th:value="7" th:text="|7 участия - ${workshop.price5}">7</option>
+                                        <option th:value="8" th:text="|8 участия - ${workshop.price5}">8</option>
+                                        <option th:value="9" th:text="|9 участия - ${workshop.price5}">9</option>
+                                        <option th:value="10" th:text="|10 участия - ${workshop.price5}">10</option>
+                                        <option th:value="11" th:text="|11 участия - ${workshop.price5}">11</option>
+                                        <option th:value="12" th:text="|12 участия - ${workshop.price5}">12</option>
+                                        <option th:value="13" th:text="|13 участия - ${workshop.price5}">13</option>
+                                        <option th:value="14" th:text="|14 участия - ${workshop.price5}">14</option>
+                                        <option th:value="15" th:text="|15 участия - ${workshop.price5}">15</option>
+                                        <option th:value="16" th:text="|16 участия - ${workshop.price5}">16</option>
+                                        <option th:value="17" th:text="|17 участия - ${workshop.price5}">17</option>
+                                        <option th:value="18" th:text="|18 участия - ${workshop.price5}">18</option>
+                                        <option th:value="19" th:text="|19 участия - ${workshop.price5}">19</option>
+                                        <option th:value="20" th:text="|20 участия - ${workshop.price5}">20</option>
+                                    </select>
+                            
+                                </div>
+                            </div>
+                            <div class="btn-list">
+                                <div>
+                                    <button class="btn" type="submit">Резервирай</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </section>
             </li>
-        
         </ul>
     </div>
 
+    
+
 </div>
+
 <th:block>
     <div th:replace="~{fragments/foot}"></div>
 </th:block>

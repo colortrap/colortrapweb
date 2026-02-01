@@ -125,7 +125,7 @@ img.a-title-img{
     justify-content: center;
     width: stretch;
     height: stretch;
-    min-height: 100vh;
+    min-height: 90vh;
     padding-left: 150px;
     display: flex;
     flex-direction: column;
@@ -195,7 +195,7 @@ img.a-title-img{
     justify-content: center;
     padding: 5px;
     margin: 5px;
-    width: 80%;
+    width: 95%;
 }
 
 .day section {
@@ -211,7 +211,7 @@ img.a-title-img{
 
 .dayVew section{
     display: flex;
-    flex-direction: column;    
+    flex-direction: row;    
     justify-content: space-between;
     align-items: center;
     gap: 10px;
@@ -288,6 +288,11 @@ img.a-title-img{
     margin: 15px;
     height: fit-content;
     width: 140px;
+}
+
+button{
+    background-color:transparent;
+    border: none;
 }
 
 .nav-btn{
@@ -399,6 +404,8 @@ a.logo-btn{
 .menu-line{
     display: flex;
     font-size: 0.8em;
+    text-align: center;
+    align-self: center;
 }
 
 .line-space{
@@ -432,12 +439,21 @@ a.logo-btn{
     width: fit-content;  
 }
 
-.calendar-date{
+.calendar-date{    
     position: absolute;
     left: 0;
     text-align: end;
     width: 20%;
 }
+
+.calendar-date2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: end;
+    width: 10%;
+}
+
 .calendar-type{
     position: absolute;
     right: 0;
@@ -573,4 +589,16 @@ a.logo-btn{
 
 .column{
     flex-direction: column;
+}
+
+.promo{
+    text-decoration: line-through;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    border-top: rgb(114, 114, 114) solid 1px;
 }

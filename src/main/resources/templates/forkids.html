@@ -58,7 +58,7 @@
 
     <div class="main-wraper"> 
         <!-- Секция: Арт занимания за деца -->
-        <h1 class="a-title center">Арт занимания за деца</h1>
+        <h1 class="a-title center">Арт работилници за деца</h1>
         <div class="art down">
             <div class="decor-img">
                 <img class="a-title-img" src="pictures/decor/index_kidsWorkshops_image.png" alt="Арт занимания за деца COLORTRAP" onContextMenu="return false;">
@@ -70,40 +70,25 @@
                     <p class="text-justify mobile">Арт заниманията в COLORTRAP са перфектен начин за развитие на креативност, увереност и радост от създаването – преживяване, което остава в сърцето на малките творци.</p>
                     <div class="btn-list">
                         <div>
-                            <a class="btn" th:href="@{/calendar}" >Към календар</a>
+                            <a class="btn" th:href="@{/calendar-ptc-forkids}" >Цени за 2+ участия</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/}" >Начало</a>
+                            <a class="btn" th:href="@{/calendar-pfc-forkids}" >Цени за 5+ участия</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-foradults}" >Работилници за възрастни</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
                         </div>
                     </div>
                 </div>
             </div>       
         </div>
-
-        <ul class="week">
-            <li class="day" th:each="workshop:${workshops}">
-                <section>
-                    <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на събитието COLORTRAP" onContextMenu="return false;">
-                    <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
-                    <div class="picture">
-                        <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение от арт събитие в COLORTRAP" onContextMenu="return false;">
-                    </div>
-                    <div class="workshop">
-                        <div>
-                            <h3 th:text ="${workshop.eventType}" class="normal">Тип събитие</h3>
-                            <h3 th:text ="${workshop.title}" class="normal">Заглавие на събитие</h3>
-                        </div>
-                        <p th:text = "${workshop.suitableFor}">Подходящо за всички възрасти</p>
-                        <p th:text = "${workshop.price}">40лв. (20.45 &isin;)</p>
-                        <div class="btn-list">
-                            <div>
-                                <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </li>
-        </ul>
+        
+        <th:block>
+            <ul th:replace="~{fragments/itemlist}"></ul>
+        </th:block>
     </div>
     
 

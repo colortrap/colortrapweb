@@ -70,7 +70,7 @@
                     <p class="text-justify mobile">Стъпете вътре и открийте свят, където границите между реалност и въображение изчезват.</p>
                     <div class="btn-list">
                         <div>
-                            <a class="btn" th:href="@{/share}" >Специални предложения</a>
+                            <a class="btn" th:href="@{/promo}" >Специални предложения</a>
                         </div>
                     </div>
                 </div>
@@ -80,35 +80,15 @@
             <h1 class="a-title center">Предстоящо днес</h1>
             <div class="btn-list">
                 <div>
-                    <a class="btn" th:href="@{/calendar}" >Разгледай календара</a>
+                    <a class="btn" th:href="@{/calendar-pnc-all}" >Разгледай календара</a>
                 </div>
             </div>
         </div>
         <div class="event-wraper up">           
             <div class="calendar">
-                <ul class="week">
-                    <li class="day" th:each="workshop:${workshops}">
-                        <section>
-                            <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
-                            <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
-                            <div class="picture">
-                                <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
-                            </div>
-                            <div class="workshop">
-                                <div>
-                                    <h2 th:text ="${workshop.eventType}" class="normal"></h2>
-                                </div>
-                                <p th:text = "${workshop.suitableFor}"></p>
-                                <p th:text = "${workshop.price}"></p>
-                                <div class="btn-list">
-                                    <div>
-                                        <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </li>
-                </ul>
+                <th:block>
+                    <ul th:replace="~{fragments/itemlist}"></ul>
+                </th:block>
             </div>
         </div>
 
@@ -147,10 +127,10 @@
                     </div>
                     <div class="btn-list">
                         <div>
-                            <a class="btn" th:href="@{/calendar/forkids}" >Работилници за деца</a>
+                            <a class="btn" th:href="@{/calendar-pnc-forkids}" >Работилници за деца</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/calendar/foradults}" >Работилници за възрастни</a>
+                            <a class="btn" th:href="@{/calendar-pnc-foradults}" >Работилници за възрастни</a>
                         </div>
                     </div> 
                 </div>
@@ -181,7 +161,7 @@
                                             <p th:text = "${kid.price}"></p>
                                             <div class="btn-list">
                                                 <div>
-                                                    <a class="btn" th:href="@{|/${kid.id}|}" >Виж повече</a>
+                                                    <a class="btn" th:href="@{|/workshop-pncw/${kid.id}|}" >Виж повече</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -210,7 +190,7 @@
                                             <p th:text = "${adult.price}"></p>
                                             <div class="btn-list">
                                                 <div>
-                                                    <a class="btn" th:href="@{|/${adult.id}|}" >Виж повече</a>
+                                                    <a class="btn" th:href="@{|/workshop-pncw/${adult.id}|}" >Виж повече</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -237,7 +217,7 @@
                         <p class="text-justify mobile">Подарете си вечер, която превръща всеки повод в изкуство и оставя трайни спомени.</p>
                         <div class="btn-list">
                             <div>
-                                <a class="btn" th:href="@{/gallery}" >Изложбена зала</a>
+                                <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
                             </div>
                             <div>
                                 <a class="btn" th:href="@{/privateParty}" >Частни събития</a>
@@ -270,7 +250,7 @@
                                             <p th:text = "${rentItem.price}"></p>
                                             <div class="btn-list">
                                                 <div>
-                                                    <a class="btn" th:href="@{|/${rentItem.id}|}" >Виж повече</a>
+                                                    <a class="btn" th:href="@{|/workshop-pncw/${rentItem.id}|}" >Виж повече</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -296,7 +276,7 @@
                                             <p th:text = "${workshopItem.price}"></p>
                                             <div class="btn-list">
                                                 <div>
-                                                    <a class="btn" th:href="@{|/${workshopItem.id}|}" >Виж повече</a>
+                                                    <a class="btn" th:href="@{|/workshop-pncw/${workshopItem.id}|}" >Виж повече</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -324,7 +304,7 @@
                 
                                 <div class="btn-list">
                                     <div>
-                                        <a class="btn" th:href="@{/calendar}" >Разгледай календара</a>
+                                        <a class="btn" th:href="@{/calendar-pnc-all}" >Разгледай календара</a>
                                     </div>
                                 </div>
                             </div>

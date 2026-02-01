@@ -41,6 +41,42 @@ public class WorkshopService {
         }
         return views;
     }
+
+    public List<WorkshopView> getWorkshopsForCalendar2(){
+        List<WorkshopView> views = getWorkshopsForCalendar();
+        for (int i = 0; i < views.size(); i++) {
+            if(views.get(i).getPrice2().contains(views.get(i).getPrice())){
+                views.remove(i);
+                i--;
+            }
+        }
+
+        return views;
+    }
+    
+    public List<WorkshopView> getWorkshopsForCalendar5(){
+        List<WorkshopView> views = getWorkshopsForCalendar();
+        for (int i = 0; i < views.size(); i++) {
+            if(views.get(i).getPrice5().contains(views.get(i).getPrice())){
+                views.remove(i);
+                i--;
+            }
+        }
+
+        return views;
+    }
+    
+    public List<WorkshopView> getWorkshopsForCalendarPromo(){
+        List<WorkshopView> views = getWorkshopsForCalendar();
+        for (int i = 0; i < views.size(); i++) {
+            if(!views.get(i).getIsPromo()){
+                views.remove(i);
+                i--;
+            }
+        }
+
+        return views;
+    }
     
         public List<WorkshopView> getWorkshopsForShare(){
         checkIsActiveWorkshopsUpToNow();
@@ -122,8 +158,26 @@ public class WorkshopService {
         return view;
     }
     
+    public List<WorkshopView> getWorkshopsForKidsCalendar(){
+        checkIsActiveWorkshopsUpToNow();
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
+        List<WorkshopView> view = new ArrayList<>();
 
-        public List<WorkshopView> getWorkshopsForAdultsIndex(){
+        if(!views.isEmpty()){
+            for (WorkshopView workshopView : views) {
+                if (workshopView.getSuitableFor().equals("За деца")){
+                    view.add(workshopView);
+                }
+            }
+        }
+        if (view.isEmpty()) {
+            view.add(contentProvider.getDefaultWorkshopVew("notfound"));
+        }
+
+        return view;
+    }
+    
+    public List<WorkshopView> getWorkshopsForAdultsIndex(){
         checkIsActiveWorkshopsUpToNow();
         List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
         List<WorkshopView> view = new ArrayList<>();
@@ -145,8 +199,45 @@ public class WorkshopService {
         return view;
     }
     
+    public List<WorkshopView> getWorkshopsForAdultsCalendar(){
+        checkIsActiveWorkshopsUpToNow();
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
+        List<WorkshopView> view = new ArrayList<>();
 
-        public List<WorkshopView> getRentItemsForIndex(){
+        if(!views.isEmpty()){
+            for (WorkshopView workshopView : views) {
+                if (workshopView.getSuitableFor().equals("За възрастни")){
+                    view.add(workshopView);
+                }
+            }
+        }
+        if (view.isEmpty()) {
+            view.add(contentProvider.getDefaultWorkshopVew("notfound"));
+        }
+
+        return view;
+    }
+
+    public List<WorkshopView> getWorkshopsForGalleryCalendar(){
+        checkIsActiveWorkshopsUpToNow();
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
+        List<WorkshopView> view = new ArrayList<>();
+
+        if(!views.isEmpty()){
+            for (WorkshopView workshopView : views) {
+                if (workshopView.getEventType().equals("Изложба")){
+                    view.add(workshopView);
+                }
+            }
+        }
+        if (view.isEmpty()) {
+            view.add(contentProvider.getDefaultWorkshopVew("notfound"));
+        }
+
+        return view;
+    }
+    
+    public List<WorkshopView> getRentItemsForIndex(){
         List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveItems()));
         List<WorkshopView> view = new ArrayList<>();
 
@@ -168,8 +259,7 @@ public class WorkshopService {
         return view;
     }
     
-
-        public List<WorkshopView> getWorkshopItemsForIndex(){
+    public List<WorkshopView> getWorkshopItemsForIndex(){
         List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveItems()));
         List<WorkshopView> view = new ArrayList<>();
 
@@ -181,6 +271,24 @@ public class WorkshopService {
                     if (view.size() >= 3){
                         break;
                     }
+                }
+            }
+        }
+        if (view.isEmpty()) {
+            view.add(contentProvider.getDefaultWorkshopVew("notfound"));
+        }
+
+        return view;
+    }    
+    
+    public List<WorkshopView> getWorkshopItems(){
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveItems()));
+        List<WorkshopView> view = new ArrayList<>();
+
+        if(!views.isEmpty()){
+            for (WorkshopView workshopView : views) {
+                if (workshopView.getEventType().equals("Частно събитие")){
+                    view.add(workshopView);
                 }
             }
         }
@@ -267,7 +375,7 @@ public class WorkshopService {
         }
     }
 
-    public WorkshopView getWorkshopById(String id) {
+    public WorkshopView getById(String id) {
         Workshop workshop = workshopRepo.findByID(id);
         if(workshop==null){
             return contentProvider.getDefaultWorkshopVew(id);

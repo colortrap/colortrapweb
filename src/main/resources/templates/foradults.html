@@ -58,52 +58,37 @@
 
     <div class="main-wraper"> 
         <!-- Секция: Рисуване и вино -->
-        <h1 class="a-title center">Рисуване и вино</h1>
         <div class="art">
             <div class="decor-img">
                 <img class="a-title-img" src="pictures/decor/index_paintAndSip_image.png" alt="Рисуване и вино COLORTRAP" onContextMenu="return false;">
             </div>
             <div class="decor-des">
                 <div>
-                    <p class="text-justify no-gab">Представете си вечер, в която времето спира. Усмивките се оглеждат в цветовете, а ароматът на вино изпълва атмосферата. В арт вечерта „Рисуване и вино“ в COLORTRAP ще се потопите в магията на творчеството – дори да не сте държали четка отдавна.</p>
-                    <p class="text-justify mobile">В уютна и непринудена обстановка ще рисувате, ще се смеете и ще откривате нови страни от себе си и хората около вас. Виното ще ви помогне да се отпуснете и да позволите на въображението си да води всяка линия и цвят.</p>
-                    <p class="text-justify mobile">Най-хубавото? Вашата картина остава за вас – личен спомен от една вечер, изпълнена с творчество, настроение и истински емоции. Елате сами, с приятел или с компания и се потопете в изживяване, което оставя следа в сърцето.</p>
+                    <h1 class="a-title center">Арт работилници за възрастни</h1>
+                    <p class="text-justify no-gab">Представете си вечер, в която времето спира. Усмивките се оглеждат в цветовете, а ароматът на вино изпълва атмосферата. В арт работилниците за възрастни в COLORTRAP ще се потопите в магията на творчеството – дори да не сте държали четка отдавна.</p>
+                    <p class="text-justify mobile">В уютна и непринудена обстановка ще творите, ще се смеете и ще откривате нови страни от себе си и хората около вас. Виното ще ви помогне да се отпуснете и да позволите на въображението си да води всяка линия и цвят.</p>
+                    <p class="text-justify mobile">Най-хубавото? Вашата творба остава за вас – личен спомен от една вечер, изпълнена с творчество, настроение и истински емоции. Елате сами, с приятел или с компания и се потопете в изживяване, което оставя следа в сърцето.</p>
                     <div class="btn-list">
                         <div>
-                            <a class="btn" th:href="@{/calendar}" >Към календар</a>
+                            <a class="btn" th:href="@{/calendar-ptc-foradults}" >Цени за 2+ участия</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/}" >Начало</a>
+                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Цени за 5+ участия</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-forkids}" >Работилници за деца</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
                         </div>
                     </div>
                 </div>
-            </div>       
+            </div>
         </div>
-
-        <ul class="week">
-            <li class="day" th:each="workshop:${workshops}">
-                <section>
-                    <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на събитието COLORTRAP" onContextMenu="return false;">
-                    <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
-                    <div class="picture">
-                        <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение от арт събитие в COLORTRAP" onContextMenu="return false;">
-                    </div>
-                    <div class="workshop">
-                        <div>
-                            <h3 th:text ="${workshop.eventType}" class="normal">Тип събитие</h3>
-                            <h3 th:text ="${workshop.title}" class="normal">Заглавие на събитие</h3>
-                        </div>
-                        <p th:text = "${workshop.suitableFor}">Подходящо за всички възрасти</p>
-                        <p th:text = "${workshop.price}">40лв. (20.45 &isin;)</p>
-                        <div class="btn-list">
-                            <div>
-                                <a class="btn" th:href="@{|/${workshop.id}|}" >Виж повече</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </li>
-        </ul>
+        
+        <th:block>
+            <ul th:replace="~{fragments/itemlist}"></ul>
+        </th:block>
     </div>
     
 
