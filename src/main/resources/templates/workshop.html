@@ -94,7 +94,10 @@
                             </div>
                         </div>
                     
-                        <form th:action="@{/register}" th:method="POST" th:object="${registrationDTO}">
+                        <form th:action="@{|/workshop-pncw/${id}|}" th:method="POST" th:object="${registrationDTO}">                            
+                            <div>
+                                <p class="red" th:text = "${sent}"></p>
+                            </div>
                             <div>
                                 <div>
                                     <label for="inputUsername" >Име и фамилия</label>
@@ -128,26 +131,26 @@
                                 </div>
                                 <div>
                                     <select name="count" th:field="*{count}" type="count" id="inputCount" onfocus='this.size=6;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
-                                        <option th:value="1" th:text="|1 участие - ${workshop.price}">1</option>
-                                        <option th:value="2" th:text="|2 участия - ${workshop.price2}">2</option>
-                                        <option th:value="3" th:text="|3 участия - ${workshop.price2}">3</option>
-                                        <option th:value="4" th:text="|4 участия - ${workshop.price2}">4</option>
-                                        <option th:value="5" th:text="|5 участия - ${workshop.price5}">5</option>
-                                        <option th:value="6" th:text="|6 участия - ${workshop.price5}">6</option>
-                                        <option th:value="7" th:text="|7 участия - ${workshop.price5}">7</option>
-                                        <option th:value="8" th:text="|8 участия - ${workshop.price5}">8</option>
-                                        <option th:value="9" th:text="|9 участия - ${workshop.price5}">9</option>
-                                        <option th:value="10" th:text="|10 участия - ${workshop.price5}">10</option>
-                                        <option th:value="11" th:text="|11 участия - ${workshop.price5}">11</option>
-                                        <option th:value="12" th:text="|12 участия - ${workshop.price5}">12</option>
-                                        <option th:value="13" th:text="|13 участия - ${workshop.price5}">13</option>
-                                        <option th:value="14" th:text="|14 участия - ${workshop.price5}">14</option>
-                                        <option th:value="15" th:text="|15 участия - ${workshop.price5}">15</option>
-                                        <option th:value="16" th:text="|16 участия - ${workshop.price5}">16</option>
-                                        <option th:value="17" th:text="|17 участия - ${workshop.price5}">17</option>
-                                        <option th:value="18" th:text="|18 участия - ${workshop.price5}">18</option>
-                                        <option th:value="19" th:text="|19 участия - ${workshop.price5}">19</option>
-                                        <option th:value="20" th:text="|20 участия - ${workshop.price5}">20</option>
+                                        <option th:value="|1 участие - ${workshop.price}" th:text="|1 участие - ${workshop.price}">1</option>
+                                        <option th:value="|2 участия - ${workshop.price2}" th:text="|2 участия - ${workshop.price2}">2</option>
+                                        <option th:value="|3 участия - ${workshop.price2}" th:text="|3 участия - ${workshop.price2}">3</option>
+                                        <option th:value="|4 участия - ${workshop.price2}" th:text="|4 участия - ${workshop.price2}">4</option>
+                                        <option th:value="|5 участия - ${workshop.price5}" th:text="|5 участия - ${workshop.price5}">5</option>
+                                        <option th:value="|6 участия - ${workshop.price5}" th:text="|6 участия - ${workshop.price5}">6</option>
+                                        <option th:value="|7 участия - ${workshop.price5}" th:text="|7 участия - ${workshop.price5}">7</option>
+                                        <option th:value="|8 участия - ${workshop.price5}" th:text="|8 участия - ${workshop.price5}">8</option>
+                                        <option th:value="|9 участия - ${workshop.price5}" th:text="|9 участия - ${workshop.price5}">9</option>
+                                        <option th:value="|10 участия - ${workshop.price5}" th:text="|10 участия - ${workshop.price5}">10</option>
+                                        <option th:value="|11 участия - ${workshop.price5}" th:text="|11 участия - ${workshop.price5}">11</option>
+                                        <option th:value="|12 участия - ${workshop.price5}" th:text="|12 участия - ${workshop.price5}">12</option>
+                                        <option th:value="|13 участия - ${workshop.price5}" th:text="|13 участия - ${workshop.price5}">13</option>
+                                        <option th:value="|14 участия - ${workshop.price5}" th:text="|14 участия - ${workshop.price5}">14</option>
+                                        <option th:value="|15 участия - ${workshop.price5}" th:text="|15 участия - ${workshop.price5}">15</option>
+                                        <option th:value="|16 участия - ${workshop.price5}" th:text="|16 участия - ${workshop.price5}">16</option>
+                                        <option th:value="|17 участия - ${workshop.price5}" th:text="|17 участия - ${workshop.price5}">17</option>
+                                        <option th:value="|18 участия - ${workshop.price5}" th:text="|18 участия - ${workshop.price5}">18</option>
+                                        <option th:value="|19 участия - ${workshop.price5}" th:text="|19 участия - ${workshop.price5}">19</option>
+                                        <option th:value="|20 участия - ${workshop.price5}" th:text="|20 участия - ${workshop.price5}">20</option>
                                     </select>
                             
                                 </div>
@@ -162,6 +165,14 @@
                 </section>
             </li>
         </ul>
+        <div class="btn-list">
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-all}" >Към календара</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/promo}" >Специални предложения</a>
+            </div>
+        </div>
     </div>
 
     

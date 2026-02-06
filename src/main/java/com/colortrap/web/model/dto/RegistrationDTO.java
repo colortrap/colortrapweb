@@ -22,5 +22,5 @@ public class RegistrationDTO {
     private String tel;
 
     @NotNull(message = "Полете не може да е празно!")
-    private String count;    
+    private String count; 
 }

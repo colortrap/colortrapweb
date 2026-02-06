@@ -85,75 +85,18 @@
                                 <p>Пловдив, ул. Петко Каравелов 20</p>
                             </div>
                             <div>
-                                <p>Цена:</p>
-                                <p th:text="${workshop.price}">18:30</p>
+                                <p>Начало:</p>
+                                <p th:text="${workshop.startAt}">18:30</p>
                             </div>
                             <div>
                                 <p>Организатор</p>
                                 <p>COLORTRAP</p>
                             </div>
                         </div>
-                    
-                        <form th:action="@{|/workshop-pncw/${id}|}" th:method="POST" th:object="${registrationDTO}">                            
-                            
-                            <div>
-                                <p class="red" th:text = "${sent}"></p>
-                            </div>
-                            <div>
-                                <div>
-                                    <label for="inputUsername" >Име и фамилия</label>
-                                </div>
-                                <div>
-                                    <input name="username" th:field="*{username}" th:value="*{username}" th:errorclass="is-invalid" required minlength="5" maxlength="100" type="text" id="inputUsername" class="form-control" aria-describedby="usernameHelpInline"/>
-                                    <small th:errors="*{username}" th:class="'invalid-feedback rounded'">error message</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <label for="inputEmail">Email</label>
-                                </div>
-                                <div>
-                                    <input name="email" th:field="*{email}" th:errorclass="is-invalid" type="email" id="inputEmail" class="form-control" aria-describedby="emailHelpInline">
-                                    <small th:errors="*{email}" th:class="'invalid-feedback rounded'">error message</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <label for="inputTel">Телефон</label>
-                                </div>
-                                <div>
-                                    <input name="tel" th:field="*{tel}" required minlength="10" maxlength="10" type="tel" id="inputTel" class="form-control" aria-describedby="telHelpInline">
-                                    <small th:errors="*{tel}" th:class="'invalid-feedback rounded'">error message</small>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <label for="inputCount">За дата</label>
-                                </div>
-                                <div>
-                                    <input name="count" th:field="*{count}" required minlength="8" maxlength="11" type="date" id="inputCount" class="form-control" aria-describedby="telHelpInline">
-                                    <small th:errors="*{count}" th:class="'invalid-feedback rounded'">error message</small>
-                                </div>
-                            </div>
-                            
-                            <div class="btn-list">
-                                <div>
-                                    <button class="btn" type="submit">Резервирай</button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </section>
             </li>
         </ul>
-        <div class="btn-list">
-            <div>
-                <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
-            </div>
-            <div>
-                <a class="btn" th:href="@{/privateParty}" >Частни събития</a>
-            </div>
-        </div>
     </div>
 
     

@@ -11,6 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.colortrap.web.model.dto.RegistrationDTO;
 
+import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 
 @RequestMapping("/")
@@ -67,7 +68,7 @@ public interface HomeController {
     @PostMapping("/workshop-pncw/{id}")
     ModelAndView workshopRegistration(@PathVariable String id, @Valid RegistrationDTO registrationDTO,
                             BindingResult bindingResult,
-                            RedirectAttributes redirectAttributes);
+                            RedirectAttributes redirectAttributes) throws MessagingException;
                             
     @ModelAttribute("registrationDTO")
     RegistrationDTO initRegistrationForm();

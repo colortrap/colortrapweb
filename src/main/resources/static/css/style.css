@@ -125,7 +125,7 @@ img.a-title-img{
     justify-content: center;
     width: stretch;
     height: stretch;
-    min-height: 90vh;
+    min-height: 70vh;
     padding-left: 150px;
     display: flex;
     flex-direction: column;
@@ -193,8 +193,6 @@ img.a-title-img{
     display: flex;
     align-content: center;
     justify-content: center;
-    padding: 5px;
-    margin: 5px;
     width: 95%;
 }
 
@@ -235,7 +233,7 @@ img.a-title-img{
     justify-content: center;
     align-content: center;
     width: 60vw;
-    height: 60vw;
+    height: auto;
     overflow: hidden;
 }
 
@@ -601,4 +599,7 @@ form{
     gap: 5px;
     padding: 5px;
     border-top: rgb(114, 114, 114) solid 1px;
+}
+.red{
+    color:blue;
 }
