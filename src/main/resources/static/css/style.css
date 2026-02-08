@@ -26,7 +26,6 @@ ul{
     margin: 0;
 }
 
-
 .navigation {  
     position: fixed;
     left: 0;
@@ -45,7 +44,6 @@ ul{
     justify-items: center;
     align-items: center;
 }
-
 
 .title {
     padding: 5%;
@@ -467,7 +465,6 @@ a.logo-btn{
     align-self: center;
     margin-bottom: 1%;
     overflow: hidden;
-
 }
 
 .event-des{
@@ -600,6 +597,16 @@ form{
     padding: 5px;
     border-top: rgb(114, 114, 114) solid 1px;
 }
+
 .red{
     color:blue;
+}
+
+/* Нови правила за подменюто КАЛЕНДАР */
+#menu-up-down {
+    display: none; /* по подразбиране скрито */
+}
+
+#menu-up-down.show {
+    display: block; /* когато JS добави show, се показва */
 }

@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/js/stile.js}">
+    <script th:src="@{/js/stile.js}"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
@@ -116,7 +118,7 @@
 
         <!-- Секция: категории работилници -->
         <div class="section3">
-            <div class="section-art down column"> 
+            <div class="section-art"> 
                 <div class="section-decor-des">
                     <h2 class="a-title center">Сподели вдъхновението с приятели</h2>
                     <div>
@@ -208,7 +210,7 @@
 
         <!-- Секция: Частно парти -->
          <div class="section3">
-            <div class="section-art down column">
+            <div class="section-art">
                 <div class="section-decor-des">
                     <h2 class="a-title center">Създайте свое специално арт преживяване</h2>
                     <div>
@@ -236,7 +238,7 @@
                     <!-- Секция: категория частно събитие наем зала -->
                     <div class="event-wraper up">                                           
                         <div class="calendar">
-                            <ul class="week">
+                            <ul class="week nowrap">
                                 <li class="day" th:each="rentItem:${rentItems}">
                                     <section>
                                        <div class="picture">
@@ -262,7 +264,7 @@
                     <!-- Секция: категория частно събитие работилниц-->
                     <div class="event-wraper up">                                           
                         <div class="calendar">
-                            <ul class="week">
+                            <ul class="week nowrap">
                                 <li class="day" th:each="workshopItem:${workshopItems}">
                                     <section>
                                         <div class="picture">

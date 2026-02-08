@@ -1,4 +1,4 @@
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices */
 @media only screen and (max-width: 1500px) {
     .event-wraper{
         flex-direction: column;
@@ -7,43 +7,34 @@
         width: 60%;
         align-content: end;
     }
-    
+
     .btn-list{
         display: flex;
         justify-content: center;
-        justify-self: center;
         align-self: center;
         margin-bottom: 2px;
     }
 
-    .view{    
-    margin-right: 10px;
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: auto;
-}
+    .view{
+        margin-right: 10px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: auto;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
     .mobile{
         display: none;
     }
-
-}
-
-@media only screen and (max-width: 1050px) {
     .section3{
         flex-direction: column;
     }
-
     .section-art{
         display: flex;
         flex-direction: row;
-        align-content: center;
-        align-self: center;
-        justify-self: center;
         width: 90%;
     }
 
@@ -54,283 +45,211 @@
     .section-decor-des{
         width: 50%;
     }
-    
+
+    .mobile1{
+       max-width: 100%;
+       overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .section3{
+        flex-direction: column;
+    }
+
+    .section-art{
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .section-decor-img{
+        width: 40%;
+    }
+
+    .section-decor-des{
+        width: 50%;
+    }
+
     .mobile1{
         max-width: 100%;
         overflow: hidden;
     }
 
-.dayVew section{
-    display: flex;
-    flex-direction: column;    
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    position: relative;
-    max-width: 100%;
-    padding: 5px;
-    margin: 5px;
+    .dayVew section{
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .calendar-date2{
+        width: 20%;
+    }
 }
 
-.calendar-date2{
-    position: absolute;
-    left: 0;
-    top: 0;
-    text-align: end;
-    width: 20%;
+@media only screen and (max-width: 950px) {
+
+    .body{
+        font-size: small;
+        background-image: url("background_m.PNG");
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 70px;
+        width: 100%;
+        background-color: black;
+    }
+
+    .navigation ul{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 70px;
+    }
+
+    .logo{
+        height: 70px;
+        padding-left: 1vh;
+        padding-bottom: 0;
+    }
+
+    .logo-img{
+        height: 70px;
+        width: auto;
+    }
+
+    #menu{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        padding-right: 4vw;
+        gap: 4vw;
+        background-color: black;
+    }
+
+    #menu li{
+        width: 100%;
+        height: fit-content;
+        background-color: black;
+    }
+
+    #btn-menu{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: fit-content;
+    }
+    
+
+    .menu li a{
+        font-size: 11px;
+    }
+
+    /* ⬇️ това беше под 800px — вече е тук */
+    .desk{
+        display: flex;
+        align-content: flex-end;
+    }
+
+    .flow{
+        display: none;
+    }
+
+    .main-wraper{
+        padding-top: 70px;
+        padding-left: 0;
+        min-height: 80%;
+    }
+
+    .event-des{
+        width: 90%;
+        padding: 2%;
+    }
+
+    .calendar-date,
+    .calendar-type{
+        width: 80px;
+        height: 80px;
+    }
+
+    .footer-menu{
+        flex-direction: column;
+        padding-left: 0;
+    }
 }
 
-}
-        
-@media only screen and (max-width: 900px) {
-.body{
-    font-size: small;
-    background-image: url("background_m.PNG" );
-    background-size: 100% 100%;
-    background-attachment: fixed;
-}
+/* ===== ОСТАНАЛИТЕ СТИЛОВЕ ПОД 800px (БЕЗ НАВИГАЦИЯ) ===== */
+@media only screen and (max-width: 800px) {
 
-.main{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    align-items: center;
-    height: auto;
-}
+    .body{
+        font-size: xx-small;
+    }
 
-.navigation {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 70px;
-    width: 100%;
-    margin: 0;
-    background-color:black;
-    padding: 0;
-    text-align: right;
-}
+    .art{
+        flex-direction: column;
+        width: 85%;
+    }
 
-.navigation ul{
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 70px;
-}
+    .decor-img,
+    .section-decor-img{
+        width: 100%;
+    }
 
-.logo{      
-    height: 70px;
-    padding-left: 1vh;
-    padding-bottom: 0;
-    padding-top: 0;
-}
+    .decor-des,
+    .section-decor-des{
+        width: 100%;
+        gap: 15px;
+    }
 
-.logo-img{
-    height: 70px;
-    width: auto;
-}
+    .section-art{
+        flex-direction: column;
+        width: 90%;
+    }
 
-.menu{
-    display: flex;
-    gap: 4vw;
-    flex-direction: column;
-    align-self: flex-end;
-    align-content: center;
-    justify-items: center;
-    padding-right: 4vw;
-}
+    .btn-list{
+        flex-wrap: wrap;
+    }
 
-.menu li a {
-    font-size: 11px;
-}
-
-.main-wraper{    
-    overflow: hidden;
-    padding-top: 70px;
-    justify-self: center;
-    align-self: center;
-    width: stretch;
-    height: stretch;
-    min-height: 80%;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.up{    
-    flex-direction: column-reverse;
-}
-.event-des{
-    padding: 2%;
-    align-self: center;
-    justify-self: center;
-    justify-items: center;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 2%;
-}
-.calendar-date{
-    position: absolute;
-    left: 0;
-    text-align: end;
-    width: 80px;
-    height: 80px;
-}
-.calendar-type{
-    position: absolute;
-    right: 0;
-    text-align: end;
-    width: 80px;
-    height: 80px;
-}
-
-.btn-list{
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    margin-bottom: 2px;
-}
-
-.mobile{
-    display: none;
-}
-.no-gab{
-    margin-top: 0;
-}
-
-.mobile1{
-    display: no;
-}
-
-.footer-menu{
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-}
-
+    .mobile1{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 700px) {
-   .info div{
-    padding-left: 15px;
-    padding-right: 15px;
-}
-}
-
-@media only screen and (max-width: 600px) {
-    .body{
-    font-size: xx-small;
-    background-image: url("background_m.PNG" );
-    background-size: 100% 100%;
-    background-attachment: fixed;
-}
-
-.art{
-    flex-direction: column;
-    align-content: center;
-    align-self: center;
-    justify-self: center;
-    width: 85%;
-}
-
-.decor-img{
-    width: 100%;
-}
-
-.decor-des{
-    width: 100%;
-    justify-self: center;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.section-art{
-    flex-direction: column;
-    align-content: center;
-    align-self: center;
-    justify-self: center;
-    width: 90%;
-}
-
-.section-decor-img{
-    width: 100%;
-}
-
-.section-decor-des{
-    width: 100%;
-    justify-self: center;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.btn-list{
-    flex-wrap: wrap;
-}
-
-.desk{
-    display: block;
-}
-.flow{
-    display: none;
-}
-
-.mobile1{
-    display: none;
-}
-
+    .info div{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
-.back-img{
-    align-self: center;
-    justify-self: center;
-    background-image: url("index_giftCard_image.png");
-    background-size: auto 105%;
-    background-attachment:local;
-    background-position: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
+    .back-img,
+    .about-img{
+        background-size: auto 105%;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 
-.about-img{
-    align-self: center;
-    justify-self: center;
-    background-image: url("index_workshops_image.png");
-    background-size: auto 105%;
-    background-attachment:local;
-    background-position: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
+    .workshop{
+        width: 300px;
+    }
 
-.workshop {
-    margin-right: 10px;
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    width: 300px;
-}
+    .day section div.picture{
+        width: 280px;
+        height: 280px;
+    }
 
-.day section div.picture{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 280px;
-    height: 280px;
-    overflow: hidden;
-}
-.day section div.picture img.img{
-    justify-self: center;
-    align-self: center;
-    max-width: 280px;
-    max-height: 280px;
-}
+    .day section div.picture img.img{
+        max-width: 280px;
+        max-height: 280px;
+    }
 }
