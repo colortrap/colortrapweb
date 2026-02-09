@@ -143,10 +143,12 @@ public class WorkshopService {
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (workshopView.getSuitableFor().equals("За деца")){
-                    view.add(workshopView);
-                    if (view.size() >= 3){
-                        break;
+                if (!workshopView.getEventType().equals("Изложба")){
+                    if (workshopView.getSuitableFor().equals("За деца") || workshopView.getSuitableFor().equals("За всички")){
+                        view.add(workshopView);
+                        if (view.size() >= 3){
+                            break;
+                        }
                     }
                 }
             }
@@ -165,8 +167,10 @@ public class WorkshopService {
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (workshopView.getSuitableFor().equals("За деца")){
-                    view.add(workshopView);
+                if(!workshopView.getEventType().equals("Изложба")){
+                    if (workshopView.getSuitableFor().equals("За деца") || workshopView.getSuitableFor().equals("За всички")){
+                        view.add(workshopView);
+                    }
                 }
             }
         }
@@ -184,10 +188,12 @@ public class WorkshopService {
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (workshopView.getSuitableFor().equals("За възрастни")){
-                    view.add(workshopView);
-                    if (view.size() >= 3){
-                        break;
+                if (!workshopView.getEventType().equals("Изложба")){
+                    if (workshopView.getSuitableFor().equals("За възрастни") || workshopView.getSuitableFor().equals("За всички")){
+                        view.add(workshopView);
+                        if (view.size() >= 3){
+                            break;
+                        }
                     }
                 }
             }
@@ -206,8 +212,10 @@ public class WorkshopService {
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (workshopView.getSuitableFor().equals("За възрастни")){
-                    view.add(workshopView);
+                if(!workshopView.getEventType().equals("Изложба")){
+                    if (workshopView.getSuitableFor().equals("За възрастни") || workshopView.getSuitableFor().equals("За всички")){
+                        view.add(workshopView);
+                    }
                 }
             }
         }

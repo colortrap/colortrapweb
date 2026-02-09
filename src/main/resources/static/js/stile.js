@@ -7,25 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuUpDown = document.getElementById("menu-up-down");
     const imgUpDown = document.getElementById("img-up-down");
 
-    /* ---------- helper functions ---------- */
-    function slideDown(el) {
-        el.style.display = "flex";
-        el.style.overflow = "hidden";
-        el.style.maxHeight = el.scrollHeight + "px";
-        el.style.transition = "max-height 0.3s ease";
-    }
-
-    function slideUp(el) {
-        el.style.overflow = "hidden";
-        el.style.maxHeight = "0";
-        el.style.transition = "max-height 0.3s ease";
-        setTimeout(() => {
-            el.style.display = "none";
-        }, 300);
-    }
-
+    /* ---------- helper function ---------- */
     function isVisible(el) {
         return window.getComputedStyle(el).display !== "none";
+    }
+
+    function showElement(el) {
+        el.style.display = "flex"; // само display, без max-height
+    }
+
+    function hideElement(el) {
+        el.style.display = "none";
     }
 
     /* ---------- MOBILE MAIN MENU ---------- */
@@ -35,11 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             flowItems.forEach(item => {
                 if (isVisible(item)) {
-                    slideUp(item);
+                    hideElement(item);
                 } else {
-                    slideDown(item);
+                    showElement(item);
                 }
             });
+
+            // ❌ Ако подменюто е отворено, да се затвори автоматично
+            if (menuUpDown && isVisible(menuUpDown)) {
+                hideElement(menuUpDown);
+                imgUpDown.src = "/pictures/nav/down.png";
+            }
         });
     }
 
@@ -49,10 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
 
             if (isVisible(menuUpDown)) {
-                slideUp(menuUpDown);
+                hideElement(menuUpDown);
                 imgUpDown.src = "/pictures/nav/down.png";
             } else {
-                slideDown(menuUpDown);
+                showElement(menuUpDown);
                 imgUpDown.src = "/pictures/nav/up.png";
             }
         });
@@ -61,18 +59,18 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ---------- RESIZE SYNC ---------- */
     window.addEventListener("resize", () => {
         if (window.innerWidth >= 950) {
+            // десктоп: показваме всички елементи
             flowItems.forEach(item => {
-                item.style.display = "flex";
-                item.style.maxHeight = "none";
+                showElement(item);
             });
-            slideUp(menuUpDown);
+            hideElement(menuUpDown);
             imgUpDown.src = "/pictures/nav/down.png";
         } else {
+            // мобилно: скриваме елементите по подразбиране
             flowItems.forEach(item => {
-                item.style.display = "none";
-                item.style.maxHeight = "0";
+                hideElement(item);
             });
-            slideUp(menuUpDown);
+            hideElement(menuUpDown);
             imgUpDown.src = "/pictures/nav/down.png";
         }
     });

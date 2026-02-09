@@ -16,9 +16,11 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    
+
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/js/stile.js}">
+    <script th:src="@{/js/stile.js}"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
@@ -60,7 +62,7 @@
 
         <div class="art">
             <div class="decor-img">
-                <img class="a-title-img" src="pictures/decor/privateParty_image.png" alt="Частна арт вечер с балони и акварелна декорация в COLORTRAP" onContextMenu="return false;">
+                <img class="a-title-img" src="pictures/decor/index_privateParty_image.png" alt="Частна арт вечер с балони и акварелна декорация в COLORTRAP" onContextMenu="return false;">
             </div>
             <div class="decor-des">
                 <h1 class="a-title center">Празнувайте различно, творете заедно в COLORTRAP</h1>
@@ -74,6 +76,20 @@
                     <p class="a-title">Именни дни и лични поводи...</p>
                     <p class="a-title">Събиране с приятели...</p>
                 </div>
+                <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pfc-forkids}" >Работилници за деца</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Работилници за възрастни</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/promo}" >Специални предложения</a>
+                        </div>
+                    </div>
             </div>            
         </div>
         

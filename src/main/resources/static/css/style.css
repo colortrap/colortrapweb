@@ -31,7 +31,7 @@ ul{
     left: 0;
     top: 0;
     height: 100%;
-    width: 150px; 
+    width: 130px; 
     margin: 0;
     background-color:black;    
     padding: 0;
@@ -124,7 +124,7 @@ img.a-title-img{
     width: stretch;
     height: stretch;
     min-height: 70vh;
-    padding-left: 150px;
+    padding-left: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;    
@@ -298,6 +298,7 @@ button{
     font-weight: bold;
     font-size: 0.9rem;
     text-decoration: none;
+    width: fit-content;
 }
 
 .menu{
@@ -309,6 +310,8 @@ button{
 
 .menu-img{
     width: 30px;
+    float: right;
+    padding: 20px;
 }
 .open-img{
     height: 1em;
@@ -316,6 +319,16 @@ button{
 
 .menu li{
     padding-bottom: 1vh;
+}
+
+.menu li a {
+    font-size: 11px;
+    padding: 8px;
+}
+
+.menu-up-down ul li{
+    font-size: 11px;
+    padding: 8px;
 }
 
 .logo{        
@@ -383,7 +396,7 @@ a.logo-btn{
     gap: 30px;
     flex-wrap: wrap;
     flex-direction: column;
-    padding-left: 150px;
+    padding-left: 130px;
     padding-top: 5vh;
     padding-bottom: 2vh;
     justify-content: space-around;
@@ -610,3 +623,9 @@ form{
 #menu-up-down.show {
     display: block; /* когато JS добави show, се показва */
 }
+
+#menu-up-down ul{
+    display: flex;
+    flex-direction: column;
+}
+

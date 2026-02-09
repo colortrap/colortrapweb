@@ -132,27 +132,34 @@
         display: flex;
         flex-direction: column;
         align-self: flex-end;
-        padding-right: 4vw;
-        gap: 4vw;
         background-color: black;
+    }
+
+    #menu li a{
+        font-size: medium;
     }
 
     #menu li{
         width: 100%;
         height: fit-content;
         background-color: black;
+        padding: 0;
     }
 
     #btn-menu{
-        padding-top: 20px;
-        padding-bottom: 20px;
         width: fit-content;
     }
-    
 
-    .menu li a{
-        font-size: 11px;
-    }
+    #menu-up-down {
+    display: none;
+}
+
+#menu-up-down.show {
+    display: flex;
+    flex-direction: column; /* когато JS добави show, се показва */
+    background-color: black;
+    
+}
 
     /* ⬇️ това беше под 800px — вече е тук */
     .desk{

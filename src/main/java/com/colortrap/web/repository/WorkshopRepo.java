@@ -43,7 +43,7 @@ public class WorkshopRepo {
 
             if(!(workshop.getEventType().equals("Изложба")||workshop.getEventType().equals("Частно събитие"))){
             workshop.setDescription(contentProvider.getDescription(workshop.getTitle(), workshop.getEventType()));
-            workshop.setTitle("'" + workshop.getTitle() + "'");
+            workshop.setTitle(contentProvider.getTitle(workshop.getTitle(), workshop.getEventType()));
             }
         }
         return !stuff.isEmpty();
