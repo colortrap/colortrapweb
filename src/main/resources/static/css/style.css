@@ -26,7 +26,6 @@ ul{
     margin: 0;
 }
 
-
 .navigation {  
     position: fixed;
     left: 0;
@@ -45,7 +44,6 @@ ul{
     justify-items: center;
     align-items: center;
 }
-
 
 .title {
     padding: 5%;
@@ -66,13 +64,16 @@ img.a-title-img{
 .decor-img{   
     justify-self: center;
     align-self: center;
-    width: 40%;
+    width: 60%;
 }
 
 .decor-des{
-    width: 60%;
+    width: 40%;
     justify-self: center;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .down{
@@ -88,7 +89,7 @@ img.a-title-img{
     display: flex;
     flex-direction: column;
     gap: 1px;
-    width: 300px;
+    width: 220px;
 }
 
 .workshop p {
@@ -106,6 +107,7 @@ img.a-title-img{
 .main{
     position: relative;
     display: flex;
+    flex-direction: column;
     padding: 0;
     align-items: center;
     height: auto;
@@ -113,30 +115,40 @@ img.a-title-img{
 
 .main-wraper{
     overflow: hidden;
-    padding-top: 2%;
     justify-self: center;
     align-self: center;
     align-items: center;
     justify-items: center;
+    align-content: center;
+    justify-content: center;
     width: stretch;
     height: stretch;
-    min-height: 100vh;
+    min-height: 70vh;
     padding-left: 130px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around;    
+    gap: 30px;
 }
 
-div.footer{
+.footer{
     display: flex;
     justify-content: space-around;
     align-content: center;
     padding: 10px;
-    margin: 0;   
-    
+    margin: 0;
+    gap: 1%;
 }
 
-div.sig{
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.sig{
     text-align: center;
     width: auto;
 }
@@ -165,24 +177,21 @@ div.sig{
     flex-wrap:wrap;
     width: fit-content;
     padding: 0;
-    margin: 0;
-    margin-top: 5%;   
+    margin: 0;  
     width: 100%; 
 }
 
 .day{
     display: flex;
-    padding: 5px;
-    margin: 5px;   
+    flex-wrap: wrap;
+    margin: 5px; 
 }
 
 .dayVew{
     display: flex;
     align-content: center;
     justify-content: center;
-    padding: 5px;
-    margin: 5px;
-    width: 80%;
+    width: 95%;
 }
 
 .day section {
@@ -198,7 +207,7 @@ div.sig{
 
 .dayVew section{
     display: flex;
-    flex-direction: column;    
+    flex-direction: row;    
     justify-content: space-between;
     align-items: center;
     gap: 10px;
@@ -212,8 +221,8 @@ div.sig{
     display: flex;
     justify-content: center;
     align-content: center;
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -222,15 +231,15 @@ div.sig{
     justify-content: center;
     align-content: center;
     width: 60vw;
-    height: 60vw;
+    height: auto;
     overflow: hidden;
 }
 
 .day section div.picture img.img{
     justify-self: center;
     align-self: center;
-    max-width: 280px;
-    max-height: 280px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .dayVew section div.picture img.img{
@@ -274,6 +283,12 @@ div.sig{
     color: rgb(255, 255, 255);
     margin: 15px;
     height: fit-content;
+    width: 140px;
+}
+
+button{
+    background-color:transparent;
+    border: none;
 }
 
 .nav-btn{
@@ -283,6 +298,7 @@ div.sig{
     font-weight: bold;
     font-size: 0.9rem;
     text-decoration: none;
+    width: fit-content;
 }
 
 .menu{
@@ -292,8 +308,27 @@ div.sig{
     justify-items: center;
 }
 
+.menu-img{
+    width: 30px;
+    float: right;
+    padding: 20px;
+}
+.open-img{
+    height: 1em;
+}
+
 .menu li{
     padding-bottom: 1vh;
+}
+
+.menu li a {
+    font-size: 11px;
+    padding: 8px;
+}
+
+.menu-up-down ul li{
+    font-size: 11px;
+    padding: 8px;
 }
 
 .logo{        
@@ -317,11 +352,12 @@ a.logo-btn{
 
 .btn-list{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     justify-self: center;
     align-self: center;
     margin-bottom: 2px;
-    max-width: 300px;
+    width: fit-content;
 }
 
 .btn-list div{   
@@ -356,15 +392,18 @@ a.logo-btn{
 }
 
 .footer-menu{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 130px;
     padding-top: 5vh;
     padding-bottom: 2vh;
-    width: 70vw;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
     font-size: 1rem;
     text-decoration: none;
+    text-align: center;   
 }
 
 .footer-menu div h2{
@@ -374,6 +413,8 @@ a.logo-btn{
 .menu-line{
     display: flex;
     font-size: 0.8em;
+    text-align: center;
+    align-self: center;
 }
 
 .line-space{
@@ -383,7 +424,7 @@ a.logo-btn{
 
 .art{
     display: flex;
-    width: 70%;
+    width: 80%;
     align-content: center;
     align-self: center;
     align-items: center;
@@ -407,12 +448,21 @@ a.logo-btn{
     width: fit-content;  
 }
 
-.calendar-date{
+.calendar-date{    
     position: absolute;
     left: 0;
     text-align: end;
     width: 20%;
 }
+
+.calendar-date2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: end;
+    width: 10%;
+}
+
 .calendar-type{
     position: absolute;
     right: 0;
@@ -422,10 +472,12 @@ a.logo-btn{
 
 .event-wraper{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
     align-self: center;
     margin-bottom: 1%;
+    overflow: hidden;
 }
 
 .event-des{
@@ -440,3 +492,140 @@ a.logo-btn{
 .text-justify {
     text-align: justify;
 }
+
+.hidden{
+    display: none;
+}
+
+.desk{
+    display: none;
+}
+
+.flow{
+    display: block;
+}
+
+.section1{
+    color:rgb(214, 214, 214);
+    width: 100%;
+    background-color:black;
+}
+
+.section2{
+    flex-direction: column;
+}
+
+.section3{
+    display: flex;
+    width: 98%;
+    justify-content: space-evenly;
+    align-content: space-evenly;    
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nowrap{    
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.section-art{
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: center;
+    justify-items: center;
+    width: 30%;
+}
+
+.section-decor-img{
+    width: 100%;
+}
+
+.section-decor-des{
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile1{
+    max-width: 68%;
+    overflow: hidden;
+}
+
+.back-img{
+    align-self: center;
+    justify-self: center;
+    background-image: url("index_giftCard_image.png");
+    background-size: 100% auto;
+    background-attachment:local;
+    background-position: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.about-img{
+    align-self: center;
+    justify-self: center;
+    background-image: url("index_workshops_image.png");
+    background-size: 100% auto;
+    background-attachment:local;
+    background-position: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: rgb(129, 129, 129, 0.8);
+}
+
+.title-section{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.promo{
+    text-decoration: line-through;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    border-top: rgb(114, 114, 114) solid 1px;
+}
+
+.red{
+    color:blue;
+}
+
+/* Нови правила за подменюто КАЛЕНДАР */
+#menu-up-down {
+    display: none; /* по подразбиране скрито */
+}
+
+#menu-up-down.show {
+    display: block; /* когато JS добави show, се показва */
+}
+
+#menu-up-down ul{
+    display: flex;
+    flex-direction: column;
+}
+

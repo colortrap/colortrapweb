@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="bg-BG" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      class="sr js_active vc_desktop vc_transform vc_transform ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <title>COLORTRAP - Календар за възрастни на арт събитията</title>
+    <meta name="description" content="Разгледайте календара за възрастни на COLORTRAP – арт работилници, рисуванес и вино, творчески вечери и специални събития за всички възрасти. Не пропускайте вдъхновяващи преживявания в Пловдив.">
+    
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/js/stile.js}">
+    <script th:src="@{/js/stile.js}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "COLORTRAP",
+      "image": "pictures/logo/loge_with_name.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Петко Каравелов 20",
+        "addressLocality": "Пловдив",
+        "addressCountry": "BG"
+      },
+      "email": "colortrap.ltd@gmail.com",
+      "telephone": "032/557735",
+      "url": "https://www.colortrap.azurewebsites.net",
+      "sameAs": ["https://www.facebook.com/people/Colortrap/61583353547226/"]
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+    <th:block>
+        <div th:replace="~{fragments/nav}"></div>
+    </th:block>
+
+    <div class="main-wraper"> 
+        <!-- Секция: Рисуване и вино -->
+        <div class="art">
+            <div class="decor-img">
+                <img class="a-title-img" src="pictures/decor/index_paintAndSip_image.png" alt="Рисуване и вино COLORTRAP" onContextMenu="return false;">
+            </div>
+            <div class="decor-des">
+                <div>
+                    <h1 class="a-title center">Арт работилници за възрастни</h1>
+                    <p class="text-justify no-gab">Представете си вечер, в която времето спира. Усмивките се оглеждат в цветовете, а ароматът на вино изпълва атмосферата. В арт работилниците за възрастни в COLORTRAP ще се потопите в магията на творчеството – дори да не сте държали четка отдавна.</p>
+                    <p class="text-justify mobile">В уютна и непринудена обстановка ще творите, ще се смеете и ще откривате нови страни от себе си и хората около вас. Виното ще ви помогне да се отпуснете и да позволите на въображението си да води всяка линия и цвят.</p>
+                    <p class="text-justify mobile">Най-хубавото? Вашата творба остава за вас – личен спомен от една вечер, изпълнена с творчество, настроение и истински емоции. Елате сами, с приятел или с компания и се потопете в изживяване, което оставя следа в сърцето.</p>
+                    <div class="btn-list">
+                        <div>
+                            <a class="btn" th:href="@{/calendar-ptc-foradults}" >Цени за 2+ участия</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Цени за 5+ участия</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-forkids}" >Работилници за деца</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <th:block>
+            <ul th:replace="~{fragments/itemlist}"></ul>
+        </th:block>
+    </div>
+    
+
+</div>
+<th:block>
+    <div th:replace="~{fragments/foot}"></div>
+</th:block>
+</body>
+</html>

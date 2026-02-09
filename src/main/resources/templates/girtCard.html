@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
  
     <title>COLORTRAP - Подарете вдъхновение | Gift Card за арт преживявания</title>
-    <meta name="description" content="Подарете вдъхновение с Gift Card на COLORTRAP в Пловдив– арт работилници, рисуванес и вино, творчески вечери и уникални изживявания. Перфектният подарък за всички възрасти и поводи.">
+    <meta name="description" content="Подарете вдъхновение с Gift Card на COLORTRAP– арт работилници, рисуванес и вино, творчески вечери и уникални изживявания. Перфектният подарък за всички възрасти и поводи.">
     
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/js/stile.js}">
+    <script th:src="@{/js/stile.js}"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
@@ -56,13 +58,14 @@
     </th:block>
 
     <div class="main-wraper">
-        <h1 class="a-title center">Подарете вдъхновение с COLORTRAP</h1>
+        
 
         <div class="art down">            
             <div class="decor-img">
                 <img class="a-title-img" src="pictures/decor/giftCard_image.png" alt="Gift Card за арт преживяване в COLORTRAP Пловдив" onContextMenu="return false;">
             </div>
             <div class="decor-des">
+                <h1 class="a-title center">Подарете вдъхновение с COLORTRAP</h1>
                 <div>                    
                     <p class="text-justify no-gab">Най-хубавите подаръци не са винаги най-скъпите – те са онези, които идват от сърце и носят усмивка. В <strong>COLORTRAP</strong> вярваме, че изкуството е един от най-красивите начини да подариш преживяване. Затова създадохме нашата Gift Card – персонален подарък, с който давате възможност на някого да се потопи в света на цветовете, въображението и творчеството.</p>
                     <p class="text-justify">Ваучерът може да бъде използван за участие в арт вечери, работилници или други творчески събития в COLORTRAP. Той е чудесен избор за рожден ден, имен ден, празник или просто като мил жест без специален повод – защото вдъхновението винаги е подходящ подарък.</p>                    
@@ -88,17 +91,16 @@
                         <a class="btn" th:href="@{/}" >Начало</a>
                     </div>
                     <div>
-                        <a class="btn" th:href="@{/calendar}" >Календар</a>
+                        <a class="btn" th:href="@{/calendar-pnc-all}">Разгледай календара</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <th:block>
-            <div th:replace="~{fragments/foot}"></div>
-        </th:block>
+        
     </div>
 </div>
-
+<th:block>
+    <div th:replace="~{fragments/foot}"></div>
+</th:block>
 </body>
 </html>

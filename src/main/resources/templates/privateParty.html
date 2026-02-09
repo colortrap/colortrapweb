@@ -16,9 +16,11 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    
+
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/js/stile.js}">
+    <script th:src="@{/js/stile.js}"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
@@ -56,52 +58,67 @@
     </th:block>
 
     <div class="main-wraper">
-        <h1 class="a-title center">Празнувайте различно, творете заедно в COLORTRAP</h1>
+        
 
         <div class="art">
             <div class="decor-img">
-                <img class="a-title-img" src="pictures/decor/privateParty_image.png" alt="Частна арт вечер с балони и акварелна декорация в COLORTRAP" onContextMenu="return false;">
+                <img class="a-title-img" src="pictures/decor/index_privateParty_image.png" alt="Частна арт вечер с балони и акварелна декорация в COLORTRAP" onContextMenu="return false;">
             </div>
             <div class="decor-des">
+                <h1 class="a-title center">Празнувайте различно, творете заедно в COLORTRAP</h1>
                 <div>
                     <p class="text-justify mobile">Всеки повод заслужава нещо повече от традиционен празник – той заслужава преживяване, което оставя следа. В <strong>COLORTRAP</strong> превръщаме специалните ви моменти в цветни истории, изпълнени с усмивки, въображение и споделена радост. Нашите частни арт вечери са създадени, за да съберат хората чрез изкуството – в атмосфера, която вдъхновява, отпуска и сближава.</p>
                     <p class="text-justify no-gab">В COLORTRAP вярваме, че изкуството е най-красивият начин да създаваме спомени. Независимо от повода свържете се с нас и ние ще се погрижим вечерта ви да бъде топла, вдъхновяваща и незабравима.</p>
                     <p class="text-justify">Подарете си празник, който ще остане – не само в снимки, а и в усещането за нещо истинско, споделено и красиво.</p>
-                </div>
-            </div>
-            
-        </div>
-        <div class="art">
-            <div class="decor-des">
-                <div>
-                    <h2 class="a-title">Рожден ден с щипка творчество</h2>
-                    <p class="text-justify">Вместо обичайното парти, отпразнувайте рождения си ден с четки, цветове и настроение. Под ръководството на нашите художници всеки гост ще създаде своя картина, а накрая всички ще си тръгнете с красив спомен – не само в сърцето, но и върху платно. Подходящо както за възрастни, така и за деца, които обичат да творят и да се забавляват.</p>
-
-                    <h2 class="a-title">Тиймбилдинг или фирмено събитие</h2>
-                    <p class="text-justify">Изкуството има силата да обединява, а съвместното творчество е най-добрият начин екипът да се свърже по нов начин. Нашите арт вечери за фирми и организации предлагат непринудена среда, в която колегите се усмихват, споделят и откриват нови страни един в друг. Ще се погрижим за всичко – от организацията до материалите – така че вие да се насладите на преживяването.</p>
-
-                    <h2 class="a-title">Моминско парти с артистичен дух</h2>
-                    <p class="text-justify">За бъдещата булка – вечер, пълна с цвят, смях и вдъхновение. Организирайте моминско парти, което ще остане в спомените като нежно и креативно преживяване. Всяка от участничките ще може да създаде нещо свое – символ на приятелството и радостта от този специален момент.</p>
-
-                    <h2 class="a-title">Именни дни и лични поводи</h2>
-                    <p class="text-justify">Понякога няма нужда от голяма причина, за да отпразнуваме живота. Независимо дали отбелязвате имен ден, годишнина или просто искате да си подарите време за себе си, една арт вечер е чудесен начин да внесете малко повече цвят и вдъхновение в деня си. Всяко събитие може да бъде персонализирано според вашите желания и настроение.</p>
-
-                    <h2 class="a-title">Събиране с приятели</h2>
-                    <p class="text-justify">Най-хубавите вечери са онези, в които споделяме смях, разговори и нещо ново. Организирайте арт вечер с приятели – без повод, просто за удоволствието да сте заедно и да творите. Ще рисувате, ще експериментирате и ще се насладите на усещането, че времето спира, когато въображението оживява.</p>
+                    <p class="a-title">Рожден ден с щипка творчество...</p>
+                    <p class="a-title">Тиймбилдинг или фирмено събитие...</p>
+                    <p class="a-title">Моминско парти с артистичен дух...</p>
+                    <p class="a-title">Именни дни и лични поводи...</p>
+                    <p class="a-title">Събиране с приятели...</p>
                 </div>
                 <div class="btn-list">
-                    <div>
-                        <a class="btn" th:href="@{/}" >Начало</a>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pfc-forkids}" >Работилници за деца</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Работилници за възрастни</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/promo}" >Специални предложения</a>
+                        </div>
                     </div>
-                </div>
-            </div>
+            </div>            
         </div>
-
-        <th:block>
-            <div th:replace="~{fragments/foot}"></div>
-        </th:block>
+        
+        <ul class="week">
+            <li class="day" th:each="workshop:${workshops}">
+                <section>
+                    <div class="picture">
+                        <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение от арт събитие в COLORTRAP" onContextMenu="return false;">
+                    </div>
+                    <div class="workshop">
+                        <div>
+                            <h3 th:text ="${workshop.eventType}" class="normal">Тип събитие</h3>
+                            <h3 th:text ="${workshop.title}" class="normal">Заглавие на събитие</h3>
+                        </div>
+                        <p th:text = "${workshop.suitableFor}">Подходящо за всички възрасти</p>
+                        <p th:text = "${workshop.price}">40лв. (20.45 &isin;)</p>
+                        <div class="btn-list">
+                            <div>
+                                <a class="btn" th:href="@{|/workshop-pncw/${workshop.id}|}" >Виж повече</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
     </div>
 </div>
-
+<th:block>
+    <div th:replace="~{fragments/foot}"></div>
+</th:block>
 </body>
 </html>

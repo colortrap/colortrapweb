@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="bg-BG" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      class="sr js_active vc_desktop vc_transform vc_transform ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <title>COLORTRAP - Изложби и презентации в COLORTRAP</title>
+    <meta name="description" content="Изложби и презентации в COLORTRAP. Разгледайте предстоящите събития, рисуване и вино, работилници, изложби и специални вечери за творчество.">
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/js/stile.js}">
+    <script th:src="@{/js/stile.js}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "COLORTRAP",
+      "image": "pictures/logo/loge_with_name.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Петко Каравелов 20",
+        "addressLocality": "Пловдив",
+        "addressCountry": "BG"
+      },
+      "email": "colortrap.ltd@gmail.com",
+      "telephone": "032/557735",
+      "url": "https://www.colortrap.azurewebsites.net",
+      "sameAs": ["https://www.facebook.com/people/Colortrap/61583353547226/"]
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+    <th:block>
+        <div th:replace="~{fragments/nav}"></div>
+    </th:block>
+
+    <div class="main-wraper">
+        <ul class="week">
+            <li class="dayVew">
+                <section>
+                    <div>
+                        <img class="calendar-date2" th:src="|/${workshop.datePicUrl}|" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                        <div class="picture">
+                            <img class="img" th:src="|/${workshop.pictureUrl}|" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="view">
+                            <div>
+                                <h2 th:text="${workshop.eventType}" class="normal">Рисуване и вино</h2>
+                                <h2 th:text="${workshop.title}" class="normal">Име на картината</h2>
+                            </div>
+                            <p class="text-justify" th:text="${workshop.description}">Colortrap ви кани да нарисуваме заедно "име на картината".
+                            Всеки посетител ще получи всички необходими материали на място и единствено е необходимо да 
+                            дойдете с настроение за едно незабравимо изживяване.
+                             Нашият художник ще Ви покаже как да нарисувате Вашия собствен шедьовър, който да отнесете с гордост вкъщи.                             
+                             Опит не е необходим! Запишете се и резервирайте своето място сега. Очакваме Ви!</p>
+                             <div>
+                                <p>Подходящо:</p>
+                                <p th:text = "${workshop.suitableFor}"></p>
+                            </div>
+                            <div>
+                                <p>Място - COLORTRAP</p>
+                                <p>Пловдив, ул. Петко Каравелов 20</p>
+                            </div>
+                            <div>
+                                <p>Начало:</p>
+                                <p th:text="${workshop.startAt}">18:30</p>
+                            </div>
+                            <div>
+                                <p>Организатор</p>
+                                <p>COLORTRAP</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+    </div>
+
+    
+
+</div>
+
+<th:block>
+    <div th:replace="~{fragments/foot}"></div>
+</th:block>
+</body>
+</html>

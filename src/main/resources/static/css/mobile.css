@@ -1,178 +1,262 @@
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices */
 @media only screen and (max-width: 1500px) {
     .event-wraper{
         flex-direction: column;
-    }
-    .mobile{
-        display: none;
     }
     .event-des{
         width: 60%;
         align-content: end;
     }
-    
+
     .btn-list{
         display: flex;
         justify-content: center;
-        justify-self: center;
         align-self: center;
         margin-bottom: 2px;
     }
 
-    .view{    
-    margin-right: 10px;
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%;
-}
-}
-        
-@media only screen and (max-width: 900px) {
-.body{
-    font-size: small;
-    background-image: url("background_m.PNG" );
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    .view{
+        margin-right: 10px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: auto;
+    }
 }
 
-.main{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    align-items: center;
-    height: auto;
+@media only screen and (max-width: 1200px) {
+    .mobile{
+        display: none;
+    }
+    .section3{
+        flex-direction: column;
+    }
+    .section-art{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .section-decor-img{
+        width: 40%;
+    }
+
+    .section-decor-des{
+        width: 50%;
+    }
+
+    .mobile1{
+       max-width: 100%;
+       overflow: hidden;
+    }
 }
 
-.navigation {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 70px;
-    width: 100%;
-    margin: 0;
-    background-color:black;
-    padding: 0;
-    text-align: right;
+@media only screen and (max-width: 1050px) {
+    .section3{
+        flex-direction: column;
+    }
+
+    .section-art{
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .section-decor-img{
+        width: 40%;
+    }
+
+    .section-decor-des{
+        width: 50%;
+    }
+
+    .mobile1{
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .dayVew section{
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .calendar-date2{
+        width: 20%;
+    }
 }
 
-.navigation ul{
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 70px;
-}
+@media only screen and (max-width: 950px) {
 
-.logo{      
-    height: 70px;
-    padding-left: 1vh;
-    padding-bottom: 0;
-    padding-top: 0;
-}
+    .body{
+        font-size: small;
+        background-image: url("background_m.PNG");
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
 
-.logo-img{
-    height: 70px;
-    width: auto;
-}
+    .main{
+        flex-direction: column;
+        align-items: center;
+    }
 
-.menu{
-    display: flex;
-    gap: 4vw;
-    flex-direction: column;
-    align-self: flex-end;
-    align-content: center;
-    justify-items: center;
-    padding-right: 4vw;
-}
+    .navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 70px;
+        width: 100%;
+        background-color: black;
+    }
 
-.menu li a {
-    font-size: 11px;
-}
+    .navigation ul{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 70px;
+    }
 
-.main-wraper{    
-    overflow: hidden;
-    padding-top: 100px;
-    justify-self: center;
-    align-self: center;
-    width: stretch;
-    height: stretch;
-    min-height: 100vh;
-    max-width: 90vw;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+    .logo{
+        height: 70px;
+        padding-left: 1vh;
+        padding-bottom: 0;
+    }
 
-.art{
-    flex-direction: column;
-    align-content: center;
-    align-self: center;
-    justify-self: center;
-    width: 100%;;
-}
+    .logo-img{
+        height: 70px;
+        width: auto;
+    }
 
-.decor-img{
-    width: 50%;
-}
+    #menu{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        background-color: black;
+    }
 
-.decor-des{
-    width: 100%;
-    justify-self: center;
-    align-self: center;
-}
-.up{    
-    flex-direction: column-reverse;
-}
-.event-des{
-    padding: 2%;
-    align-self: center;
-    justify-self: center;
-    justify-items: center;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 2%;
-}
-.calendar-date{
-    position: absolute;
-    left: 0;
-    text-align: end;
-    width: 80px;
-    height: 80px;
-}
-.calendar-type{
-    position: absolute;
-    right: 0;
-    text-align: end;
-    width: 80px;
-    height: 80px;
-}
-.footer-menu{
-    padding-top: 5vh;
-    padding-bottom: 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1rem;
-    text-decoration: none;
-}
-.btn-list{
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    margin-bottom: 2px;
-}
+    #menu li a{
+        font-size: medium;
+    }
 
-.mobile{
+    #menu li{
+        width: 100%;
+        height: fit-content;
+        background-color: black;
+        padding: 0;
+    }
+
+    #btn-menu{
+        width: fit-content;
+    }
+
+    #menu-up-down {
     display: none;
 }
-.no-gab{
-    margin-top: 0;
+
+#menu-up-down.show {
+    display: flex;
+    flex-direction: column; /* когато JS добави show, се показва */
+    background-color: black;
+    
 }
 
+    /* ⬇️ това беше под 800px — вече е тук */
+    .desk{
+        display: flex;
+        align-content: flex-end;
+    }
+
+    .flow{
+        display: none;
+    }
+
+    .main-wraper{
+        padding-top: 70px;
+        padding-left: 0;
+        min-height: 80%;
+    }
+
+    .event-des{
+        width: 90%;
+        padding: 2%;
+    }
+
+    .calendar-date,
+    .calendar-type{
+        width: 80px;
+        height: 80px;
+    }
+
+    .footer-menu{
+        flex-direction: column;
+        padding-left: 0;
+    }
+}
+
+/* ===== ОСТАНАЛИТЕ СТИЛОВЕ ПОД 800px (БЕЗ НАВИГАЦИЯ) ===== */
+@media only screen and (max-width: 800px) {
+
+    .body{
+        font-size: xx-small;
+    }
+
+    .art{
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .decor-img,
+    .section-decor-img{
+        width: 100%;
+    }
+
+    .decor-des,
+    .section-decor-des{
+        width: 100%;
+        gap: 15px;
+    }
+
+    .section-art{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .btn-list{
+        flex-wrap: wrap;
+    }
+
+    .mobile1{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .info div{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .back-img,
+    .about-img{
+        background-size: auto 105%;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .workshop{
+        width: 300px;
+    }
+
+    .day section div.picture{
+        width: 280px;
+        height: 280px;
+    }
+
+    .day section div.picture img.img{
+        max-width: 280px;
+        max-height: 280px;
+    }
 }

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="bg-BG" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      class="sr js_active vc_desktop vc_transform vc_transform ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <title>COLORTRAP - Специални предложения, доведи приятел и сподели арт преживяване</title>
+    <meta name="description" content="Споделете незабравими арт моменти с приятели в COLORTRAP. Повече творчество, повече усмивки и вдъхновение за всички.">
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/js/stile.js}">
+    <script th:src="@{/js/stile.js}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "COLORTRAP",
+      "image": "pictures/logo/loge_with_name.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Петко Каравелов 20",
+        "addressLocality": "Пловдив",
+        "addressCountry": "BG"
+      },
+      "email": "colortrap.ltd@gmail.com",
+      "telephone": "032/557735",
+      "url": "https://www.colortrap.azurewebsites.net",
+      "sameAs": ["https://www.facebook.com/people/Colortrap/61583353547226/"]
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+    <th:block>
+        <div th:replace="~{fragments/nav}"></div>
+    </th:block>
+
+    <div class="main-wraper">
+
+        <!-- Секция: категории работилници -->
+        <div class="section3">
+            <div class="section-art down column"> 
+                <div class="section-decor-des">
+                   <h1 class="a-title center">Повече творчество, повече усмивки</h1>
+                <div>
+                    <p class="text-justify no-gab">В COLORTRAP вярваме, че изкуството не е просто хоби или забавление – то е преживяване, което свързва, вдъхновява и носи радост. А когато създаваме заедно с хората, които обичаме, цветовете стават по-ярки, усмивките – по-широки, а спомените – по-живи.</p>
+                    <p class="text-justify">Затова решихме да направим тези споделени моменти още по-специални.</p>
+                    <p class="text-justify">Творете заедно. Радвайте се заедно. Откривайте заедно.</p>
+                    </div>
+                <div class="btn-list">
+                    <div>
+                        <a class="btn" th:href="@{/calendar-ptc-all}" >Цени за 2+ участия</a>
+                    </div>
+                    <div>
+                        <a class="btn" th:href="@{/calendar-pfc-all}" >Цени за 5+ участия</a>
+                    </div>
+                    <div>
+                        <a class="btn" th:href="@{/calendar-ppc-all}" >Промо</a>
+                    </div>                    
+                    <div>
+                        <a class="btn" th:href="@{/calendar-pnc-all}" >Разгледай календара</a>
+                    </div>
+                </div>
+                </div>
+                <div class="section-decor-img">
+                    <img class="a-title-img" src="pictures/decor/share_image.png" alt="Приятели се наслаждават на арт събитие в COLORTRAP" onContextMenu="return false;">
+                </div> 
+                
+            </div>
+        
+            <div class="mobile1">
+                <div>
+                    <!-- Секция: промоции -->
+                    <div class="event-wraper up">                                           
+                        <div class="calendar">
+                            <ul class="week nowrap">
+                                <li class="day" th:each="promo:${promos}">
+                                    <section>
+                                        <img class="calendar-date" th:src="${promo.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-type" th:src="${promo.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <div class="picture">
+                                            <img class="img" th:src="${promo.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                        </div>
+                                        <div class="workshop">
+                                            <div>
+                                                <h2 th:text ="${promo.eventType}" class="normal"></h2>
+                                            </div>
+                                            <p th:text = "${promo.suitableFor}"></p>
+                                            <p th:text = "${promo.price}"></p>
+                                            <div class="btn-list">
+                                                <div>
+                                                    <a class="btn" th:href="@{|/workshop-pncw/${promo.id}|}" >Виж повече</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Секция: категория 2+ участия -->
+                    <div class="event-wraper up">
+                        <div class="calendar">
+                            <ul class="week nowrap">
+                                <li class="day" th:each="workshop:${workshops}">
+                                    <section>
+                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <div class="picture">
+                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                        </div>
+                                        <div class="workshop">
+                                            <div>
+                                                <h2 class="normal">2+ участия</h2>
+                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                            </div>
+                                            <p th:text = "${workshop.suitableFor}"></p>
+                                            <p class="promo" th:text = "${workshop.price}"></p>
+                                            <p th:text = "${workshop.price2}"></p>
+                                            <div class="btn-list">
+                                                <div>
+                                                    <a class="btn" th:href="@{|/workshop-pncw/${workshop.id}|}" >Виж повече</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Секция: категория 5+ участия -->
+                    <div class="event-wraper up">
+                        <div class="calendar">
+                            <ul class="week nowrap">
+                                <li class="day" th:each="workshop:${workshops}">
+                                    <section>
+                                        <img class="calendar-date" th:src="${workshop.datePicUrl}" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <img class="calendar-type" th:src="${workshop.typePicUrl}" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+                                        <div class="picture">
+                                            <img class="img" th:src="${workshop.pictureUrl}" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                        </div>
+                                        <div class="workshop">
+                                            <div>
+                                                <h2 class="normal">5+ участия</h2>
+                                                <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                                            </div>
+                                            <p th:text = "${workshop.suitableFor}"></p>
+                                            <p class="promo" th:text = "${workshop.price}"></p>
+                                            <p th:text = "${workshop.price5}"></p>
+                                            <div class="btn-list">
+                                                <div>
+                                                    <a class="btn" th:href="@{|/workshop-pncw/${workshop.id}|}" >Виж повече</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+</div>
+<th:block>
+    <div th:replace="~{fragments/foot}"></div>
+</th:block>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+<ul class="week">
+    <li class="day" th:each="workshop:${workshops}">
+        <section>
+            <img class="calendar-date" th:src="|/${workshop.datePicUrl}|" alt="Дата на събитието COLORTRAP" onContextMenu="return false;">
+            <img class="calendar-type" th:src="|/${workshop.typePicUrl}|" alt="Тип арт събитие COLORTRAP" onContextMenu="return false;">
+            <div class="picture">
+                <img class="img" th:src="|/${workshop.pictureUrl}|" alt="Изображение от арт събитие в COLORTRAP" onContextMenu="return false;">
+            </div>
+            <div class="workshop">
+                <div>
+                    <h3 class="normal">2+ участия</h3>
+                    <h3 th:text ="${workshop.eventType}" class="normal">Тип събитие</h3>
+                    <h3 th:text ="${workshop.title}" class="normal">Заглавие на събитие</h3>
+                </div>
+                <p th:text = "${workshop.suitableFor}">Подходящо за всички възрасти</p>
+                <p th:text = "${workshop.price}" class="promo">40лв. (20.45 &isin;)</p>
+                <p th:text = "${workshop.price2}">40лв. (20.45 &isin;)</p>
+                <div class="btn-list">
+                    <div>
+                        <a class="btn" th:href="@{|/workshop-pncw/${workshop.id}|}" >Виж повече</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </li>
+</ul>
