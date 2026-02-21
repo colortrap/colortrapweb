@@ -187,7 +187,7 @@ img.a-title-img{
     margin: 5px; 
 }
 
-.dayVew{
+li.dayVew{
     display: flex;
     flex-direction: column;
     gap: 10px;
