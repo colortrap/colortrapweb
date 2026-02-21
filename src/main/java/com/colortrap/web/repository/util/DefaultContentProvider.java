@@ -69,6 +69,8 @@ public class DefaultContentProvider {
             case "Галантерия и вино" -> url += "wine" + ".png";
             case "Плюшена тел" -> url += "feather-duster" + ".png";
             case "Плюшена тел и вино" -> url += "wine" + ".png";
+            case "Полимерна глина" -> url += "pottery" + ".png";
+            case "Рисуване на дърво" -> url += "paint" + ".png";          
             default -> url += "rejected" + ".png";
         }
 

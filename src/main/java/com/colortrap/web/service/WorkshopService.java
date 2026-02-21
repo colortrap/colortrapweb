@@ -311,9 +311,9 @@ public class WorkshopService {
         checkIsActiveWorkshopsUpToNow();
         for (int i = 0; i < workshops.size() - 1; i++) {
             for (int j = i+1; j < workshops.size(); j++) {
-                if(workshops.get(i).getDay() > workshops.get(j).getDay()
-                        && workshops.get(i).getMonth() >= workshops.get(j).getMonth()
-                        && workshops.get(i).getYear() >= workshops.get(j).getYear()
+                if((workshops.get(i).getDay() > workshops.get(j).getDay() && workshops.get(i).getMonth() == workshops.get(j).getMonth()) ||
+                workshops.get(i).getMonth() > workshops.get(j).getMonth() || 
+                workshops.get(i).getYear() > workshops.get(j).getYear()
                 ){
                  Workshop workshop = workshops.get(i);
                  workshops.set(i, workshops.get(j));
@@ -359,7 +359,7 @@ public class WorkshopService {
         }
     }
 
-        public void checkIsActiveItemsUpToNow(){
+    public void checkIsActiveItemsUpToNow(){
         List<Workshop> workshops = workshopRepo.findAllItems();
 
         if(!workshops.isEmpty() || upToDate.isAfter( dateProvider.getDate())) {
