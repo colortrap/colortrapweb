@@ -25,12 +25,10 @@
     }
 }
 
-@media only screen and (max-width: 1200px) {
+
+@media only screen and (max-width: 1250px) {
     .mobile{
         display: none;
-    }
-    .section3{
-        flex-direction: column;
     }
     .section-art{
         display: flex;
@@ -50,9 +48,6 @@
        max-width: 100%;
        overflow: hidden;
     }
-}
-
-@media only screen and (max-width: 1050px) {
     .section3{
         flex-direction: column;
     }
@@ -152,14 +147,14 @@
 
     #menu-up-down {
     display: none;
-}
+    }
 
-#menu-up-down.show {
+    #menu-up-down.show {
     display: flex;
     flex-direction: column; /* когато JS добави show, се показва */
     background-color: black;
     
-}
+    }
 
     /* ⬇️ това беше под 800px — вече е тук */
     .desk{

@@ -60,6 +60,14 @@
     <div class="main-wraper">
         <ul class="week">
             <li class="dayVew">
+                <div class="view-title">
+                    <h1 th:text="${workshop.eventType}" class="normal">Рисуване и вино</h1>
+                    <h1 th:text="${workshop.title}" class="normal">Име на картината</h1>
+                </div>
+                <div class="view-title">
+                    <p>Подходящо:</p>
+                    <p th:text = "${workshop.suitableFor}"></p>
+                </div>
                 <section>
                     <div>
                         <img class="calendar-date2" th:src="|/${workshop.datePicUrl}|" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
@@ -69,19 +77,12 @@
                     </div>
                     <div>
                         <div class="view">
-                            <div>
-                                <h2 th:text="${workshop.eventType}" class="normal">Рисуване и вино</h2>
-                                <h2 th:text="${workshop.title}" class="normal">Име на картината</h2>
-                            </div>
                             <p class="text-justify" th:text="${workshop.description}">Colortrap ви кани да нарисуваме заедно "име на картината".
                             Всеки посетител ще получи всички необходими материали на място и единствено е необходимо да 
                             дойдете с настроение за едно незабравимо изживяване.
                              Нашият художник ще Ви покаже как да нарисувате Вашия собствен шедьовър, който да отнесете с гордост вкъщи.                             
                              Опит не е необходим! Запишете се и резервирайте своето място сега. Очакваме Ви!</p>
-                             <div>
-                                <p>Подходящо:</p>
-                                <p th:text = "${workshop.suitableFor}"></p>
-                            </div>
+                             
                             <div>
                                 <p>Място - COLORTRAP</p>
                                 <p>Пловдив, ул. Петко Каравелов 20</p>

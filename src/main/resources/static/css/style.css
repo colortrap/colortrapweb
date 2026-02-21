@@ -189,9 +189,20 @@ img.a-title-img{
 
 .dayVew{
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-content: center;
     justify-content: center;
     width: 95%;
+}
+
+.view-title{
+    margin-top: 1em;
+    text-align: center;
+}
+
+p{
+    margin: 2px;
 }
 
 .day section {
@@ -254,8 +265,8 @@ img.a-title-img{
     margin-left: 10px;
     display: flex;
     flex-direction: column;
+    align-self: center;
     gap: 5px;
-    width: 80%;
 }
 
 .view div p{
