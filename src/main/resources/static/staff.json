@@ -2854,7 +2854,7 @@
       "suitableFor": "ADULTS",
       "eventType": "Рисуване и вино",
       "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
-      "title": "Чай с рози",
+      "title": "Цветно утро",
       "description": "Нещо да се каже",
       "isActive": true,
       "price": "20.45 ∈ (40.00 лв.)",
@@ -2928,6 +2928,22 @@
 
     {
       "day": 1,
+      "month": 4,
+      "year": 2026,
+      "startAt": "18:30 - 21:00 ч.",
+      "suitableFor": "ALL",
+      "eventType": "Плюшена тел",
+      "pictureUrl": "pictures/decor/pngtree_colorful-graffiti-art-rainbow-paint-splash_21525033.png",
+      "title": "Саксия с маргаритки",
+      "description": "Нещо да се каже",
+      "isActive": true,
+      "price": "20.45 ∈ (40.00 лв.)",
+      "price2": "18.75 ∈ (36.67 лв.)",
+      "price5": "17.00 ∈ (33.24 лв.)"
+    },
+
+    {
+      "day": 2,
       "month": 4,
       "year": 2026,
       "startAt": "18:30 - 21:00 ч.",

@@ -161,8 +161,7 @@ public class WorkshopService {
     }
     
     public List<WorkshopView> getWorkshopsForKidsCalendar(){
-        checkIsActiveWorkshopsUpToNow();
-        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
+        List<WorkshopView> views = getWorkshopsForCalendar();
         List<WorkshopView> view = new ArrayList<>();
 
         if(!views.isEmpty()){
@@ -206,8 +205,7 @@ public class WorkshopService {
     }
     
     public List<WorkshopView> getWorkshopsForAdultsCalendar(){
-        checkIsActiveWorkshopsUpToNow();
-        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
+        List<WorkshopView> views = getWorkshopsForCalendar();
         List<WorkshopView> view = new ArrayList<>();
 
         if(!views.isEmpty()){
@@ -227,8 +225,7 @@ public class WorkshopService {
     }
 
     public List<WorkshopView> getWorkshopsForGalleryCalendar(){
-        checkIsActiveWorkshopsUpToNow();
-        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
+        List<WorkshopView> views = getWorkshopsForCalendar();
         List<WorkshopView> view = new ArrayList<>();
 
         if(!views.isEmpty()){
