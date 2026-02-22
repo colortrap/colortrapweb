@@ -59,7 +59,7 @@ public class WorkshopRepo {
         return list;
     }
 
-        public List<Workshop> findAllItemsByIsActive(boolean isActive) {
+    public List<Workshop> findAllItemsByIsActive(boolean isActive) {
         List<Workshop> list = new ArrayList<>();
         for (Workshop workshop : items) {
             if (workshop.getIsActive() == isActive) {
@@ -73,7 +73,7 @@ public class WorkshopRepo {
         return workshops;
     }
 
-        public List<Workshop> findAllItems() {
+    public List<Workshop> findAllItems() {
         return items;
     }
 

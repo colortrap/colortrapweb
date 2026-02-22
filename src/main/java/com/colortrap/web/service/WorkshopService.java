@@ -36,9 +36,9 @@ public class WorkshopService {
         if (views.isEmpty()){
             views.add(contentProvider.getDefaultWorkshopVew("notfound"));
         }
-        while (views.size() > 41){
-            views.remove(41);
-        }
+        // while (views.size() > 41){
+        //     views.remove(41);
+        // }
         return views;
     }
 
@@ -330,7 +330,7 @@ public class WorkshopService {
         return workshopRepo.findAllByIsActive(true);
     }
 
-        private List<Workshop> getActiveItems(){
+    private List<Workshop> getActiveItems(){
         checkIsActiveItemsUpToNow();
         return workshopRepo.findAllItemsByIsActive(true);
     }
