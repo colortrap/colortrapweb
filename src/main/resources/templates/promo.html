@@ -10,12 +10,12 @@
     
     <title>COLORTRAP - Специални предложения, доведи приятел и сподели арт преживяване</title>
     <meta name="description" content="Споделете незабравими арт моменти с приятели в COLORTRAP. Повече творчество, повече усмивки и вдъхновение за всички.">
-    
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="icon" type="image/png" th:href="@{/favicon-96x96.png}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}" />
+    <link rel="shortcut icon" th:href="@{/favicon.ico}" />
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/apple-touch-icon.png}" />
+    <link rel="manifest" th:href="@{/site.webmanifest}" />
 
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/mobile.css}">
@@ -77,7 +77,7 @@
                         <a class="btn" th:href="@{/calendar-pfc-all}" >Цени за 5+ участия</a>
                     </div>
                     <div>
-                        <a class="btn" th:href="@{/calendar-ppc-all}" >Промо</a>
+                        <a class="btn" th:href="@{/calendar-ppc-all}" >Тематични работилници</a>
                     </div>                    
                     <div>
                         <a class="btn" th:href="@{/calendar-pnc-all}" >Разгледай календара</a>
