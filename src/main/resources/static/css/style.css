@@ -640,3 +640,10 @@ form{
     flex-direction: column;
 }
 
+.nb{
+    float: left;
+    padding-right: 5px;
+    max-width: 5em;
+    max-height: 5em;
+}
+

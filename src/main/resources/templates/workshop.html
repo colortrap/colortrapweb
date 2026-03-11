@@ -88,12 +88,29 @@
                                 <p>Пловдив, ул. Петко Каравелов 20</p>
                             </div>
                             <div>
+                                <p>Цена:</p>
+                                <h1 th:text="${workshop.price}">90</h1>
+                            </div>
+                            <div>
+                                
+                                    <img class="nb" src="\pictures\eventType\information.png" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                    <h3>Вземете отстъпка от цената докато творите заедно!</h3>
+                                    <p>За групи от двама или повече</p>
+                                    <p class="bold" th:text="|- ${workshop.price2}|">90</p>
+                                    <p>За групи от петима или повече</p>
+                                    <p th:text="|- ${workshop.price5}|">90</p>
+                            </div>
+
+                            <div>
                                 <p>Начало:</p>
                                 <p th:text="${workshop.startAt}">18:30</p>
                             </div>
                             <div>
                                 <p>Организатор</p>
                                 <p>COLORTRAP</p>
+                            </div>
+                            <div>
+                                <p>*Цената е с включено ДДС</p>
                             </div>
                         </div>
                     
