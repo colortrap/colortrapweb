@@ -52,6 +52,8 @@ public class DefaultContentProvider {
         view.setSuitableFor(getDefaultNoContentText());
         view.setTypePicUrl(getDefaultEventTypePicUrl());
         view.setPrice(getDefaultNoContentText());
+        view.setPrice2(getDefaultNoContentText());
+        view.setPrice5(getDefaultNoContentText());
         
         return view;
     }
@@ -70,7 +72,8 @@ public class DefaultContentProvider {
             case "Плюшена тел" -> url += "feather-duster" + ".png";
             case "Плюшена тел и вино" -> url += "wine" + ".png";
             case "Полимерна глина" -> url += "pottery" + ".png";
-            case "Рисуване на дърво" -> url += "paint" + ".png";          
+            case "Рисуване на дърво" -> url += "paint" + ".png"; 
+            case "Интуитивно рисуване и вино" -> url += "inspiration" + ".png";      
             default -> url += "rejected" + ".png";
         }
 
@@ -150,6 +153,18 @@ public class DefaultContentProvider {
                                 "Резервирайте своето място сега и си подарете едно вдъхновяващо и уютно арт изживяване. Очакваме ви!";
         
             }
+        }
+        if (eventType.equals("Интуитивно рисуване и вино")){
+            description = "Colortrap ви кани на едно специално изживяване с интуитивно рисуване и чаша вино.\n" + //
+                        "Всеки участник ще получи всички необходими материали на място и единственото, което е нужно, е да дойдете с добро настроение и желание да се потопите в цветовете.\n" + //
+                        "\n" + //
+                        "Нашият водещ ще ви въведе в процеса и ще ви напътства, но творбата ще бъде изцяло ваше лично вдъхновение. Ще имате свободата да експериментирате, да играете с цветовете и да създадете свой уникален проект, който да отнесете у дома с гордост.\n" + //
+                        "\n" + //
+                        "Предишен опит не е необходим!\n" + //
+                        "По време на събитието ще се насладите на приятна атмосфера, релакс и чаша вино.\n" + //
+                        "\n" + //
+                        "Резервирайте своето място сега и си подарете една творческа, спокойна и вдъхновяваща вечер.\n" + //
+                        "Очакваме ви!";
         }
 
         return description;

@@ -67,14 +67,13 @@ public class WorkshopService {
     }
     
     public List<WorkshopView> getWorkshopsForCalendarPromo(){
-        List<WorkshopView> views = getWorkshopsForCalendar();
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
         for (int i = 0; i < views.size(); i++) {
-            if(!views.get(i).getIsPromo()){
+            if (!views.get(i).getIsPromo()){
                 views.remove(i);
-                i--;
-            }
+                i--;               
+            }            
         }
-
         return views;
     }
     
@@ -97,13 +96,7 @@ public class WorkshopService {
     
     public List<WorkshopView> getPromosForShare(){
         checkIsActiveWorkshopsUpToNow();
-        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
-        for (int i = 0; i < views.size(); i++) {
-            if (!views.get(i).getIsPromo()){
-                views.remove(i);
-                i--;               
-            }            
-        }
+        List<WorkshopView> views = getWorkshopsForCalendarPromo();
         while (views.size() > 3){
             views.remove(3);
         }
@@ -167,7 +160,7 @@ public class WorkshopService {
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
                 if(!workshopView.getEventType().equals("Изложба")){
-                    if (workshopView.getSuitableFor().equals("За деца") || workshopView.getSuitableFor().equals("За всички")){
+                    if (!workshopView.getSuitableFor().equals("За възрастниС")){
                         view.add(workshopView);
                     }
                 }
@@ -211,7 +204,7 @@ public class WorkshopService {
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
                 if(!workshopView.getEventType().equals("Изложба")){
-                    if (workshopView.getSuitableFor().equals("За възрастни") || workshopView.getSuitableFor().equals("За всички")){
+                    if (!workshopView.getSuitableFor().equals("За деца")){
                         view.add(workshopView);
                     }
                 }

@@ -33,12 +33,19 @@ public class WorkshopRepo {
 
             workshop.setId("" + i + workshop.getDay() + workshop.getMonth() + workshop.getYear());
             if(workshop.getEventType().equals("Частно събитие")){
-                items.add(workshop);
-
                 workshop.setPictureUrl(contentProvider.getPictureUrlByType(workshop.getEventType()));
+                
+                items.add(workshop);
+                
             } else {
+                if(workshop.getEventType().equals("Интуитивно рисуване и вино")){
+                    workshop.setPictureUrl(contentProvider.getPictureUrlByType(workshop.getEventType()));
+                } else{
+                    workshop.setPictureUrl(contentProvider.getPictureUrlByTitle(workshop.getTitle()));
+                }
+                
                 workshops.add(workshop);
-                workshop.setPictureUrl(contentProvider.getPictureUrlByTitle(workshop.getTitle()));
+                
             }
 
             if(!(workshop.getEventType().equals("Изложба") || workshop.getEventType().equals("Частно събитие"))){
