@@ -36,8 +36,8 @@ public class HomeControllerImpl implements HomeController {
         List<WorkshopView> workshops = workshopService.getWorkshopsForIndex();
         List<WorkshopView> kids = workshopService.getWorkshopsForKidsIndex();
         List<WorkshopView> adults = workshopService.getWorkshopsForAdultsIndex();
-        List<WorkshopView> rentItems = workshopService.getRentItemsForIndex();
-        List<WorkshopView> workshopItems = workshopService.getWorkshopItemsForIndex();
+        List<WorkshopView> rentItems = workshopService.getPrivateEventsForIndex();
+        List<WorkshopView> workshopItems = workshopService.getPrivateWorkshopForIndex();
 
         ModelAndView model = new ModelAndView("index");
         model.addObject("workshops", workshops);
@@ -52,12 +52,12 @@ public class HomeControllerImpl implements HomeController {
     public ModelAndView promo() {
         List<WorkshopView> workshops = workshopService.getDiscountForShare();
         List<WorkshopView> promos = workshopService.getPromosForShare();
-        List<WorkshopView> subscription = workshopService.getSubscriptionForShare()
+        List<WorkshopView> subscription = workshopService.getSubscriptionForShare();
 
         ModelAndView model =  new ModelAndView("promo");
         model.addObject("workshops", workshops);
         model.addObject("promos", promos);
-        model.addObject("subscription", subscription);
+        model.addObject("subscriptions", subscription);
         return model;
     }
 
@@ -113,13 +113,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView calendarForKids2() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendar();
-        for (int i = 0; i < workshops.size(); i++) {
-            if(workshops.get(i).getIsPromo()){
-                workshops.remove(i);
-                i--;
-            }
-        }
+        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendarPromo();
 
         ModelAndView model = new ModelAndView("forkids2");
         model.addObject("workshops", workshops);
@@ -128,13 +122,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView calendarForKids5() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendar();
-        for (int i = 0; i < workshops.size(); i++) {
-            if(workshops.get(i).getIsPromo()){
-                workshops.remove(i);
-                i--;
-            }
-        }
+        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendarSubscription();
 
         ModelAndView model = new ModelAndView("forkids5");
         model.addObject("workshops", workshops);
@@ -152,13 +140,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView calendarForAdults2() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsCalendar();
-        for (int i = 0; i < workshops.size(); i++) {
-            if(workshops.get(i).getIsPromo()){
-                workshops.remove(i);
-                i--;
-            }
-        }
+        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsCalendarPromo();
 
         ModelAndView model = new ModelAndView("foradults2");
         model.addObject("workshops", workshops);
@@ -167,13 +149,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView calendarForAdults5() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsCalendar();
-        for (int i = 0; i < workshops.size(); i++) {
-            if(workshops.get(i).getIsPromo()){
-                workshops.remove(i);
-                i--;
-            }
-        }
+        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsSubscription();
 
         ModelAndView model = new ModelAndView("foradults5");
         model.addObject("workshops", workshops);
@@ -219,7 +195,7 @@ public class HomeControllerImpl implements HomeController {
         return model;
         }
 
-        if(workshop.getIsPromo()){
+        if(!(workshop.getPromoPrice().isEmpty() || workshop.getPromoPrice() == null)){
             ModelAndView model = new ModelAndView("promoWorkshop");
             model.addObject("workshop", workshop);
             return model;

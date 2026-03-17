@@ -49,8 +49,7 @@ public class DefaultContentProvider {
         view.setSuitableFor(getDefaultNoContentText());
         view.setTypePicUrl(getDefaultEventTypePicUrl());
         view.setPrice(getDefaultNoContentText());
-        view.setPrice2(getDefaultNoContentText());
-        view.setPrice5(getDefaultNoContentText());
+        view.setDiscountedPrice(getDefaultNoContentText());
         
         return view;
     }

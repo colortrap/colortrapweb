@@ -9,9 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Discount {
     
-    private String price2;
-
-    private String price5;
+    private String discountedPrice;
 
     private String promoPrice;
 
@@ -20,13 +18,4 @@ public class Discount {
     private String discountDescription;
 
     private String subscriptionDescription;
-
-    public void updateDiscount(boolean isDiscounted){
-        if(!isDiscounted){
-            setPrice2(null);
-            setPrice5(null);
-            setPromoPrice(null);
-            setSubscriptionPrice(null);
-        }
-    }
 }

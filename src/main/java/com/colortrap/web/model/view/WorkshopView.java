@@ -30,10 +30,8 @@ public class WorkshopView{
     private String description;
 
     private String price;
-
-    private String price2;
-
-    private String price5;
+    
+    private String discountedPrice;
 
     private String promoPrice;
 

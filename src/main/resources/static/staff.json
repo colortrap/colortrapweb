@@ -2,2460 +2,493 @@
   "workshops": [
 
     {
-      "startDay": 0,
-      "startMonth": 0,
-      "startYear": 0,
-      "startAt": "01.11.2025г.",
-      "suitableFor": "ALL",
+      
+      "startDay": 4,
+      "startMonth": 4,
+      "startYear": 2026,
+      "endDay": 1,
+      "endMonth": 12,
+      "endYear": 2027,
+      "startAt": "04.04.2026г.",
+      "price": "Вход свободен",
+      "description": "Юбилейна изложба живопис 2025 на Теодора Узунова",
       "eventType": "Изложба",
       "title": "Астрална цветосимфония",
-      "description": "Юбилейна изложба живопис 2025 на Теодора Узунова",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
+      "isPrivateEvent": false,
+      "isWorkshop": false,
+      "isExhibition": true
     },
-
+    
     {
       "startDay": 19,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "19:00 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Откриване на дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 20,
-      "startMonth": 3,
-      "startYear": 2026,
+      "endDay": 2,
+      "endMonth": 4,
+      "endYear": 2026,
       "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
+      "price": "Вход свободен",
+      "description": "Дебютна изложба на Дария Бинева",
       "eventType": "Изложба",
       "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 21,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 22,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 23,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 24,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 25,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 26,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 27,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 28,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 29,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 30,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 31,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-
-    {
-      "startDay": 1,
-      "startMonth": 4,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
-    },
-    
-    {
-      "startDay": 2,
-      "startMonth": 4,
-      "startYear": 2026,
-      "startAt": "19.03.2026 г.",
-      "suitableFor": "ALL",
-      "eventType": "Изложба",
-      "title": "Sleepwalking",
-      "description": "Дебютна изложба на Дария Бинева",      
-      "price": "Вход безплатен",
-      "price2": "Вход безплатен",
-      "price5": "Вход безплатен"
+      "isPrivateEvent": false,
+      "isWorkshop": false,
+      "isExhibition": true
     },
 
 
     {
-      "startDay": 0,
-      "startMonth": 0,
-      "startYear": 0,
-      "startAt": "",
+      
       "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "pictureUrl": "pictures/decor/privateParty_image.png",
       "title": "Наем на зала дo 1ч.",
-      "description": "Ако търсите къде да проведете своето събитие – било то изложба, презентация, рожден ден или друг личен или фирмен празник – нашата зала е идеалният избор. Залата е 100 квадрата, разположени на две нива, с работилница до 25 седящи места, е просторна и светла, осигурявайки комфорт и безпроблемно протичане на вашето събитие. По желание можем да предложим и кетъринг, за да добавим изискано обслужване и допълнително удобство за вас и вашите гости. Резервирайте за желаната от вас дата поне 7 дни предварително, а ние ще се свържем с вас за допълнително информация и потвърждаване на резервацията.",      
-      "price": "55.00 ∈ (107.57 лв.)"
+      "price": "55.00 ∈ (107.57 лв.)",
+      "isPrivateEvent": true,
+      "isWorkshop": false,
+      "isExhibition": false
     },
     
     {
-      "startDay": 0,
-      "startMonth": 0,
-      "startYear": 0,
-      "startAt": "",
       "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "pictureUrl": "pictures/decor/privateParty_image.png",
       "title": "Наем на зала дo 2ч.",
-      "description": "Ако търсите къде да проведете своето събитие – било то изложба, презентация, рожден ден или друг личен или фирмен празник – нашата зала е идеалният избор. Залата е 100 квадрата, разположени на две нива, с работилница до 25 седящи места, просторна и светла, осигурявайки комфорт и безпроблемно протичане на вашето събитие. По желание можем да предложим и кетъринг, за да добавим изискано обслужване и допълнително удобство за вас и вашите гости. Резервирайте за желаната от вас дата поне 7 дни предварително, а ние ще се свържем с вас за допълнително информация и потвърждаване на резервацията.",      
-      "price": "90.00 ∈ (176.02 лв.)"
+      "price": "90.00 ∈ (176.02 лв.)",
+      "isPrivateEvent": true,
+      "isWorkshop": false,
+      "isExhibition": false
     },
     
     {
-      "startDay": 0,
-      "startMonth": 0,
-      "startYear": 0,
-      "startAt": "",
       "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "pictureUrl": "pictures/decor/privateParty_image.png",
       "title": "Наем на зала дo 4ч.",
-      "description": "Ако търсите къде да проведете своето събитие – било то изложба, презентация, рожден ден или друг личен или фирмен празник – нашата зала е идеалният избор. Залата е 100 квадрата, разположени на две нива, с работилница до 25 седящи места, просторна и светла, осигурявайки комфорт и безпроблемно протичане на вашето събитие. По желание можем да предложим и кетъринг, за да добавим изискано обслужване и допълнително удобство за вас и вашите гости. Резервирайте за желаната от вас дата поне 7 дни предварително, а ние ще се свържем с вас за допълнително информация и потвърждаване на резервацията.",      
-      "price": "150.00 ∈ (293.38 лв.)"
+      "price": "150.00 ∈ (293.38 лв.)",
+      "isPrivateEvent": true,
+      "isWorkshop": false,
+      "isExhibition": false
     },
 
     {
-      "startDay": 0,
-      "startMonth": 0,
-      "startYear": 0,
-      "startAt": "",
-      "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "pictureUrl": "pictures/decor/privateParty_image.png",
       "title": "Наем на зала над 4ч.",
-      "description": "Ако търсите къде да проведете своето събитие – било то изложба, презентация, рожден ден или друг личен или фирмен празник – нашата зала е идеалният избор. Залата е 100 квадрата, разположени на две нива, с работилница до 25 седящи места, просторна и светла, осигурявайки комфорт и безпроблемно протичане на вашето събитие. По желание можем да предложим и кетъринг, за да добавим изискано обслужване и допълнително удобство за вас и вашите гости. Резервирайте за желаната от вас дата поне 7 дни предварително, а ние ще се свържем с вас за допълнително информация и потвърждаване на резервацията.",      
-      "price": "35.00 ∈ (68.45 лв.) на час"
+      "price": "35.00 ∈ (68.45 лв.) на час",
+      "isPrivateEvent": true,
+      "isWorkshop": false,
+      "isExhibition": false
     },
     
     {
-      "startDay": 0,
-      "startMonth": 0,
-      "startYear": 0,
-      "startAt": "",
-      "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "pictureUrl": "pictures/decor/privateParty_image.png",
       "title": "Работилница с до 10 участници с продължителност до 2ч.",
-      "description": "Ако търсите място за празнуване на рожден ден или друг детски празник – нашата частна арт работилница е идеалният избор. Не е нужно да мислите за украса, тъй като ние ще я осигурим  за вас. Всички необходими материали за работилницата са включени, всяко дете ще получи напитка, а накрая ще вземе със себе си собственото си произведение. Просторна, светла и оборудвана с необходимата техника, залата осигурява комфорт и безпроблемно протичане на празника. По желание можем да предложим и кетъринг, за да добавим изискано обслужване и допълнително удобство за вас и вашите гости. Резервирайте за желаната от вас дата поне 7 дни предварително, а ние ще се свържем с вас за допълнително информация и потвърждаване на резервацията.",      
-      "price": "140.00 ∈ (273.82 лв.)"
+      "price": "140.00 ∈ (273.82 лв.)",
+      "isPrivateEvent": true,
+      "isWorkshop": false,
+      "isExhibition": false
     },    
     
     {
-      "startDay": 0,
-      "startMonth": 0,
-      "startYear": 0,
-      "startAt": "",
-      "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "pictureUrl": "pictures/decor/privateParty_image.png",
       "title": "Работилница с над 10 участници с продължителност до 2ч.",
-      "description": "Ако търсите място за празнуване на рожден ден или друг детски празник – нашата частна арт работилница е идеалният избор. Не е нужно да мислите за украса, тъй като ние ще я осигурим  за вас. Всички необходими материали за работилницата са включени, всяко дете ще получи напитка, а накрая ще вземе със себе си собственото си произведение. Просторна, светла и оборудвана с необходимата техника, залата осигурява комфорт и безпроблемно протичане на празника. По желание можем да предложим и кетъринг, за да добавим изискано обслужване и допълнително удобство за вас и вашите гости. Резервирайте за желаната от вас дата поне 7 дни предварително, а ние ще се свържем с вас за допълнително информация и потвърждаване на резервацията.",      
-      "price": "13.50 ∈ (26.40 лв.) на участие"
+      "price": "13.50 ∈ (26.40 лв.) на участие",
+      "isPrivateEvent": true,
+      "isWorkshop": false,
+      "isExhibition": false
     },
     
     {
-      "startDay": 0,
-      "startMonth": 0,
-      "startYear": 0,
-      "startAt": "",
-      "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "pictureUrl": "pictures/decor/privateParty_image.png",
       "title": "Работилница с до 10 участници с продължителност до 3ч.",
-      "description": "Ако търсите място за празнуване на рожден ден, фирмено събитие или друг личен празник – нашата частна арт работилница е идеалният избор. Не е нужно да мислите за украса, тъй като ние ще я осигурим за вас. Всички необходими материали за работилницата са включени, всеки участник ще получи чаша вино, а накрая ще вземе със себе си собственото си произведение. Просторна, светла и оборудвана с необходимата техника, залата осигурява комфорт и безпроблемно протичане на събитието. По желание можем да предложим и кетъринг, за да добавим изискано обслужване и допълнително удобство за вас и вашите гости. Резервирайте за желаната от вас дата поне 7 дни предварително, а ние ще се свържем с вас за допълнително информация и потвърждаване на резервацията.",      
-      "price": "180.00 ∈ (335.05 лв.)"
+      "price": "180.00 ∈ (335.05 лв.)",
+      "isPrivateEvent": true,
+      "isWorkshop": false,
+      "isExhibition": false
     },    
     
     {
-      "startDay": 0,
-      "startMonth": 0,
-      "startYear": 0,
-      "startAt": "",
-      "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "pictureUrl": "pictures/decor/privateParty_image.png",
       "title": "Работилница с над 10 участници с продължителност до 3ч.",
-      "description": "Ако търсите място за празнуване на рожден ден, фирмено събитие или друг личен празник – нашата частна арт работилница е идеалният избор. Не е нужно да мислите за украса, тъй като ние ще я осигурим за вас. Всички необходими материали за работилницата са включени, всеки участник ще получи чаша вино, а накрая ще вземе със себе си собственото си произведение. Просторна, светла и оборудвана с необходимата техника, залата осигурява комфорт и безпроблемно протичане на събитието. По желание можем да предложим и кетъринг, за да добавим изискано обслужване и допълнително удобство за вас и вашите гости. Резервирайте за желаната от вас дата поне 7 дни предварително, а ние ще се свържем с вас за допълнително информация и потвърждаване на резервацията.",
-      "price": "17.50 ∈ (34.22 лв.) на участие"
+      "price": "17.50 ∈ (34.22 лв.) на участие",    
+      "isPrivateEvent": true,
+      "isWorkshop": false,
+      "isExhibition": false
+    },
+    
+    {
+      "startDay": 17,
+      "startMonth": 3,
+      "startYear": 2026,
+      "startAt": "18:30",
+      "endAt": "20:30",
+      "suitableFor": "ALL",
+      "eventType": "Галантерия",
+      "title": "Ключодържател маймунка",      
+      "price": "17.00 ∈ (33.25 лв.)",
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",     
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
     
     {
       "startDay": 18,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Есен в парка",
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 19,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Червена наслада",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
+      "startMonth": 3,
+      "startYear": 2026,
+      "startAt": "18:30",
+      "endAt" : "20:30",
+      "suitableFor": "CHILDREN",
+      "eventType": "Плюшена тел",
+      "title": "Рисуване с плюшена тел",      
+      "price": "17.00 ∈ (33.25 лв.)", 
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",      
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 20,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Букет златна пръчица",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 21,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Суета в цветове",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 22,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Светулки",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 22,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Импресия в танц",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 23,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Спомени от праисторията",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 23,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Шепотът на цветята",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 25,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Залез край морето",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 26,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Тикви в градината",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 27,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Бяла тишина",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 28,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Есенни фенери",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 29,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Криеница в полето",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 29,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Между цвят и небе",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 30,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Падащи жълъди",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 30,
-      "startMonth": 11,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Огнени корони",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 2,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Заник над морето",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 3,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Цветно утро",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 4,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Шепот от сатен",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 5,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
+      "startMonth": 3,
+      "startYear": 2026,
+      "startAt": "18:30",
+      "endAt" : "21:00",
       "suitableFor": "ADULTS",
       "eventType": "Рисуване и вино",
       "title": "Дъх на пролет",      
       "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 6,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Игра с есента",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 6,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Листа в нощта",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 7,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Снежен човек",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 7,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Целувката",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 9,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Макове във ваза",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 10,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Мечтите на малката сърна",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 11,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Сред огледалните води",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 12,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Събор",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 13,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Цветна премяна",
-      "description": "Криеница в полето",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-    
-    {
-      "startDay": 13,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Първи сняг",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 14,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Коледна украса под снега",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 14,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Сияние отвътре",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 16,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Чай с рози",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 17,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Сълзата",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 18,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Дивото зове",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 19,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Пияно до прозореца",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-    
-    {
-      "startDay": 20,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Коледен гном",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 20,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Тайна градина",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },    
-
-    {
-      "startDay": 21,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Нарисувай Олаф",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "19.80 ∈ (38.73 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",     
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 21,
-      "startMonth": 12,
-      "startYear": 2025,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Очарователен град",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 3,
-      "startMonth": 1,
+      "startMonth": 3,
       "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Бели мечки",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 3,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Чай и ябълка",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 4,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Нарисувай пингвините",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 4,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Кокичета в снега",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 6,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "На ледената пързалка",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 7,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Утро над снега",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 8,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Дамата с божурите",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 9,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Тигър сред бамбука",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 10,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Нарисувай Звънче",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 10,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Лунна светлина в снежна нощ",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 11,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Драконче",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 11,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Чайник и часовник",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 13,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Бета",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 14,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Зимна нощ",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 15,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Жената с цигулката",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 16,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Зимен уют",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 17,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
+      "startAt": "14:30",
+      "endAt" : "16:30",
       "suitableFor": "CHILDREN",
       "eventType": "Рисуване на платно",
       "title": "Малкият принц",      
       "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 17,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Пълнолуние сред полето",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 18,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Гущерче в лилиите",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 18,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Суета в цветове",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 20,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "В розовата градина",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 21,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Шепот от сатен",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 22,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Цветно утро",
-      "description": "Цветно утро",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 23,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Шепотът на цветята",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 24,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Спомени от праисторията",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 24,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Букет златна пръчица",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 25,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Игра с есента",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 25,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Между цвят и небе",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 27,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Първи сняг",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 28,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Цветя до прозореца",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 29,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Бяла тишина",
-      "description": "Цветно утро",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 30,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Червена наслада",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 31,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Прегръдка",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 31,
-      "startMonth": 1,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Целувката",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 1,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Нарисувай Олаф",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 1,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Кафе и шоколад",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 3,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Края на селото",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 4,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "На ледената пързалка",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 5,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Минзухари",
-      "description": "Цветно утро",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 6,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Чай и ябълка",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 7,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Нарисувай пингвините",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 7,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Синя целувка",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 8,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Еднорог",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 8,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Цветна целувка",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 10,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Светът е за двама",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-      
-    },
-
-    {
-      "startDay": 11,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Моето сърце",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 12,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Завинаги",
-      "description": "Цветно утро",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 13,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "На разсъмване",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 14,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Нарисувай Лейди и Скитника",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 14,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино за двама",
-      "title": "Червено вино",      
-      "price": "33.00 ∈ (64.54 лв.)",
-      "price2": "33.00 ∈ (64.54 лв.)",
-      "price5": "33.00 ∈ (64.54 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 15,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Нарисувай Стич и Ейнджъл",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 15,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино за двама",
-      "title": "Две следи",      
-      "price": "33.00 ∈ (64.54 лв.)",
-      "price2": "33.00 ∈ (64.54 лв.)",
-      "price5": "33.00 ∈ (64.54 лв.)",
-      "isPromo": true
-    },
-    
-    {
-      "startDay": 17,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Галантерия",
-      "title": "Ключодържател маймунка",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 17,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Цветя за теб",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-    
-    {
-      "startDay": 18,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Плюшена тел",
-      "title": "Фигурка бухалче",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 18,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Макове във ваза",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 19,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Лулаби",
-      "description": "Цветно утро",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 20,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Две праскори",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 21,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Бухал в гората",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 21,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Плюшена тел",
-      "title": "Рисуване с плюшена тел",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",     
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
     
     {
       "startDay": 21,
-      "startMonth": 2,
+      "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Плюшена тел и вино",
-      "title": "Букет лалета",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 21,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Кокичета в снега",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 22,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Сладки сънища",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-    
-    {
-      "startDay": 22,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Плюшена тел",
-      "title": "Фигурка папагалче",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 22,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Импресия в танц",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-    
-
-    {
-      "startDay": 22,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
+      "startAt": "18:30",
+      "endAt" : "21:00",
       "suitableFor": "ADULTS",
       "eventType": "Плюшена тел и вино",
       "title": "Букет рози",      
       "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-        {
-      "startDay": 24,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Галантерия",
-      "title": "Ключодържател коте",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 24,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Червени обувки",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-    
-    {
-      "startDay": 25,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Плюшена тел",
-      "title": "Мартенички",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 25,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Чай с рози",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-    
-    {
-      "startDay": 26,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Плюшена тел",
-      "title": "Мартенички",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 26,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Минзухари",
-      "description": "Цветно утро",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-    
-    {
-      "startDay": 27,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Плюшена тел",
-      "title": "Мартенички",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 27,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Дамата с божурите",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 28,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Аз съм цвете",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-        {
-      "startDay": 28,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Плюшена тел",
-      "title": "Мартенички",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 28,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Сълзата",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 28,
-      "startMonth": 2,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Плюшена тел и вино",
-      "title": "Букет зюмбюли",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-        {
-      "startDay": 1,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Плюшена тел",
-      "title": "Мартенички",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 1,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Плюшена тел и вино",
-      "title": "Букет лалета",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-    
-     {
-      "startDay": 2,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Галантерия",
-      "title": "Ключодържател маймунка",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 2,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Плюшена тел и вино",
-      "title": "Букет лилиуми",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-    
-     {
-      "startDay": 3,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Полимерна глина",
-      "title": "Рисуване с пластилин",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 3,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Тя",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 4,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Плюшена тел и вино",
-      "title": "Букет рози",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 5,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Плюшена тел и вино",
-      "title": "Букет лалета",
-      "description": "Цветно утро",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 6,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Дамата с розите",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 7,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Плюшена тел",
-      "title": "Букет за мама",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 7,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Женственост",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 8,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Плюшена тел",
-      "title": "Букет за мама",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 8,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Майка",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)",
-      "isPromo": true
-    },
-
-    {
-      "startDay": 9,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Плюшена тел",
-      "title": "Рисуване с плюшена тел",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 10,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Галантерия",
-      "title": "Ключодържател коте",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-      
-    },
-
-    {
-      "startDay": 11,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Полимерна глина",
-      "title": "Рисуване с пластилин",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 12,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Плюшена тел и вино",
-      "title": "Букет зюмбюли",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 13,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Плюшена тел и вино",
-      "title": "Букет лилиуми",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 14,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Еднорог",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 14,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Венера",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 15,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Криеница в полето",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 15,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Чадъри",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 16,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Полимерна глина",
-      "title": "Рисуване с пластилин",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-    
-    {
-      "startDay": 17,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "ALL",
-      "eventType": "Галантерия",
-      "title": "Ключодържател маймунка",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-    
-    {
-      "startDay": 18,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Плюшена тел",
-      "title": "Рисуване с плюшена тел",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-
-    {
-      "startDay": 20,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Дъх на пролет",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
-    },
-
-    {
-      "startDay": 21,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
-      "suitableFor": "CHILDREN",
-      "eventType": "Рисуване на платно",
-      "title": "Малкият принц",      
-      "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
-    },
-    
-    {
-      "startDay": 21,
-      "startMonth": 3,
-      "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
-      "suitableFor": "ADULTS",
-      "eventType": "Плюшена тел и вино",
-      "title": "Букет рози",      
-      "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
+      "discountedPrice": "19.80 ∈ (38.73 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",     
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 22,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
+      "startAt": "14:30",
+      "endAt" : "16:30",
       "suitableFor": "CHILDREN",
       "eventType": "Рисуване на платно",
       "title": "Нарисувай Звънче",      
       "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",     
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 22,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
+      "startAt": "18:30",
+      "endAt" : "21:00",
       "suitableFor": "ADULTS",
       "eventType": "Рисуване и вино",
       "title": "В розовата градина",      
       "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
+      "discountedPrice": "19.80 ∈ (38.73 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",    
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 23,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
+      "startAt": "18:30",
+      "endAt" : "21:00",
       "suitableFor": "CHILDREN",
       "eventType": "Плюшена тел",
       "title": "Рисуване с плюшена тел",      
       "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
     
     {
       "startDay": 24,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
+      "startAt": "18:30",
+      "endAt" : "20:30",
       "suitableFor": "ALL",
       "eventType": "Галантерия",
       "title": "Ключодържател коте",      
       "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 25,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
+      "startAt": "18:30",
+      "endAt" : "20:30",
       "suitableFor": "CHILDREN",
       "eventType": "Полимерна глина",
       "title": "Рисуване с пластилин",      
       "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 26,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
-      "suitableFor": "ALL",
+      "startAt": "18:30",
+      "endAt" : "21:00",
+      "suitableFor": "ADULTS",
       "eventType": "Плюшена тел и вино",
-      "title": "Букет лалета",
-      "description": "Цветно утро",      
+      "title": "Букет лалета",      
       "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
+      "discountedPrice": "19.80 ∈ (38.73 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 27,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
+      "startAt": "18:30",
+      "endAt" : "21:00",
       "suitableFor": "ADULTS",
       "eventType": "Плюшена тел и вино",
       "title": "Букет лилиуми",      
       "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
+      "discountedPrice": "19.80 ∈ (38.73 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 28,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
+      "startAt": "14:30",
+      "endAt" : "16:30",
       "suitableFor": "CHILDREN",
       "eventType": "Рисуване на платно",
       "title": "Драконче",      
       "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 28,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
+      "startAt": "18:30",
+      "endAt" : "21:00",
       "suitableFor": "ADULTS",
       "eventType": "Рисуване и вино",
       "title": "Цветно утро",      
       "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
+      "discountedPrice": "19.80 ∈ (38.73 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
         {
       "startDay": 29,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
+      "startAt": "14:30",
+      "endAt" : "16:30",
       "suitableFor": "CHILDREN",
       "eventType": "Рисуване на платно",
       "title": "Калинка",      
       "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 29,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
+      "startAt": "18:30",
+      "endAt" : "21:00",
       "suitableFor": "ADULTS",
       "eventType": "Рисуване и вино",
-      "title": "Фенери в черешите",      
+      "title": "Фенери в черешите",
       "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "19.80 ∈ (38.73 лв.)",
-      "price5": "18.70 ∈ (36.57 лв.)"
+      "discountedPrice": "19.80 ∈ (38.73 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 30,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "14:30 - 16:30 ч.",
+      "startAt": "14:30",
+      "endAt" : "16:30",
       "suitableFor": "CHILDREN",
       "eventType": "Полимерна глина",
       "title": "Рисуване с пластилин",      
       "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
     
     {
       "startDay": 31,
       "startMonth": 3,
       "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
+      "startAt": "18:30",
+      "endAt" : "21:00",
       "suitableFor": "ADULTS",
       "eventType": "Интуитивно рисуване и вино",
       "title": "Вечер на отворените врати",      
-      "price": "Вход свободен",
-      "price2": "10 ∈ (19.95 лв.)",
-      "price5": "На място се заплаща само цената на ползваните материали: 10 ∈ (19.95 лв.)",
-      "isPromo": true
+      "price": "22.00 ∈ (43.03 лв.)",
+      "promoPrice": "Вход свободен",
+      "discountDescription": "Заплаща се само цената на ползваните материали: 10 ∈ (19.95 лв.)",
+      "subscriptionPrice":"75 ∈ (146.69 лв.)", 
+      "subscriptionDescription": "Месечен абонамент за 4 посещения",     
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
     
     {
       "startDay": 1,
       "startMonth": 4,
       "startYear": 2026,
-      "startAt": "18:30 - 20:30 ч.",
+      "startAt": "18:30",
+      "endAt" : "20:30",
       "suitableFor": "ALL",
       "eventType": "Галантерия",
       "title": "Ключодържател маймунка",      
       "price": "17.00 ∈ (33.25 лв.)",
-      "price2": "15.30 ∈ (29.92 лв.)",
-      "price5": "14.45 ∈ (28.26 лв.)"
+      "discountedPrice": "15.30 ∈ (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участника",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
+      "isPrivateEvent": false,
+      "isWorkshop": true,
+      "isExhibition": false
     },
 
     {
       "startDay": 2,
       "startMonth": 4,
       "startYear": 2026,
-      "startAt": "18:30 - 21:00 ч.",
+      "startAt": "18:30",
+      "endAt" : "21:00",
       "suitableFor": "ADULTS",
       "eventType": "Интуитивно рисуване и вино",
-      "title": "Вечер на отворените врати",
+      "title": "Вечер на отворените врати",      
       "price": "22.00 ∈ (43.03 лв.)",
-      "price2": "",
-      "price5": "",
       "promoPrice": "Вход свободен",
-      "discountDescription": "Заплаща само цената на ползваните материали: 10 ∈ (19.95 лв.)",
+      "discountDescription": "Заплаща се само цената на ползваните материали: 10 ∈ (19.95 лв.)",
       "subscriptionPrice":"75 ∈ (146.69 лв.)", 
-      "subscriptionDescription": "Месечен абонамент за 4 посещения на работилници Интуитивно рисуване и вино вместо 88 ∈ (172.12 лв.).",     
-      "isPromo": true,
+      "subscriptionDescription": "Месечен абонамент за 4 посещения",     
       "isPrivateEvent": false,
-      "isPrivateWorkshop": false,
       "isWorkshop": true,
       "isExhibition": false
     }

@@ -35,11 +35,9 @@ public class WorkshopDTO {
 
     private String title;
 
-    private String price;
-
-    private String price2;
-
-    private String price5;
+    private String price; 
+    
+    private String discountedPrice;
 
     private String promoPrice;
 
@@ -49,13 +47,7 @@ public class WorkshopDTO {
 
     private String discountDescription;
 
-
-
-    private boolean isActive;
-
     private boolean isPrivateEvent;
-
-    private boolean isPrivateWorkshop;
 
     private boolean isWorkshop;
 

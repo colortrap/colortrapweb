@@ -39,7 +39,7 @@ public class WorkshopRepo {
     public List<WorkshopEvent> findAllByIsActive(boolean isActive) {
         List<WorkshopEvent> list = new ArrayList<>();
         for (BaseWorkshop workshop : workshops) {
-            if (workshop.isActive() == isActive&& workshop.isWorkshop()) {
+            if (workshop.isActive() == isActive && workshop.isWorkshop()) {
                 list.add((WorkshopEvent) workshop);
             }
         }
@@ -48,9 +48,10 @@ public class WorkshopRepo {
 
     public List<ExhibitionEvent> findAllExhibitionsByIsActive(boolean isActive) {
         List<ExhibitionEvent> list = findAllExhibitionEvents();
-        for (BaseWorkshop workshop : workshops) {
-            if (workshop.isActive() && workshop.isExhibition()) {
-                list.add((ExhibitionEvent) workshop);
+        for (int i = 0; i < list.size(); i++) {
+            if (!list.get(i).isActive()) {
+                list.remove((ExhibitionEvent) list.get(i));
+                i--;
             }
         }
         return list;
@@ -58,11 +59,7 @@ public class WorkshopRepo {
 
     public List<PrivateEvent> findAllPrivateEventsByIsActive(boolean isActive) {
         List<PrivateEvent> list = findAllPrivateEvent();
-        for (BaseWorkshop workshop : workshops) {
-            if (workshop.isActive() && workshop.isPrivateEvent()) {
-                list.add((PrivateEvent) workshop);
-            }
-        }
+        
         return list;
     }
 

@@ -27,19 +27,19 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
         eventDate.setStartDay(workshopDTO.getStartDay());
         eventDate.setStartMonth(workshopDTO.getStartMonth());
         eventDate.setStartYear(workshopDTO.getStartYear());
-        eventDate.setEndDay(workshopDTO.getEndDay());
-        eventDate.setEndMonth(workshopDTO.getEndMonth());
-        eventDate.setEndYear(workshopDTO.getEndYear());
+        eventDate.setEndDay(workshopDTO.getStartDay());
+        eventDate.setEndMonth(workshopDTO.getStartMonth());
+        eventDate.setEndYear(workshopDTO.getStartYear());
 
         workshopEvent.setEventDate(eventDate);
+        
         workshopEvent.setStartAt(workshopDTO.getStartAt());
         workshopEvent.setEndAt(workshopDTO.getEndAt());
         workshopEvent.setSuitableFor(workshopDTO.getSuitableFor());
         workshopEvent.setPrice(workshopDTO.getPrice());
 
         Discount discount = new Discount();
-        discount.setPrice2(workshopDTO.getPrice2());
-        discount.setPrice5(workshopDTO.getPrice5());
+        discount.setDiscountedPrice(workshopDTO.getDiscountedPrice());
         discount.setPromoPrice(workshopDTO.getPromoPrice());
         discount.setSubscriptionDescription(workshopDTO.getSubscriptionDescription());
         discount.setSubscriptionPrice(workshopDTO.getSubscriptionPrice());
@@ -47,9 +47,11 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
 
         workshopEvent.setDiscount(discount);
 
+        workshopEvent.setActive(true);
+
         return workshopEvent;
 
-    }else if (workshopDTO.isExhibition()){
+    }else if (workshopDTO.isExhibition()){        
         ExhibitionEvent exhibitionEvent = new ExhibitionEvent();
         baseMapper(workshopDTO, exhibitionEvent);
 
@@ -60,29 +62,32 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
         eventDate.setEndDay(workshopDTO.getEndDay());
         eventDate.setEndMonth(workshopDTO.getEndMonth());
         eventDate.setEndYear(workshopDTO.getEndYear());
-        
+
         exhibitionEvent.setEventDate(eventDate);
         exhibitionEvent.setDescription(workshopDTO.getDescription());
         exhibitionEvent.setStartAt(workshopDTO.getStartAt());
         exhibitionEvent.setPrice(workshopDTO.getPrice());
 
+        exhibitionEvent.setActive(true);
+
         return exhibitionEvent;
     }else if (workshopDTO.isPrivateEvent()){
         PrivateEvent privateEvent = new PrivateEvent();
         baseMapper(workshopDTO, privateEvent);
-
+        
         privateEvent.setPrice(workshopDTO.getPrice());
 
         Discount discount = new Discount();
-        discount.setPrice2(workshopDTO.getPrice2());
-        discount.setPrice5(workshopDTO.getPrice5());
+        discount.setDiscountedPrice(workshopDTO.getDiscountedPrice());
         discount.setPromoPrice(workshopDTO.getPromoPrice());
         discount.setSubscriptionDescription(workshopDTO.getSubscriptionDescription());
         discount.setSubscriptionPrice(workshopDTO.getSubscriptionPrice());
         discount.setDiscountDescription(workshopDTO.getDiscountDescription());
 
         privateEvent.setDiscount(discount);
-        privateEvent.setPrivateWorkshop(workshopDTO.isPrivateWorkshop());
+        privateEvent.setPrivateWorkshop(workshopDTO.getTitle().startsWith("Работилница с"));
+
+        privateEvent.setActive(true);
         
         return privateEvent;
     }
@@ -93,18 +98,16 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
 private BaseWorkshop baseMapper(WorkshopDTO workshopDTO,BaseWorkshop workshop){
     workshop.setActive(true);
     workshop.setExhibition(workshopDTO.isExhibition());
-    workshop.setPrivateEvent(workshop.isPrivateEvent());
+    workshop.setPrivateEvent(workshopDTO.isPrivateEvent());
     workshop.setWorkshop(workshopDTO.isWorkshop());
 
     workshop.setEventType(workshopDTO.getEventType());
     workshop.setTitle(contentProvider.getTitle(workshopDTO.getTitle(), workshopDTO.getEventType()));
+    workshop.setPictureUrl(contentProvider.getPictureUrlByTitle(workshopDTO.getTitle()));
 
     if(workshop.getEventType().equals("Интуитивно рисуване и вино") || workshopDTO.isPrivateEvent()){
-                    workshop.setPictureUrl(contentProvider.getPictureUrlByType(workshop.getEventType()));
-                } else{
-                    workshop.setPictureUrl(contentProvider.getPictureUrlByTitle(workshop.getTitle()));
-                }
-
+        workshop.setPictureUrl(contentProvider.getPictureUrlByType(workshopDTO.getEventType()));
+    }
  
     return workshop;
 }

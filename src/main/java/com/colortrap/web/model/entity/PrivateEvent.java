@@ -18,11 +18,21 @@ public class PrivateEvent extends BaseWorkshop {
     private String description;
     
     public boolean isDiscounted(){
-        return discount != null && (discount.getPrice5() == null && discount.getPrice2() == null);
+        if(discount != null || discount.getDiscountedPrice() == null){
+            return false;
+        } else if (discount.getDiscountedPrice().isEmpty()){
+            return false;
+        }
+        return true;
     }
 
     public boolean isPromo(){
-        return discount !=null && discount.getPromoPrice() != null;
+        if(discount != null || discount.getPromoPrice() == null){
+            return false;
+        } else if (discount.getPromoPrice().isEmpty()){
+            return false;
+        }
+        return true;
     }
 
 }
