@@ -50,12 +50,14 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView promo() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForShare();
+        List<WorkshopView> workshops = workshopService.getDiscountForShare();
         List<WorkshopView> promos = workshopService.getPromosForShare();
+        List<WorkshopView> subscription = workshopService.getSubscriptionForShare()
 
         ModelAndView model =  new ModelAndView("promo");
         model.addObject("workshops", workshops);
         model.addObject("promos", promos);
+        model.addObject("subscription", subscription);
         return model;
     }
 
@@ -66,7 +68,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView privateParty() {
-        List<WorkshopView> workshops = workshopService.getWorkshopItems();
+        List<WorkshopView> workshops = workshopService.getPrivateEvents();
 
         ModelAndView model = new ModelAndView("privateParty");
         model.addObject("workshops", workshops);
@@ -75,7 +77,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView calendarAll2() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendar2();
+        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendarDiscount();
 
         ModelAndView model = new ModelAndView("calendar2");
         model.addObject("workshops", workshops);
@@ -84,7 +86,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView calendarAll5() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendar5();
+        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendarSubscription();
 
         ModelAndView model = new ModelAndView("calendar5");
         model.addObject("workshops", workshops);
@@ -242,6 +244,8 @@ public class HomeControllerImpl implements HomeController {
                             bindingResult);
         } else {
             WorkshopView workshop = workshopService.getById(id);
+            String date = workshopService.getWorkshopDateById(id);
+            
             String textTo =  "Здравете "+ registrationDTO.getUsername() + ",\n\n" +
             "Заявката за резервация е успешно подадена. Ще се свържем с вас на предоставения от вас телефон " + registrationDTO.getTel() + " за потвърждаването й.\n\n" + 
             "За допълнително информация не се колебайте да се свържете с нас на телефон: 0894 793 440 или 032/517 735!\n\n" + 
@@ -253,7 +257,7 @@ public class HomeControllerImpl implements HomeController {
             "Емаил: " + registrationDTO.getEmail() + "\n\n" +
             "За: " + workshop.getEventType() + "->" + workshop.getTitle() + "\n\n" + 
             "Заявка за брой участия: " + registrationDTO.getCount() + "\n\n" +  
-            "За дата: " + workshop.getDay() + "." + workshop.getMonth() + "." + workshop.getYear() + "." + "\n\n" +
+            "За дата: " + date + "\n\n" +
             "година, месец, дата" + 
             "Лек и успешен ден!";
             
