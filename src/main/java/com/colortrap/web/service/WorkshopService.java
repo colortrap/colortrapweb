@@ -194,12 +194,12 @@ public class WorkshopService {
     }
 
     public List<WorkshopView> getWorkshopsForKidsCalendarDiscount(){
-        List<WorkshopView> views = getWorkshopsForKidsCalendar();
+        List<WorkshopView> views = getWorkshopsForCalendarDiscount();
         List<WorkshopView> view = new ArrayList<>();
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (!(workshopView.getDiscountedPrice().isEmpty() || workshopView.getDiscountedPrice() == null)){
+                if (workshopView.getSuitableFor() != "За възрастни"){
                     view.add(workshopView);
                 }
             }
@@ -232,12 +232,12 @@ public class WorkshopService {
     }
 
     public List<WorkshopView> getWorkshopsForKidsCalendarSubscription(){
-        List<WorkshopView> views = getWorkshopsForKidsCalendar();
+        List<WorkshopView> views = getWorkshopsForCalendarSubscription();
         List<WorkshopView> view = new ArrayList<>();
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (!(workshopView.getSubscriptionPrice().isEmpty() || workshopView.getSubscriptionPrice() == null)){
+                if (workshopView.getSuitableFor() != "За възрастни"){
                     view.add(workshopView);
                 }
             }
@@ -295,12 +295,12 @@ public class WorkshopService {
     }
 
     public List<WorkshopView> getWorkshopsForAdultsCalendarDiscount(){
-        List<WorkshopView> views = getWorkshopsForAdultsCalendar();
+        List<WorkshopView> views = getWorkshopsForCalendarDiscount();
         List<WorkshopView> view = new ArrayList<>();
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (!(workshopView.getDiscountedPrice().isEmpty() || workshopView.getDiscountedPrice() == null)){
+                if (workshopView.getSuitableFor() != "За деца"){
                     view.add(workshopView);
                 }
             }
@@ -334,12 +334,12 @@ public class WorkshopService {
     }
 
     public List<WorkshopView> getWorkshopsForAdultsSubscription(){
-        List<WorkshopView> views = getWorkshopsForAdultsCalendar();
+        List<WorkshopView> views = getWorkshopsForCalendarSubscription();
         List<WorkshopView> view = new ArrayList<>();
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (!(workshopView.getSubscriptionPrice().isEmpty() || workshopView.getSubscriptionPrice() == null)){
+                if (workshopView.getSuitableFor() != "За деца"){
                     view.add(workshopView);
                 }
             }
@@ -453,7 +453,7 @@ public class WorkshopService {
     private List<WorkshopEvent> getDiscountedWorkshops(){
         List<WorkshopEvent> discounted = getActiveWorkshops();
         for (int i = 0; i < discounted.size(); i++){
-            if(!discounted.get(i).isDiscounted()){
+            if(!discounted.get(i).isDiscounted() || discounted.get(i).isSubscription() || discounted.get(i).isPromo()){
 
                 discounted.remove(i);
                 i--;

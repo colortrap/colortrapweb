@@ -11,16 +11,18 @@ import lombok.Setter;
 @NoArgsConstructor
 public class RegistrationDTO {
     
-    @NotNull(message = "Полете не може да е празно!")
+    @NotNull(message = "Полето не може да е празно!")
     private String username;
     
     @Email(message = "Въведете валиден email!")
-    @NotNull(message = "Полете не може да е празно!")
+    @NotNull(message = "Полето не може да е празно!")
     private String email;
 
-    @NotNull(message = "Полете не може да е празно!")
+    @NotNull(message = "Полето не може да е празно!")
     private String tel;
 
-    @NotNull(message = "Полете не може да е празно!")
-    private String count; 
+    @NotNull(message = "Полето не може да е празно!")
+    private String count;
+    
+    private String subscription;
 }

@@ -32,7 +32,7 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
         eventDate.setEndYear(workshopDTO.getStartYear());
 
         workshopEvent.setEventDate(eventDate);
-        workshopEvent.setId("" + workshopEvent.getEventDate().getStartDate() + "-" + workshopEvent.getEventDate().getStartMonth() + "-"  + workshopEvent.getEventDate().getStartYear() + "-" );
+        workshopEvent.setId("" + workshopEvent.getEventDate().getStartDay() + "-" + workshopEvent.getEventDate().getStartMonth() + "-"  + workshopEvent.getEventDate().getStartYear() + "-" );
         
         workshopEvent.setStartAt(workshopDTO.getStartAt());
         workshopEvent.setEndAt(workshopDTO.getEndAt());
@@ -66,7 +66,7 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
         eventDate.setEndYear(workshopDTO.getEndYear());
 
         exhibitionEvent.setEventDate(eventDate);
-        exhibitionEvent.setId("" + exhibitionEvent.getEventDate().getStartDate() + "-" + exhibitionEvent.getEventDate().getStartMonth() + "-" + exhibitionEvent.getEventDate().getStartYear() + "-" );
+        exhibitionEvent.setId("" + exhibitionEvent.getEventDate().getStartDay() + "-" + exhibitionEvent.getEventDate().getStartMonth() + "-" + exhibitionEvent.getEventDate().getStartYear() + "-" );
 
         exhibitionEvent.setDescription(workshopDTO.getDescription());
         exhibitionEvent.setStartAt(workshopDTO.getStartAt());

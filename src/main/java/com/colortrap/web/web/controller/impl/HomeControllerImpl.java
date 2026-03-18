@@ -196,6 +196,12 @@ public class HomeControllerImpl implements HomeController {
         return model;
         }
 
+       if(workshop.getSubscriptionPrice() != null && !(workshop.getSubscriptionPrice().isEmpty())){
+            ModelAndView model = new ModelAndView("subscription");
+            model.addObject("workshop", workshop);
+            return model;
+        } 
+
         ModelAndView model = new ModelAndView("workshop");
         model.addObject("workshop", workshop);
         return model;
@@ -221,7 +227,11 @@ public class HomeControllerImpl implements HomeController {
             "Заявката за резервация е успешно подадена. Ще се свържем с вас на предоставения от вас телефон " + registrationDTO.getTel() + " за потвърждаването й.\n\n" + 
             "За допълнително информация не се колебайте да се свържете с нас на телефон: 0894 793 440 или 032/517 735!\n\n" + 
             "Лек и успешен ден от екипа на COLORTRAP!";
+
             String reportEmail = "colortrap.ltd@gmail.com";
+            if(registrationDTO.getSubscription() == null || registrationDTO.getSubscription().isEmpty()){
+                registrationDTO.setSubscription("Без абонамент");
+            }
             String textReport = "Направена е резервация!\n\n" +
             "На име: " + registrationDTO.getUsername() + "\n\n" + 
             "Телефон: " + registrationDTO.getTel() + "\n\n" + 
@@ -230,6 +240,7 @@ public class HomeControllerImpl implements HomeController {
             "Заявка за брой участия: " + registrationDTO.getCount() + "\n\n" +  
             "За дата: " + date + "\n\n" +
             "година, месец, дата" + 
+            "С абонамент: " + registrationDTO.getSubscription() + "\n\n" +
             "Лек и успешен ден!";
             
             try {

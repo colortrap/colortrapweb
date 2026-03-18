@@ -29,10 +29,10 @@ public interface HomeController {
     @GetMapping("/privateParty")
     ModelAndView privateParty();
 
-    @GetMapping("/calendar-ptc-all")
+    @GetMapping("/calendar-pfc-all")
     ModelAndView calendarAllDiscount();
 
-    @GetMapping("/calendar-pfc-all")
+    @GetMapping("/calendar-ptc-all")
     ModelAndView calendarAllSubscription();
     
     @GetMapping("/calendar-ppc-all")
@@ -41,19 +41,19 @@ public interface HomeController {
     @GetMapping("/calendar-pnc-all")
     ModelAndView calendarAllNormal();
     
-    @GetMapping("/calendar-ptc-forkids")
+    @GetMapping("/calendar-pfc-forkids")
     ModelAndView calendarForKidsDiscount();
 
-    @GetMapping("/calendar-pfc-forkids")
+    @GetMapping("/calendar-ptc-forkids")
     ModelAndView calendarForKidsSubscription();
     
     @GetMapping("/calendar-pnc-forkids")
     ModelAndView calendarForKidNnormal();
     
-    @GetMapping("/calendar-ptc-foradults")
+    @GetMapping("/calendar-pfc-foradults")
     ModelAndView calendarForAdultsDiscount();
 
-    @GetMapping("/calendar-pfc-foradults")
+    @GetMapping("/calendar-ptc-foradults")
     ModelAndView calendarForAdultsSubscription();
     
     @GetMapping("/calendar-pnc-foradults")
