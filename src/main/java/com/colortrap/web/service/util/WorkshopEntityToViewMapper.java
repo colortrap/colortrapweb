@@ -4,6 +4,7 @@ import com.colortrap.web.model.entity.BaseWorkshop;
 import com.colortrap.web.model.entity.ExhibitionEvent;
 import com.colortrap.web.model.entity.PrivateEvent;
 import com.colortrap.web.model.entity.WorkshopEvent;
+import com.colortrap.web.model.enumeration.SuitableForEnum;
 import com.colortrap.web.model.view.WorkshopView;
 import com.colortrap.web.repository.util.DefaultContentProvider;
 import org.springframework.stereotype.Component;
@@ -45,6 +46,18 @@ public class WorkshopEntityToViewMapper {
         return viewList;
     }
 
+    public List<WorkshopView> mapExhibitionEntityToViewList(List<ExhibitionEvent> all) {
+        List<WorkshopView> viewList = new ArrayList<>();
+        if (!all.isEmpty()) {
+            for (BaseWorkshop workshop : all) {   
+                if(workshop.isExhibition()){           
+                    viewList.add(mapExhibitionEntityToView((ExhibitionEvent) workshop));
+                }
+            }
+        }
+        return viewList;
+    }
+
     public WorkshopView mapWorkshopEntityToView (WorkshopEvent workshop){
         WorkshopView view = new WorkshopView();
         view.setId(workshop.getId());
@@ -58,12 +71,12 @@ public class WorkshopEntityToViewMapper {
 
         
         view.setDescription(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 1));
-        view.setDescription(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 2));
-        view.setDescription(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 3));
-        view.setDescription(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 4));
-        view.setDescription(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 5));
-        view.setDescription(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 6));
-        view.setDescription(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 7));
+        view.setDescription1(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 2));
+        view.setDescription2(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 3));
+        view.setDescription3(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 4));
+        view.setDescription4(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 5));
+        view.setDescription5(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 6));
+        view.setDescription6(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 7));
 
         view.setPrice(workshop.getPrice());
         if(workshop.isDiscounted()){
@@ -79,6 +92,8 @@ public class WorkshopEntityToViewMapper {
             view.setPromoPrice(workshop.getDiscount().getPromoPrice());
             if (workshop.getDiscount().getDiscountDescription() != null){
                 view.setDiscountDescription(workshop.getDiscount().getDiscountDescription());
+                view.setPrice(view.getPromoPrice());
+                view.setDiscountedPrice(view.getPromoPrice());
             } else view.setDiscountDescription("");
         } else {
             view.setPromoPrice("");
@@ -90,11 +105,14 @@ public class WorkshopEntityToViewMapper {
 
         if(workshop.isSubscription()){
             view.setSubscriptionPrice(workshop.getDiscount().getSubscriptionPrice());
+            view.setSubscriptionRealPrice(workshop.getDiscount().getSubscriptionRealPrice());
             if (workshop.getDiscount().getSubscriptionDescription() != null){
                 view.setSubscriptionDescription(workshop.getDiscount().getSubscriptionDescription());
             } else view.setSubscriptionDescription("");
         } else {
             view.setSubscriptionPrice("");
+            view.setSubscriptionRealPrice("");
+            view.setSubscriptionDescription("");
         }
 
         return view;
@@ -107,18 +125,19 @@ public class WorkshopEntityToViewMapper {
         view.setTitle(workshop.getTitle());
         view.setEventType(workshop.getEventType());
         LocalDate today = LocalDate.now();
-        view.setDatePicUrl(contentProvider.getCalendarPicURL(today.getDayOfMonth(), today.getMonthValue()));
+        LocalDate starDate = LocalDate.of(workshop.getEventDate().getStartYear(), workshop.getEventDate().getStartMonth(), workshop.getEventDate().getStartDay());
+
+        if(starDate.isBefore(today)){
+            view.setDatePicUrl(contentProvider.getCalendarPicURL(today.getDayOfMonth(), today.getMonthValue()));
+        } else {
+            view.setDatePicUrl(contentProvider.getCalendarPicURL(starDate.getDayOfMonth(), starDate.getMonthValue()));
+        }
         view.setDateEndPicUrl(contentProvider.getCalendarPicURL(workshop.getEventDate().getEndDay(), workshop.getEventDate().getEndMonth()));
         view.setTypePicUrl(contentProvider.getTypePicUrl(workshop.getEventType()));
         view.setStartAt(workshop.getStartAt());
 
-        view.setDescription(contentProvider.getPrivateEventDescription(workshop.getEventType(), 1));
-        view.setDescription(contentProvider.getPrivateEventDescription(workshop.getEventType(), 2));
-        view.setDescription(contentProvider.getPrivateEventDescription(workshop.getEventType(), 3));
-        view.setDescription(contentProvider.getPrivateEventDescription(workshop.getEventType(), 4));
-        view.setDescription(contentProvider.getPrivateEventDescription(workshop.getEventType(), 5));
-        view.setDescription(contentProvider.getPrivateEventDescription(workshop.getEventType(), 6));
-        view.setDescription(contentProvider.getPrivateEventDescription(workshop.getEventType(), 7));
+        view.setDescription(workshop.getDescription());        
+        view.setSuitableFor(contentProvider.getSuitableForString(SuitableForEnum.ALL));
 
         view.setPrice(workshop.getPrice());
 
@@ -130,9 +149,15 @@ public class WorkshopEntityToViewMapper {
         view.setId(workshop.getId());
         view.setPictureUrl(workshop.getPictureUrl());
         view.setTitle(workshop.getTitle());
-        view.setEventType(workshop.getEventType());
+        view.setEventType(workshop.getEventType());        
 
-        view.setDescription(workshop.getDescription());
+        view.setDescription(contentProvider.getPrivateEventDescription(workshop.getTitle(), 1));
+        view.setDescription1(contentProvider.getPrivateEventDescription(workshop.getTitle(), 2));
+        view.setDescription2(contentProvider.getPrivateEventDescription(workshop.getTitle(), 3));
+        view.setDescription3(contentProvider.getPrivateEventDescription(workshop.getTitle(), 4));
+        view.setDescription4(contentProvider.getPrivateEventDescription(workshop.getTitle(), 5));
+        view.setDescription5(contentProvider.getPrivateEventDescription(workshop.getTitle(), 6));
+        view.setDescription6(contentProvider.getPrivateEventDescription(workshop.getTitle(), 7));
 
         view.setPrice(workshop.getPrice());
         if(workshop.isDiscounted()){
@@ -161,6 +186,7 @@ public class WorkshopEntityToViewMapper {
         
         view.setSubscriptionPrice("");
         view.setSubscriptionDescription("");
+        view.setSuitableFor(contentProvider.getSuitableForString(SuitableForEnum.ALL));
 
         return view;
     }

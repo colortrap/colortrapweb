@@ -15,6 +15,8 @@ public class Discount {
 
     private String subscriptionPrice;
 
+    private String subscriptionRealPrice;
+
     private String discountDescription;
 
     private String subscriptionDescription;

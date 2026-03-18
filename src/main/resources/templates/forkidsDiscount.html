@@ -74,10 +74,10 @@
                             <a class="btn" th:href="@{/calendar-pnc-forkids}" >Цени за 1 участиe</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{calendar-ptc-forkids}" >Цени за 2+ участия</a>
+                            <a class="btn" th:href="@{/calendar-pfc-forkids}" >Цени за 5+ участия</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Работилници за възрастни</a>
+                            <a class="btn" th:href="@{/calendar-ptc-foradults}" >Работилници за възрастни</a>
                         </div>
                         <div>
                             <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
@@ -88,7 +88,7 @@
         </div>
         
         <th:block>
-            <ul th:replace="~{fragments/itemlist5}"></ul>
+            <ul th:replace="~{fragments/itemlistDiscount}"></ul>
         </th:block>
     </div>
     

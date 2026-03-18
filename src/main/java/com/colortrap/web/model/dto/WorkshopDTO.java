@@ -41,6 +41,8 @@ public class WorkshopDTO {
 
     private String promoPrice;
 
+    private String subscriptionRealPrice;
+
     private String subscriptionPrice;
 
     private String subscriptionDescription;

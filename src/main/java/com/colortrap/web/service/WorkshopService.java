@@ -39,6 +39,19 @@ public class WorkshopService {
         if (views.isEmpty()){
             views.add(contentProvider.getDefaultWorkshopVew("notfound"));
         }
+        for (int i = 0; i < views.size(); i++) {
+            if(views.get(i).getPromoPrice() != null && !views.get(i).getPromoPrice().isEmpty()){
+                views.get(i).setPrice(views.get(i).getPromoPrice());
+            }
+        }
+        while (views.size() > 41){
+            views.remove(41);
+        }
+        return views;
+    }
+    
+    public List<WorkshopView> getAllForGalleryCalendar(){
+        List<WorkshopView> views = workshopMapper.mapExhibitionEntityToViewList(sortExhibitionsByDate(getActiveExhibitions()));
         while (views.size() > 41){
             views.remove(41);
         }
@@ -66,6 +79,9 @@ public class WorkshopService {
     public List<WorkshopView> getWorkshopsForCalendarPromo(){
         checkIsActiveWorkshopsUpToNow();
         List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getPromoWorkshops()));
+        for (int i = 0; i < views.size(); i++) {
+            views.get(i).setPrice(views.get(i).getPromoPrice());
+        }
         while (views.size() > 41){
             views.remove(41);
         }
@@ -104,8 +120,9 @@ public class WorkshopService {
         if(!exhibitionEvents.isEmpty()){
             LocalDate date = dateProvider.getDate();
             for (ExhibitionEvent event : exhibitionEvents) {
+                LocalDate startDate = LocalDate.of(event.getEventDate().getStartYear(), event.getEventDate().getStartMonth(), event.getEventDate().getStartDay());
                 LocalDate enDate = LocalDate.of(event.getEventDate().getEndYear(), event.getEventDate().getEndMonth(), event.getEventDate().getEndDay());
-                if (!date.isAfter(enDate)){
+                if ((date.isAfter(enDate) || date.isEqual(enDate)) && (date.isAfter(startDate) || date.isEqual(startDate))){
                     views.add(workshopMapper.mapExhibitionEntityToView(event));
                         break;
                 }
@@ -164,6 +181,25 @@ public class WorkshopService {
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
                 if (!workshopView.getSuitableFor().equals("За възрастни")){
+                    view.add(workshopView);
+                }
+            }
+        }
+        
+        if (view.isEmpty()) {
+            view.add(contentProvider.getDefaultWorkshopVew("notfound"));
+        }
+
+        return view;
+    }
+
+    public List<WorkshopView> getWorkshopsForKidsCalendarDiscount(){
+        List<WorkshopView> views = getWorkshopsForKidsCalendar();
+        List<WorkshopView> view = new ArrayList<>();
+
+        if(!views.isEmpty()){
+            for (WorkshopView workshopView : views) {
+                if (!(workshopView.getDiscountedPrice().isEmpty() || workshopView.getDiscountedPrice() == null)){
                     view.add(workshopView);
                 }
             }
@@ -258,6 +294,26 @@ public class WorkshopService {
         return view;
     }
 
+    public List<WorkshopView> getWorkshopsForAdultsCalendarDiscount(){
+        List<WorkshopView> views = getWorkshopsForAdultsCalendar();
+        List<WorkshopView> view = new ArrayList<>();
+
+        if(!views.isEmpty()){
+            for (WorkshopView workshopView : views) {
+                if (!(workshopView.getDiscountedPrice().isEmpty() || workshopView.getDiscountedPrice() == null)){
+                    view.add(workshopView);
+                }
+            }
+        }
+        
+        if (view.isEmpty()) {
+            view.add(contentProvider.getDefaultWorkshopVew("notfound"));
+        }
+
+        return view;
+    }
+    
+
     public List<WorkshopView> getWorkshopsForAdultsCalendarPromo(){
         List<WorkshopView> views = getWorkshopsForAdultsCalendar();
         List<WorkshopView> view = new ArrayList<>();
@@ -296,24 +352,6 @@ public class WorkshopService {
         return view;
     }
 
-    public List<WorkshopView> getWorkshopsForGalleryCalendar(){
-        List<WorkshopView> views = getWorkshopsForCalendar();
-        List<WorkshopView> view = new ArrayList<>();
-
-        if(!views.isEmpty()){
-            for (WorkshopView workshopView : views) {
-                if (workshopView.getEventType().equals("Изложба")){
-                    view.add(workshopView);
-                }
-            }
-        }
-        if (view.isEmpty()) {
-            view.add(contentProvider.getDefaultWorkshopVew("notfound"));
-        }
-
-        return view;
-    }
-    
     public List<WorkshopView> getPrivateEventsForIndex(){
         List<WorkshopView> views = workshopMapper.mapPrivateEventListToView(getActivePrivateEvents());
         List<WorkshopView> view = new ArrayList<>();
@@ -368,15 +406,30 @@ public class WorkshopService {
         return view;
     }
 
+    private List<ExhibitionEvent> sortExhibitionsByDate(List<ExhibitionEvent> workshops) {
+        checkIsActiveWorkshopsUpToNow();
+        for (int i = 0; i < workshops.size() - 1; i++) {
+            for (int j = i+1; j < workshops.size(); j++) {
+                LocalDate dateI = LocalDate.of(workshops.get(i).getEventDate().getStartYear(), workshops.get(i).getEventDate().getStartMonth(), workshops.get(i).getEventDate().getStartDay());
+                LocalDate dateJ = LocalDate.of(workshops.get(j).getEventDate().getStartYear(), workshops.get(j).getEventDate().getStartMonth(), workshops.get(j).getEventDate().getStartDay());
+                if(dateI.isAfter(dateJ)){
+                 ExhibitionEvent workshop = workshops.get(i);
+                 workshops.set(i, workshops.get(j));
+                 workshops.set(j, workshop);
+                }
+            }
+
+        }
+        return workshops;
+    }
+
     private List<WorkshopEvent> sortWorkshopsByDate(List<WorkshopEvent> workshops) {
         checkIsActiveWorkshopsUpToNow();
         for (int i = 0; i < workshops.size() - 1; i++) {
             for (int j = i+1; j < workshops.size(); j++) {
-                if((workshops.get(i).getEventDate().getStartDay() > workshops.get(j).getEventDate().getStartDay() &&
-                 workshops.get(i).getEventDate().getStartMonth() == workshops.get(j).getEventDate().getStartMonth()) ||
-                workshops.get(i).getEventDate().getStartMonth() > workshops.get(j).getEventDate().getStartMonth() || 
-                workshops.get(i).getEventDate().getStartYear() > workshops.get(j).getEventDate().getStartYear()
-                ){
+                LocalDate dateI = LocalDate.of(workshops.get(i).getEventDate().getStartYear(), workshops.get(i).getEventDate().getStartMonth(), workshops.get(i).getEventDate().getStartDay());
+                LocalDate dateJ = LocalDate.of(workshops.get(j).getEventDate().getStartYear(), workshops.get(j).getEventDate().getStartMonth(), workshops.get(j).getEventDate().getStartDay());
+                if(dateI.isAfter(dateJ)){
                  WorkshopEvent workshop = workshops.get(i);
                  workshops.set(i, workshops.get(j));
                  workshops.set(j, workshop);

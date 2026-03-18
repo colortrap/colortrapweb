@@ -31,16 +31,27 @@ public class WorkshopRepo {
         
         for (int i = 0; i < stuff.size(); i++) {
             BaseWorkshop workshop = mapper.mapToEntity(stuff.get(i));
+            workshop.setId(workshop.getId() + i);
             workshops.add(workshop);
         }
         return !stuff.isEmpty();
     }
-
+    
     public List<WorkshopEvent> findAllByIsActive(boolean isActive) {
         List<WorkshopEvent> list = new ArrayList<>();
         for (BaseWorkshop workshop : workshops) {
             if (workshop.isActive() == isActive && workshop.isWorkshop()) {
                 list.add((WorkshopEvent) workshop);
+            }
+        }
+        return list;
+    }
+
+    public List<ExhibitionEvent> findExhibitionEventsByIsActive(boolean isActive) {
+        List<ExhibitionEvent> list = new ArrayList<>();
+        for (BaseWorkshop workshop : workshops) {
+            if (workshop.isActive() == isActive && workshop.isExhibition()) {
+                list.add((ExhibitionEvent) workshop);
             }
         }
         return list;

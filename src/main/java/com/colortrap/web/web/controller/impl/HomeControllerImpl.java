@@ -76,19 +76,19 @@ public class HomeControllerImpl implements HomeController {
     }
 
     @Override
-    public ModelAndView calendarAll2() {
+    public ModelAndView calendarAllDiscount() {
         List<WorkshopView> workshops = workshopService.getWorkshopsForCalendarDiscount();
 
-        ModelAndView model = new ModelAndView("calendar2");
+        ModelAndView model = new ModelAndView("calendarDiscount");
         model.addObject("workshops", workshops);
         return model;
     }
 
     @Override
-    public ModelAndView calendarAll5() {
+    public ModelAndView calendarAllSubscription() {
         List<WorkshopView> workshops = workshopService.getWorkshopsForCalendarSubscription();
 
-        ModelAndView model = new ModelAndView("calendar5");
+        ModelAndView model = new ModelAndView("calendarSubscription");
         model.addObject("workshops", workshops);
         return model;
     }
@@ -112,19 +112,19 @@ public class HomeControllerImpl implements HomeController {
     }
 
     @Override
-    public ModelAndView calendarForKids2() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendarPromo();
+    public ModelAndView calendarForKidsDiscount() {
+        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendarDiscount();
 
-        ModelAndView model = new ModelAndView("forkids2");
+        ModelAndView model = new ModelAndView("forkidsDiscount");
         model.addObject("workshops", workshops);
         return model;
     }
 
     @Override
-    public ModelAndView calendarForKids5() {
+    public ModelAndView calendarForKidsSubscription() {
         List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendarSubscription();
 
-        ModelAndView model = new ModelAndView("forkids5");
+        ModelAndView model = new ModelAndView("forkidsSubscription");
         model.addObject("workshops", workshops);
         return model;
     }
@@ -139,19 +139,19 @@ public class HomeControllerImpl implements HomeController {
     }
 
     @Override
-    public ModelAndView calendarForAdults2() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsCalendarPromo();
+    public ModelAndView calendarForAdultsDiscount() {
+        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsCalendarDiscount();
 
-        ModelAndView model = new ModelAndView("foradults2");
+        ModelAndView model = new ModelAndView("foradultsDiscount");
         model.addObject("workshops", workshops);
         return model;
     }
 
     @Override
-    public ModelAndView calendarForAdults5() {
+    public ModelAndView calendarForAdultsSubscription() {
         List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsSubscription();
 
-        ModelAndView model = new ModelAndView("foradults5");
+        ModelAndView model = new ModelAndView("foradultsSubscription");
         model.addObject("workshops", workshops);
         return model;
     }
@@ -167,7 +167,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView calendarGallery() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForGalleryCalendar();
+        List<WorkshopView> workshops = workshopService.getAllForGalleryCalendar();
 
         ModelAndView model = new ModelAndView("gallery");
         model.addObject("workshops", workshops);
@@ -177,6 +177,7 @@ public class HomeControllerImpl implements HomeController {
     @Override
     public ModelAndView workshopView(String id) {
         WorkshopView workshop = workshopService.getById(id);
+
         if(workshop.getEventType().equals("Изложба")){
             ModelAndView model = new ModelAndView("exhebit");
             model.addObject("workshop", workshop);
@@ -184,7 +185,7 @@ public class HomeControllerImpl implements HomeController {
         }
 
         if(workshop.getEventType().equals("Частно събитие")){
-            if(workshop.getTitle().contains("Работилница")){                
+            if(workshop.getTitle().contains("Работилница")){             
                 ModelAndView model = new ModelAndView("party");
                 model.addObject("workshop", workshop);
                 return model;
@@ -193,12 +194,6 @@ public class HomeControllerImpl implements HomeController {
         ModelAndView model = new ModelAndView("item");
         model.addObject("workshop", workshop);
         return model;
-        }
-
-        if(!(workshop.getPromoPrice().isEmpty() || workshop.getPromoPrice() == null)){
-            ModelAndView model = new ModelAndView("promoWorkshop");
-            model.addObject("workshop", workshop);
-            return model;
         }
 
         ModelAndView model = new ModelAndView("workshop");

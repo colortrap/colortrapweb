@@ -27,30 +27,32 @@ public class WorkshopView{
 
     private String pictureUrl;
 
-    private String description;
-
     private String price;
     
     private String discountedPrice;
 
     private String promoPrice;
 
-    private String subscriptionPrice;    
+    private String subscriptionPrice;
+
+    private String subscriptionRealPrice;
+
+    private String subscriptionDescription;
 
     private String discountDescription;
 
-    private String discountDescription1;
+    private String description;
 
-    private String discountDescription2;
+    private String description1;
 
-    private String discountDescription3;
+    private String description2;
 
-    private String discountDescription4;
+    private String description3;
 
-    private String discountDescription5;
+    private String description4;
+
+    private String description5;
     
-    private String discountDescription6;
-
-    private String subscriptionDescription;
+    private String description6;
 
 }

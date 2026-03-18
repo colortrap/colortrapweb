@@ -3,6 +3,24 @@
 
     {
       
+      "startDay": 1,
+      "startMonth": 11,
+      "startYear": 2025,
+      "endDay": 18,
+      "endMonth": 3,
+      "endYear": 2026,
+      "startAt": "01.11.2026г.",
+      "price": "Вход свободен",
+      "description": "Юбилейна изложба живопис 2025 на Теодора Узунова",
+      "eventType": "Изложба",
+      "title": "Астрална цветосимфония",
+      "isPrivateEvent": false,
+      "isWorkshop": false,
+      "isExhibition": true
+    },
+
+    {
+      
       "startDay": 4,
       "startMonth": 4,
       "startYear": 2026,
@@ -448,8 +466,9 @@
       "price": "22.00 ∈ (43.03 лв.)",
       "promoPrice": "Вход свободен",
       "discountDescription": "Заплаща се само цената на ползваните материали: 10 ∈ (19.95 лв.)",
-      "subscriptionPrice":"75 ∈ (146.69 лв.)", 
-      "subscriptionDescription": "Месечен абонамент за 4 посещения",     
+      "subscriptionPrice":"75 ∈ (146.69 лв.)",
+      "subscriptionRealPrice": "88 ∈ (172.12 лв.)",
+      "subscriptionDescription": "Месечен абонамент 4 посещения",     
       "isPrivateEvent": false,
       "isWorkshop": true,
       "isExhibition": false
@@ -486,8 +505,9 @@
       "price": "22.00 ∈ (43.03 лв.)",
       "promoPrice": "Вход свободен",
       "discountDescription": "Заплаща се само цената на ползваните материали: 10 ∈ (19.95 лв.)",
-      "subscriptionPrice":"75 ∈ (146.69 лв.)", 
-      "subscriptionDescription": "Месечен абонамент за 4 посещения",     
+      "subscriptionPrice":"75 ∈ (146.69 лв.)",
+      "subscriptionRealPrice": "88 ∈ (172.12 лв.)",
+      "subscriptionDescription": "Месечен абонамент 4 посещения",     
       "isPrivateEvent": false,
       "isWorkshop": true,
       "isExhibition": false

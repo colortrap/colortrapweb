@@ -32,6 +32,7 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
         eventDate.setEndYear(workshopDTO.getStartYear());
 
         workshopEvent.setEventDate(eventDate);
+        workshopEvent.setId("" + workshopEvent.getEventDate().getStartDate() + "-" + workshopEvent.getEventDate().getStartMonth() + "-"  + workshopEvent.getEventDate().getStartYear() + "-" );
         
         workshopEvent.setStartAt(workshopDTO.getStartAt());
         workshopEvent.setEndAt(workshopDTO.getEndAt());
@@ -43,6 +44,7 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
         discount.setPromoPrice(workshopDTO.getPromoPrice());
         discount.setSubscriptionDescription(workshopDTO.getSubscriptionDescription());
         discount.setSubscriptionPrice(workshopDTO.getSubscriptionPrice());
+        discount.setSubscriptionRealPrice(workshopDTO.getSubscriptionRealPrice());
         discount.setDiscountDescription(workshopDTO.getDiscountDescription());
 
         workshopEvent.setDiscount(discount);
@@ -64,6 +66,8 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
         eventDate.setEndYear(workshopDTO.getEndYear());
 
         exhibitionEvent.setEventDate(eventDate);
+        exhibitionEvent.setId("" + exhibitionEvent.getEventDate().getStartDate() + "-" + exhibitionEvent.getEventDate().getStartMonth() + "-" + exhibitionEvent.getEventDate().getStartYear() + "-" );
+
         exhibitionEvent.setDescription(workshopDTO.getDescription());
         exhibitionEvent.setStartAt(workshopDTO.getStartAt());
         exhibitionEvent.setPrice(workshopDTO.getPrice());
@@ -76,6 +80,7 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
         baseMapper(workshopDTO, privateEvent);
         
         privateEvent.setPrice(workshopDTO.getPrice());
+        privateEvent.setId("" + 0 + "-" + 0 + "-" + 0 + "-" );
 
         Discount discount = new Discount();
         discount.setDiscountedPrice(workshopDTO.getDiscountedPrice());
