@@ -122,7 +122,7 @@ public class WorkshopService {
             for (ExhibitionEvent event : exhibitionEvents) {
                 LocalDate startDate = LocalDate.of(event.getEventDate().getStartYear(), event.getEventDate().getStartMonth(), event.getEventDate().getStartDay());
                 LocalDate enDate = LocalDate.of(event.getEventDate().getEndYear(), event.getEventDate().getEndMonth(), event.getEventDate().getEndDay());
-                if ((date.isAfter(enDate) || date.isEqual(enDate)) && (date.isAfter(startDate) || date.isEqual(startDate))){
+                if ((date.isBefore(enDate) || date.isEqual(enDate)) && (date.isAfter(startDate) || date.isEqual(startDate))){
                     views.add(workshopMapper.mapExhibitionEntityToView(event));
                         break;
                 }

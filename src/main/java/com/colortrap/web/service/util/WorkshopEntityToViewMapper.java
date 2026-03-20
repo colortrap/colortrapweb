@@ -68,6 +68,7 @@ public class WorkshopEntityToViewMapper {
         view.setTypePicUrl(contentProvider.getTypePicUrl(workshop.getEventType()));
         view.setSuitableFor(contentProvider.getSuitableForString(workshop.getSuitableFor()));
         view.setStartAt(workshop.getStartAt());
+        view.setEndAt(workshop.getEndAt());
 
         
         view.setDescription(contentProvider.getWorkshopDescription(workshop.getTitle(), workshop.getEventType(), 1));

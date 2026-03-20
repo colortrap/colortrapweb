@@ -225,7 +225,7 @@ public class HomeControllerImpl implements HomeController {
             
             String textTo =  "Здравете "+ registrationDTO.getUsername() + ",\n\n" +
             "Заявката за резервация е успешно подадена. Ще се свържем с вас на предоставения от вас телефон " + registrationDTO.getTel() + " за потвърждаването й.\n\n" + 
-            "За допълнително информация не се колебайте да се свържете с нас на телефон: 0894 793 440 или 032/517 735!\n\n" + 
+            "За допълнителна информация не се колебайте да се свържете с нас на телефон: 0894 793 440 или 032/517 735!\n\n" + 
             "Лек и успешен ден от екипа на COLORTRAP!";
 
             String reportEmail = "colortrap.ltd@gmail.com";

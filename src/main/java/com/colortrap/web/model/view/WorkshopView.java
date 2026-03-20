@@ -21,7 +21,9 @@ public class WorkshopView{
 
     private String typePicUrl;
 
-    private String startAt;
+    private String startAt;    
+
+    private String endAt;
 
     private String suitableFor;
 

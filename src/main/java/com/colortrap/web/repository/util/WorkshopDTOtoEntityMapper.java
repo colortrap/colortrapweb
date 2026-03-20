@@ -110,7 +110,7 @@ private BaseWorkshop baseMapper(WorkshopDTO workshopDTO,BaseWorkshop workshop){
     workshop.setTitle(contentProvider.getTitle(workshopDTO.getTitle(), workshopDTO.getEventType()));
     workshop.setPictureUrl(contentProvider.getPictureUrlByTitle(workshopDTO.getTitle()));
 
-    if(workshop.getEventType().equals("Интуитивно рисуване и вино") || workshopDTO.isPrivateEvent()){
+    if(workshop.getEventType().equals("Интуитивно рисуване и вино") || workshop.getEventType().equals("Творческа лаборатория") || workshopDTO.isPrivateEvent()){
         workshop.setPictureUrl(contentProvider.getPictureUrlByType(workshopDTO.getEventType()));
     }
  
