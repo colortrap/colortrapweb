@@ -8,6 +8,7 @@ import com.colortrap.web.model.entity.Discount;
 import com.colortrap.web.model.entity.EventDate;
 import com.colortrap.web.model.entity.ExhibitionEvent;
 import com.colortrap.web.model.entity.PrivateEvent;
+import com.colortrap.web.model.entity.Seats;
 import com.colortrap.web.model.entity.WorkshopEvent;
 
 @Component
@@ -50,6 +51,20 @@ public BaseWorkshop mapToEntity(WorkshopDTO workshopDTO) {
         workshopEvent.setDiscount(discount);
 
         workshopEvent.setActive(true);
+
+        Seats seats = new Seats();
+        if(workshopDTO.getSeatCountMax() == 0){
+            seats.setSeatsCountMax(24);
+        } else{
+            seats.setSeatsCountMax(workshopDTO.getSeatCountMax());
+        }        
+        if(workshopDTO.getSeatsToShow() == 0){
+            seats.setSeatsToShow(16);
+        } else {seats.setSeatsToShow(workshopDTO.getSeatsToShow());}
+        seats.setTakenSeats(workshopDTO.getTakenSeats());
+
+        workshopEvent.setSeats(seats);
+    
 
         return workshopEvent;
 

@@ -65,7 +65,7 @@
                     <h1 th:text="${workshop.title}" class="normal">Име на картината</h1>
                 </div>
                 <div class="view-title">
-                    <p>Подходящо:</p>
+                    <h3>Подходящо:</h3>
                     <p th:text = "${workshop.suitableFor}"></p>
                 </div>
                 <section>
@@ -93,9 +93,12 @@
                                 <h1 th:text="${workshop.price}">90</h1>
                             </div>
                             <div>
-                                
+                                <h2 th:text="|Свободни места: ${workshop.seatsToShow}|">Свободни места: 0</h2>
+                                <h2 th:text="${workshop.seatNotification}">Свободни места: 0</h2>
+                                <p>*По-малко свободни места отколкото желаете да резервирате? Свържете се с нас на тел. 0894 793 440! При голям интерес бихме могли да добавим още места или да организираме това събитие специално за вас.</p>
+                            </div>
+                            <div>                                
                                     <img class="nb" src="\pictures\eventType\information.png" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
-                                    <h3>Вземете отстъпка от цената докато творите заедно!</h3>
                                     <p th:text="${workshop.discountDescription}"></p>
                                     <p class="bold" th:text="${workshop.discountedPrice}">90</p>
                                     <p th:text="${workshop.subscriptionDescription}"></p>
@@ -148,33 +151,16 @@
                             </div>
                             <div>
                                 <div>
-                                    <label for="inputCount">Избери брой участия</label>
+                                    <label for="inputCount">Брой места</label>
                                 </div>
                                 <div>
-                                    <select name="count" th:field="*{count}" type="count" id="inputCount" onfocus='this.size=6;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
-                                        <option th:value="|1 участие – ${workshop.price}" th:text="|1 участие – ${workshop.price}">1</option>
-                                        <option th:value="|2 участия – ${workshop.price}" th:text="|2 участия – ${workshop.price}">2</option>
-                                        <option th:value="|3 участия – ${workshop.price}" th:text="|3 участия – ${workshop.price}">3</option>
-                                        <option th:value="|4 участия – ${workshop.price}" th:text="|4 участия – ${workshop.price}">4</option>
-                                        <option th:value="|5 участия – ${workshop.discountedPrice}" th:text="|5 участия – ${workshop.discountedPrice}">5</option>
-                                        <option th:value="|6 участия – ${workshop.discountedPrice}" th:text="|6 участия – ${workshop.discountedPrice}">6</option>
-                                        <option th:value="|7 участия – ${workshop.discountedPrice}" th:text="|7 участия – ${workshop.discountedPrice}">7</option>
-                                        <option th:value="|8 участия – ${workshop.discountedPrice}" th:text="|8 участия – ${workshop.discountedPrice}">8</option>
-                                        <option th:value="|9 участия – ${workshop.discountedPrice}" th:text="|9 участия – ${workshop.discountedPrice}">9</option>
-                                        <option th:value="|10 участия – ${workshop.discountedPrice}" th:text="|10 участия – ${workshop.discountedPrice}">10</option>
-                                        <option th:value="|11 участия – ${workshop.discountedPrice}" th:text="|11 участия – ${workshop.discountedPrice}">11</option>
-                                        <option th:value="|12 участия – ${workshop.discountedPrice}" th:text="|12 участия – ${workshop.discountedPrice}">12</option>
-                                        <option th:value="|13 участия – ${workshop.discountedPrice}" th:text="|13 участия – ${workshop.discountedPrice}">13</option>
-                                        <option th:value="|14 участия – ${workshop.discountedPrice}" th:text="|14 участия – ${workshop.discountedPrice}">14</option>
-                                        <option th:value="|15 участия – ${workshop.discountedPrice}" th:text="|15 участия – ${workshop.discountedPrice}">15</option>
-                                        <option th:value="|16 участия – ${workshop.discountedPrice}" th:text="|16 участия – ${workshop.discountedPrice}">16</option>
-                                        <option th:value="|17 участия – ${workshop.discountedPrice}" th:text="|17 участия – ${workshop.discountedPrice}">17</option>
-                                        <option th:value="|18 участия – ${workshop.discountedPrice}" th:text="|18 участия – ${workshop.discountedPrice}">18</option>
-                                        <option th:value="|19 участия – ${workshop.discountedPrice}" th:text="|19 участия – ${workshop.discountedPrice}">19</option>
-                                        <option th:value="|20 участия – ${workshop.discountedPrice}" th:text="|20 участия – ${workshop.discountedPrice}">20</option>
-                                    </select>
-                            
+                                    <div>
+                                        <input name="count" th:field="*{count}" th:value="1" required minlength="1" maxlength="2" type="count" id="inputCount" class="form-control" aria-describedby="countHelpInline">
+                                        <small th:errors="*{tel}" th:class="'invalid-feedback rounded'">error message</small>
+                                        <p>*Броя места се въвежда само с цифри и трябва да е по-малък или равен на свободните.</p>
+                                    </div>
                                 </div>
+
                             </div>
                             <div class="btn-list">
                                 <div>

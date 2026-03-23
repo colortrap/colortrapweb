@@ -358,7 +358,7 @@ public class WorkshopService {
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (workshopView.getTitle().startsWith("Наем на зала")
+                if (workshopView.getTitle().startsWith("Организиране на събитие с продължителност")
                 ){
                     view.add(workshopView);
                     if (view.size() >= 3){
@@ -558,5 +558,11 @@ public class WorkshopService {
             return "Не е намерен такава работилница";
         }
         return workshop.getEventDate().getStartDate() + "." + workshop.getEventDate().getStartMonth() + "." + workshop.getEventDate().getStartYear() + ".";
+    }
+
+    public boolean doSeatReservation(String id, String count){
+        if(!workshopRepo.findByID(id).isWorkshop()){return false;}
+        WorkshopEvent workshop = (WorkshopEvent) workshopRepo.findByID(id);        
+        return workshop.doSeatReservation(count);
     }
 }

@@ -188,6 +188,7 @@ img.a-title-img{
 }
 
 li.dayVew{
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -197,8 +198,12 @@ li.dayVew{
 }
 
 .view-title{
-    margin-top: 1em;
+    margin-top: 1 em;
     text-align: center;
+}
+
+.view-title h3{
+    margin: 0;
 }
 
 p{
@@ -239,6 +244,8 @@ p{
 
 .dayVew section div.picture{
     display: flex;
+    margin-top: 4%;
+    margin-bottom: 2%;
     justify-content: center;
     align-content: center;
     width: 60vw;

@@ -57,4 +57,8 @@ public class WorkshopView{
     
     private String description6;
 
+    private int seatsToShow;
+
+    private String seatNotification;
+
 }

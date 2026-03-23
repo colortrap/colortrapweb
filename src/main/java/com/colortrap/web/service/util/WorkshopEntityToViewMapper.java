@@ -116,6 +116,9 @@ public class WorkshopEntityToViewMapper {
             view.setSubscriptionDescription("");
         }
 
+        view.setSeatsToShow(workshop.getFreeSeatsToShow());
+        view.setSeatNotification(contentProvider.getSeatNotification(workshop.getSeats().getSeatsCountMax(), workshop.getSeats().getTakenSeats(), workshop.getSeats().getSeatsToShow()));
+
         return view;
     }
 

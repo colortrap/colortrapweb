@@ -55,4 +55,10 @@ public class WorkshopDTO {
 
     private boolean isExhibition;
 
+    private int seatCountMax;
+
+    private int seatsToShow;
+
+    private int takenSeats;
+
 }

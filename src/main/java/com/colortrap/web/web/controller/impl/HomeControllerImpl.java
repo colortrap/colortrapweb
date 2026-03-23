@@ -220,8 +220,14 @@ public class HomeControllerImpl implements HomeController {
                     .addFlashAttribute("org.springframework.validation.BindingResult.registrationDTO",
                             bindingResult);
         } else {
+
+            if(!workshopService.doSeatReservation(id, registrationDTO.getCount())){
+                redirectAttributes.addFlashAttribute("sent", "Въведете валиден брой места!");
+                return modelAndView;
+            }
+
             WorkshopView workshop = workshopService.getById(id);
-            String date = workshopService.getWorkshopDateById(id);
+            String date = workshopService.getWorkshopDateById(id);            
             
             String textTo =  "Здравете "+ registrationDTO.getUsername() + ",\n\n" +
             "Заявката за резервация е успешно подадена. Ще се свържем с вас на предоставения от вас телефон " + registrationDTO.getTel() + " за потвърждаването й.\n\n" + 

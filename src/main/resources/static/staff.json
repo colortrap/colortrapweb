@@ -59,7 +59,7 @@
       
       "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "title": "Наем на зала дo 1ч.",
+      "title": "Организиране на събитие с продължителност дo 1ч.",
       "price": "55.00 € (107.57 лв.)",
       "isPrivateEvent": true,
       "isWorkshop": false,
@@ -69,7 +69,7 @@
     {
       "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "title": "Наем на зала дo 2ч.",
+      "title": "Организиране на събитие с продължителност дo 2ч.",
       "price": "90.00 € (176.02 лв.)",
       "isPrivateEvent": true,
       "isWorkshop": false,
@@ -79,7 +79,7 @@
     {
       "suitableFor": "ALL",
       "eventType": "Частно събитие",
-      "title": "Наем на зала дo 4ч.",
+      "title": "Организиране на събитие с продължителност дo 4ч.",
       "price": "150.00 € (293.38 лв.)",
       "isPrivateEvent": true,
       "isWorkshop": false,
@@ -88,7 +88,7 @@
 
     {
       "eventType": "Частно събитие",
-      "title": "Наем на зала над 4ч.",
+      "title": "Организиране на събитие с продължителност над 4ч.",
       "price": "35.00 € (68.45 лв.) на час",
       "isPrivateEvent": true,
       "isWorkshop": false,
@@ -453,7 +453,7 @@
       "isWorkshop": true,
       "isExhibition": false
     },
-    
+
     {
       "startDay": 31,
       "startMonth": 3,
@@ -465,7 +465,7 @@
       "title": "Вечер на отворените врати",      
       "price": "22.00 € (43.03 лв.)",
       "promoPrice": "Вход свободен",
-      "discountDescription": "Заплаща се само цената на материалите – платно за рисуване 30/40 и акрилни бои 6 цвята по 30мл.: 10.00 € (19.95 лв.).",
+      "discountDescription": "Заплаща се само цената на материалите: 10.00 € (19.95 лв.).",
       "subscriptionPrice":"75.00 € (146.69 лв.)",
       "subscriptionRealPrice": "88.00 € (172.12 лв.)",
       "subscriptionDescription": "Месечен абонамент 4 посещения",     
@@ -504,7 +504,7 @@
       "title": "Вечер на отворените врати",      
       "price": "22.00 € (43.03 лв.)",
       "promoPrice": "Вход свободен",
-      "discountDescription": "Заплаща се само цената на материалите – платно за рисуване 30/40 и акрилни бои 6 цвята по 30мл.: 10.00 € (19.95 лв.).",
+      "discountDescription": "Заплаща се само цената на материалите: 10.00 € (19.95 лв.).",
       "subscriptionPrice":"75.00 € (146.69 лв.)",
       "subscriptionRealPrice": "88.00 € (172.12 лв.)",
       "subscriptionDescription": "Месечен абонамент 4 посещения",     
@@ -520,16 +520,18 @@
       "startAt": "18:30",
       "endAt" : "21:00",
       "suitableFor": "ADULTS",
-      "eventType": "Рисуване и вино",
-      "title": "Шепотът на цветята",      
-      "price": "22.00 € (43.03 лв.)",      
-      "discountedPrice": "19.80 € (38.73 лв.)",
-      "discountDescription": "За групи от 5 или повече участници",
+      "eventType": "Вечер на тайни и предатели",
+      "title": "Жива социална игра с тайни роли, блеф и интриги",      
+      "price": "8.00 € (15.64 лв.)",      
+      "discountedPrice": "6.00 € (11.73 лв.)",
+      "discountDescription": "За групи от 20 или повече участници",
       "subscriptionPrice":"", 
       "subscriptionDescription": "", 
       "isPrivateEvent": false,
       "isWorkshop": true,
-      "isExhibition": false
+      "isExhibition": false,
+      "seatCountMax": 50,
+      "seatsToShow": 30
     },
 
     {
@@ -563,7 +565,7 @@
       "title": "Вечер на отворените врати",      
       "price": "22.00 € (43.03 лв.)",
       "promoPrice": "Вход свободен",
-      "discountDescription": "Заплаща се само цената на материалите – платно за рисуване 30/40 и акрилни бои 6 цвята по 30мл.: 10.00 € (19.95 лв.).",
+      "discountDescription": "Заплаща се само цената на материалите: 10.00 € (19.95 лв.).",
       "subscriptionPrice":"75.00 € (146.69 лв.)",
       "subscriptionRealPrice": "88.00 € (172.12 лв.)",
       "subscriptionDescription": "Месечен абонамент 4 посещения",     
@@ -603,7 +605,7 @@
       "title": "Вечер на отворените врати",      
       "price": "22.00 € (43.03 лв.)",
       "promoPrice": "Вход свободен",
-      "discountDescription": "Заплаща се само цената на материалите – платно за рисуване 30/40 и акрилни бои 6 цвята по 30мл.: 10.00 € (19.95 лв.).",
+      "discountDescription": "Заплаща се само цената на материалите: 10.00 € (19.95 лв.).",
       "subscriptionPrice":"75.00 € (146.69 лв.)",
       "subscriptionRealPrice": "88.00 € (172.12 лв.)",
       "subscriptionDescription": "Месечен абонамент 4 посещения",     
@@ -710,7 +712,7 @@
       "isWorkshop": true,
       "isExhibition": false
     },
-
+    
     {
       "startDay": 9,
       "startMonth": 4,
@@ -718,17 +720,18 @@
       "startAt": "18:30",
       "endAt" : "21:00",
       "suitableFor": "ADULTS",
-      "eventType": "Интуитивно рисуване и вино",
-      "title": "Моя свят – Част 1",      
-      "price": "22.00 € (43.03 лв.)",
-      "promoPrice": "",
-      "discountDescription": "",
-      "subscriptionPrice":"75.00 € (146.69 лв.)",
-      "subscriptionRealPrice": "88.00 € (172.12 лв.)",
-      "subscriptionDescription": "Месечен абонамент 4 посещения",     
+      "eventType": "Вечер на тайни и предатели",
+      "title": "Жива социална игра с тайни роли, блеф и интриги",      
+      "price": "8.00 € (15.64 лв.)",      
+      "discountedPrice": "6.00 € (11.73 лв.)",
+      "discountDescription": "За групи от 20 или повече участници",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
       "isPrivateEvent": false,
       "isWorkshop": true,
-      "isExhibition": false
+      "isExhibition": false,
+      "seatCountMax": 50,
+      "seatsToShow": 30
     },
 
     {
@@ -758,7 +761,7 @@
       "endAt" : "21:00",
       "suitableFor": "ADULTS",
       "eventType": "Рисуване и вино",
-      "title": "Синя целувка",      
+      "title": "Между цвят и небе",      
       "price": "22.00 € (43.03 лв.)",
       "discountedPrice": "19.80 € (38.73 лв.)",
       "discountDescription": "За групи от 5 или повече участници",
@@ -815,14 +818,13 @@
       "startAt": "14:30",
       "endAt" : "16:30",
       "suitableFor": "CHILDREN",
-      "eventType": "Творческа лаборатория",
-      "title": "Моделиране с плюшена тел",
-      "price": "17.00 € (33.25 лв.)",
-      "discountedPrice": "",
-      "discountDescription": "",
-      "subscriptionPrice":"55.00 € (107.57 лв.)",
-      "subscriptionRealPrice": "68.00 € (133.00 лв.)",
-      "subscriptionDescription": "Месечен абонамент 4 посещения",     
+      "eventType": "Плюшена тел",
+      "title": "Рисуване с плюшена тел",
+      "price": "17.00 € (33.25 лв.)",   
+      "discountedPrice": "15.30 € (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участници",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",    
       "isPrivateEvent": false,
       "isWorkshop": true,
       "isExhibition": false
@@ -885,7 +887,7 @@
       "isWorkshop": true,
       "isExhibition": false
     },
-
+    
     {
       "startDay": 16,
       "startMonth": 4,
@@ -893,17 +895,18 @@
       "startAt": "18:30",
       "endAt" : "21:00",
       "suitableFor": "ADULTS",
-      "eventType": "Интуитивно рисуване и вино",
-      "title": "Моя свят – Част 2",      
-      "price": "22.00 € (43.03 лв.)",
-      "promoPrice": "",
-      "discountDescription": "",
-      "subscriptionPrice":"75.00 € (146.69 лв.)",
-      "subscriptionRealPrice": "88.00 € (172.12 лв.)",
-      "subscriptionDescription": "Месечен абонамент 4 посещения",     
+      "eventType": "Вечер на тайни и предатели",
+      "title": "Жива социална игра с тайни роли, блеф и интриги",      
+      "price": "8.00 € (15.64 лв.)",      
+      "discountedPrice": "6.00 € (11.73 лв.)",
+      "discountDescription": "За групи от 20 или повече участници",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
       "isPrivateEvent": false,
       "isWorkshop": true,
-      "isExhibition": false
+      "isExhibition": false,
+      "seatCountMax": 50,
+      "seatsToShow": 30
     },
 
     {
@@ -971,14 +974,13 @@
       "startAt": "14:30",
       "endAt" : "16:30",
       "suitableFor": "CHILDREN",
-      "eventType": "Творческа лаборатория",
+      "eventType": "Полимерна глина",
       "title": "Рисуване с пластилин",
       "price": "17.00 € (33.25 лв.)",
-      "discountedPrice": "",
-      "discountDescription": "",
-      "subscriptionPrice":"55.00 € (107.57 лв.)",
-      "subscriptionRealPrice": "68.00 € (133.00 лв.)",
-      "subscriptionDescription": "Месечен абонамент 4 посещения",     
+      "discountedPrice": "15.30 € (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участници",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",
       "isPrivateEvent": false,
       "isWorkshop": true,
       "isExhibition": false
@@ -1041,7 +1043,7 @@
       "isWorkshop": true,
       "isExhibition": false
     },
-
+    
     {
       "startDay": 23,
       "startMonth": 4,
@@ -1049,17 +1051,18 @@
       "startAt": "18:30",
       "endAt" : "21:00",
       "suitableFor": "ADULTS",
-      "eventType": "Интуитивно рисуване и вино",
-      "title": "Моя свят – Част 3",      
-      "price": "22.00 € (43.03 лв.)",
-      "promoPrice": "",
-      "discountDescription": "",
-      "subscriptionPrice":"75.00 € (146.69 лв.)",
-      "subscriptionRealPrice": "88.00 € (172.12 лв.)",
-      "subscriptionDescription": "Месечен абонамент 4 посещения",     
+      "eventType": "Вечер на тайни и предатели",
+      "title": "Жива социална игра с тайни роли, блеф и интриги",      
+      "price": "8.00 € (15.64 лв.)",      
+      "discountedPrice": "6.00 € (11.73 лв.)",
+      "discountDescription": "За групи от 20 или повече участници",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
       "isPrivateEvent": false,
       "isWorkshop": true,
-      "isExhibition": false
+      "isExhibition": false,
+      "seatCountMax": 50,
+      "seatsToShow": 30
     },
 
     {
@@ -1127,14 +1130,13 @@
       "startAt": "14:30",
       "endAt" : "16:30",
       "suitableFor": "CHILDREN",
-      "eventType": "Творческа лаборатория",
-      "title": "Рисиване на платно",
+      "eventType": "Рисиване на платно",
+      "title": "Прегръдка",
       "price": "17.00 € (33.25 лв.)",
-      "discountedPrice": "",
-      "discountDescription": "",
-      "subscriptionPrice":"55.00 € (107.57 лв.)",
-      "subscriptionRealPrice": "68.00 € (133.00 лв.)",
-      "subscriptionDescription": "Месечен абонамент 4 посещения",     
+      "discountedPrice": "15.30 € (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участници",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",
       "isPrivateEvent": false,
       "isWorkshop": true,
       "isExhibition": false
@@ -1197,7 +1199,7 @@
       "isWorkshop": true,
       "isExhibition": false
     },
-
+    
     {
       "startDay": 30,
       "startMonth": 4,
@@ -1205,17 +1207,18 @@
       "startAt": "18:30",
       "endAt" : "21:00",
       "suitableFor": "ADULTS",
-      "eventType": "Интуитивно рисуване и вино",
-      "title": "Моя свят – Част 4",      
-      "price": "22.00 € (43.03 лв.)",
-      "promoPrice": "",
-      "discountDescription": "",
-      "subscriptionPrice":"75.00 € (146.69 лв.)",
-      "subscriptionRealPrice": "88.00 € (172.12 лв.)",
-      "subscriptionDescription": "Месечен абонамент 4 посещения",     
+      "eventType": "Вечер на тайни и предатели",
+      "title": "Жива социална игра с тайни роли, блеф и интриги",      
+      "price": "8.00 € (15.64 лв.)",      
+      "discountedPrice": "6.00 € (11.73 лв.)",
+      "discountDescription": "За групи от 20 или повече участници",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "", 
       "isPrivateEvent": false,
       "isWorkshop": true,
-      "isExhibition": false
+      "isExhibition": false,
+      "seatCountMax": 50,
+      "seatsToShow": 30
     },
 
     {
@@ -1283,14 +1286,13 @@
       "startAt": "14:30",
       "endAt" : "16:30",
       "suitableFor": "CHILDREN",
-      "eventType": "Творческа лаборатория",
-      "title": "Моделиране с полимерна глина",
+      "eventType": "Плюшена тел",
+      "title": "Саксия с маргаритки",
       "price": "17.00 € (33.25 лв.)",
-      "discountedPrice": "",
-      "discountDescription": "",
-      "subscriptionPrice":"55.00 € (107.57 лв.)",
-      "subscriptionRealPrice": "68.00 € (133.00 лв.)",
-      "subscriptionDescription": "Месечен абонамент 4 посещения",     
+      "discountedPrice": "15.30 € (29.92 лв.)",
+      "discountDescription": "За групи от 5 или повече участници",
+      "subscriptionPrice":"", 
+      "subscriptionDescription": "",
       "isPrivateEvent": false,
       "isWorkshop": true,
       "isExhibition": false
