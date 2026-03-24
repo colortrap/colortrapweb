@@ -6,9 +6,11 @@ import lombok.Setter;
 
 import java.util.List;
 
+import com.colortrap.web.model.dto.WorkshopDTO;
+
 @Getter
 @Setter
 @NoArgsConstructor
 public class Gallery {
-    private List<Workshop> workshops;
+    private List<WorkshopDTO> workshops;
 }

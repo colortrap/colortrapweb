@@ -11,52 +11,54 @@ import lombok.Setter;
 public class WorkshopView{
     private String id;
 
-    private Integer day;
-
-    private Integer month;
-
-    private Integer year;
-
     private String datePicUrl;
 
-    private String startAt;
+    private String dateEndPicUrl;
 
-    private String suitableFor;
+    private String title;
 
     private String eventType;
 
     private String typePicUrl;
 
+    private String startAt;    
+
+    private String endAt;
+
+    private String suitableFor;
+
     private String pictureUrl;
 
-    private String title;
+    private String price;
+    
+    private String discountedPrice;
+
+    private String promoPrice;
+
+    private String subscriptionPrice;
+
+    private String subscriptionRealPrice;
+
+    private String subscriptionDescription;
+
+    private String discountDescription;
 
     private String description;
 
-    private String price;
+    private String description1;
 
-    private String price2;
+    private String description2;
 
-    private String price5;
+    private String description3;
 
-    private boolean isActive;
+    private String description4;
 
-    private boolean isPromo;
+    private String description5;
+    
+    private String description6;
 
-    public boolean getIsPromo() {
-        return isPromo;
-    }
+    private int seatsToShow;
 
-    public void setIsPromo(boolean isPromo) {
-        this.isPromo = isPromo;
-    }
-
-    public boolean getIsActive() {
-        return isActive;
-    }
-
-    public void setIsActive(boolean isActive) {
-        this.isActive = isActive;
-    }
+    private String seatNotification;
 
 }

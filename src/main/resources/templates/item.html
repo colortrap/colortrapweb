@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <title>COLORTRAP - Частни събития в COLORTRAP</title>
+    <title>COLORTRAP – Частни събития в COLORTRAP</title>
     <meta name="description" content="Частни събития в COLORTRAP. Разгледайте предстоящите събития, рисуване и вино, работилници, изложби и специални вечери за творчество.">
 
     <link rel="icon" type="image/png" th:href="@{/favicon-96x96.png}" sizes="96x96" />
@@ -70,30 +70,29 @@
                 </div>
                 <section>
                     <div>
-                        <img class="calendar-date2" th:src="|/${workshop.datePicUrl}|" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
                         <div class="picture">
                             <img class="img" th:src="|/${workshop.pictureUrl}|" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
                         </div>
                     </div>
                     <div>
                         <div class="view">
-                            <p class="text-justify" th:text="${workshop.description}">Colortrap ви кани да нарисуваме заедно "име на картината".
-                            Всеки посетител ще получи всички необходими материали на място и единствено е необходимо да 
-                            дойдете с настроение за едно незабравимо изживяване.
-                             Нашият художник ще Ви покаже как да нарисувате Вашия собствен шедьовър, който да отнесете с гордост вкъщи.                             
-                             Опит не е необходим! Запишете се и резервирайте своето място сега. Очакваме Ви!</p>
+                            <p class="text-justify" th:text="${workshop.description}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description1}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description2}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description3}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description4}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
                             <div>
-                                <p>За събития включващи продажба на билети или вход се добавя процент от входа за пространството:</p>
-                                <p>Под 15 € обявен вход от водещия</p>
+                                <p>За събития, включващи продажба на билети или вход се добавя процент от входа за пространството:</p>
+                                <p>При обявен вход под 15 €:</p>
                                 <p>- 10% за пространството</p>
-                                <p>Под 20 € обявен вход от водещия</p>
+                                <p>При обявен вход под 20 €:</p>
                                 <p>- 15% за пространството</p>
-                                <p>Над 50 € обявен вход от водещия</p>
+                                <p>При обявен вход над 50 €:</p>
                                 <p>- 20% за пространството</p>
                                 <p>Подготовка на пространството до 30 минути не се заплаща допълнително.</p>
                             </div>
                             <div>
-                                <p>Място - арт галерия COLORTRAP</p>
+                                <p>Място: арт галерия COLORTRAP</p>
                                 <p>Пловдив, ул. Петко Каравелов 20</p>
                             </div>
                             <div>
@@ -121,10 +120,10 @@
                             </div>
                             <div>
                                 <div>
-                                    <label for="inputEmail">Email</label>
+                                    <label for="inputE-mail">E-mail</label>
                                 </div>
                                 <div>
-                                    <input name="email" th:field="*{email}" th:errorclass="is-invalid" type="email" id="inputEmail" class="form-control" aria-describedby="emailHelpInline">
+                                    <input name="email" th:field="*{email}" th:errorclass="is-invalid" type="email" id="inputE-mail" class="form-control" aria-describedby="emailHelpInline">
                                     <small th:errors="*{email}" th:class="'invalid-feedback rounded'">error message</small>
                                 </div>
                             </div>
@@ -162,6 +161,12 @@
         <div class="btn-list">
             <div>
                 <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-all}" >Разгледай календара</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/promo}" >Специални предложения</a>
             </div>
             <div>
                 <a class="btn" th:href="@{/privateParty}" >Частни събития</a>

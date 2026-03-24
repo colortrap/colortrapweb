@@ -71,16 +71,22 @@
                     <p class="text-justify mobile">Най-хубавото? Вашата творба остава за вас – личен спомен от една вечер, изпълнена с творчество, настроение и истински емоции. Елате сами, с приятел или с компания и се потопете в изживяване, което оставя следа в сърцето.</p>
                     <div class="btn-list">
                        <div>
-                            <a class="btn" th:href="@{/calendar-pnc-foradults}" >Цени за 1 участие</a>
+                            <a class="btn" th:href="@{/calendar-pnc-foradults}" >Работилници за възрастни</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Цени за 5+ участия</a>
+                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Намаления за възрастни</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/calendar-ptc-forkids}" >Работилници за деца</a>
+                            <a class="btn" th:href="@{/calendar-pnc-forkids}" >Работилници за деца</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
+                            <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-all}" >Разгледай календара</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/promo}" >Специални предложения</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +94,7 @@
         </div>
         
         <th:block>
-            <ul th:replace="~{fragments/itemlist2}"></ul>
+            <ul th:replace="~{fragments/itemlistSubscription}"></ul>
         </th:block>
     </div>
     

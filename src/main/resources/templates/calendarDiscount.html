@@ -10,7 +10,7 @@
 
     <title>COLORTRAP - Календар на арт събитията</title>
     <meta name="description" content="Разгледайте календара на COLORTRAP – арт работилници, рисуванес и вино, творчески вечери и специални събития за всички възрасти. Не пропускайте вдъхновяващи преживявания в Пловдив.">
- 
+    
     <link rel="icon" type="image/png" th:href="@{/favicon-96x96.png}" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}" />
     <link rel="shortcut icon" th:href="@{/favicon.ico}" />
@@ -75,16 +75,16 @@
         </div>
         <div class="btn-list">
             <div>
-                <a class="btn" th:href="@{/calendar-pfc-forkids}" >Работилници за деца</a>
+                <a class="btn" th:href="@{/calendar-pfc-forkids}" >Намаления за деца</a>
             </div>
             <div>
-                <a class="btn" th:href="@{/calendar-pfc-foradults}" >Работилници за възрастни</a>
-            </div>
-            <div>
-                <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
+                <a class="btn" th:href="@{/calendar-pfc-foradults}" >Намаления за възрастни</a>
             </div>
             <div>
                 <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-all}" >Разгледай календара</a>
             </div>
             <div>
                 <a class="btn" th:href="@{/promo}" >Специални предложения</a>
@@ -92,7 +92,7 @@
         </div>
 
         <th:block>
-            <ul th:replace="~{fragments/itemlist5}"></ul>
+            <ul th:replace="~{fragments/itemlistDiscount}"></ul>
         </th:block>
     </div>
 

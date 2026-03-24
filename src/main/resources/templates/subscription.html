@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <title>COLORTRAP – Частни събития в COLORTRAP</title>
-    <meta name="description" content="Частни събития в COLORTRAP. Разгледайте предстоящите събития, рисуване и вино, работилници, изложби и специални вечери за творчество.">
+    <title>COLORTRAP – Арт работилници в COLORTRAP</title>
+    <meta name="description" content="Арт вечери на COLORTRAP. Разгледайте предстоящите събития, рисуване и вино, работилници, изложби и специални вечери за творчество.">
 
     <link rel="icon" type="image/png" th:href="@{/favicon-96x96.png}" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}" />
@@ -70,6 +70,7 @@
                 </div>
                 <section>
                     <div>
+                        <img class="calendar-date2" th:src="|/${workshop.datePicUrl}|" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
                         <div class="picture">
                             <img class="img" th:src="|/${workshop.pictureUrl}|" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
                         </div>
@@ -80,11 +81,9 @@
                             <p class="text-justify" th:text="${workshop.description1}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
                             <p class="text-justify" th:text="${workshop.description2}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
                             <p class="text-justify" th:text="${workshop.description3}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
-                            <p class="text-justify" th:text="${workshop.description4}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>                         
-                            <div>
-                                <p>Всички материали и напитка за всеки участник са включени в цената.</p>
-                                <p>Подготовка на пространството до 30 минути не се заплаща допълнително.</p>
-                            </div>
+                            <p class="text-justify" th:text="${workshop.description4}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description5}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description6}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
                             <div>
                                 <p>Място: арт галерия COLORTRAP</p>
                                 <p>Пловдив, ул. Петко Каравелов 20</p>
@@ -94,12 +93,32 @@
                                 <h1 th:text="${workshop.price}">90</h1>
                             </div>
                             <div>
+                                <h2 th:text="|Свободни места: ${workshop.seatsToShow}|">Свободни места: 0</h2>
+                                <h2 th:text="${workshop.seatNotification}">Свободни места: 0</h2>
+                                <p>*При голям интерес бихме могли да добавим още места или да организираме това събитие специално за вас.</p>
+                            </div>
+                            <div>                                
+                                    <img class="nb" src="\pictures\eventType\information.png" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                                    <p th:text="${workshop.discountDescription}"></p>
+                                    <p class="bold" th:text="${workshop.discountedPrice}">90</p>
+                                    <p th:text="${workshop.subscriptionDescription}"></p>
+                                    <p th:text="${workshop.subscriptionPrice}">90</p>
+                            </div>
+
+                            <div>
+                                <p>Начало – край:</p>
+                                <p th:text="|${workshop.startAt} – ${workshop.endAt} ч.|">18:30</p>
+                            </div>
+                            <div>
+                                <p>Организатор</p>
+                                <p>COLORTRAP</p>
+                            </div>
+                            <div>
                                 <p>*Цената е с включено ДДС</p>
                             </div>
                         </div>
                     
                         <form th:action="@{|/workshop-pncw/${id}|}" th:method="POST" th:object="${registrationDTO}">                            
-                            
                             <div>
                                 <p class="red" th:text = "${sent}"></p>
                             </div>
@@ -132,27 +151,43 @@
                             </div>
                             <div>
                                 <div>
-                                    <label for="inputCount">За дата</label>
+                                    <label for="inputCount">Брой места</label>
                                 </div>
                                 <div>
-                                    <input name="count" th:field="*{count}" required minlength="8" maxlength="11" type="date" id="inputCount" class="form-control" aria-describedby="telHelpInline">
-                                    <small th:errors="*{count}" th:class="'invalid-feedback rounded'">error message</small>
+                                    <div>
+                                        <input name="count" th:field="*{count}" required minlength="1" maxlength="2" type="count" id="inputCount" class="form-control" aria-describedby="countHelpInline">
+                                        <small th:errors="*{tel}" th:class="'invalid-feedback rounded'">error message</small>
+                                        <p>*Броя места се въвежда само с цифри и трябва да е по-малък или равен на свободните.</p>
+                                    </div>
                                 </div>
                             </div>
-                            
+                            <div>
+                                <div>
+                                    <label for="inputSubscription">Абонаментен номер</label>
+                                </div>
+                                <div>
+                                    <input name="subscription" th:field="*{subscription}" maxlength="10" type="subscription" id="inputSubscription" class="form-control" aria-describedby="subscriptionHelpInline">
+                                    <small th:errors="*{subscription}" th:class="'invalid-feedback rounded'">error message</small>
+                                    <p>*Моля попълнете абонаментен номер само при резервация към направен абонамент.</p>
+                                </div>
+                            </div>
                             <div class="btn-list">
                                 <div>
                                     <button class="btn" type="submit">Резервирай</button>
                                 </div>
                             </div>
-
-                            
                         </form>
                     </div>
                 </section>
             </li>
         </ul>
         <div class="btn-list">
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-forkids}" >Работилници за деца</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-foradults}" >Работилници за възрастни</a>
+            </div>
             <div>
                 <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
             </div>
@@ -161,9 +196,6 @@
             </div>
             <div>
                 <a class="btn" th:href="@{/promo}" >Специални предложения</a>
-            </div>
-            <div>
-                <a class="btn" th:href="@{/privateParty}" >Частни събития</a>
             </div>
         </div>
     </div>

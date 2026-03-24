@@ -71,16 +71,22 @@
                     <p class="text-justify mobile">Арт заниманията в COLORTRAP са перфектен начин за развитие на креативност, увереност и радост от създаването – преживяване, което остава в сърцето на малките творци.</p>
                     <div class="btn-list">
                         <div>
-                            <a class="btn" th:href="@{/calendar-pnc-forkids}" >Цени за 1 участиe</a>
+                            <a class="btn" th:href="@{/calendar-pnc-forkids}" >Работилници за деца</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{calendar-ptc-forkids}" >Цени за 2+ участия</a>
+                            <a class="btn" th:href="@{/calendar-ptc-forkids}" >Мсечни абонаменти за деца</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/calendar-pfc-foradults}" >Работилници за възрастни</a>
+                            <a class="btn" th:href="@{/calendar-pnc-foradults}" >Работилници за възрастни</a>
                         </div>
                         <div>
-                            <a class="btn" th:href="@{/calendar-pnc-all}" >Към календар</a>
+                            <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-all}" >Разгледай календара</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/promo}" >Специални предложения</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +94,7 @@
         </div>
         
         <th:block>
-            <ul th:replace="~{fragments/itemlist5}"></ul>
+            <ul th:replace="~{fragments/itemlistDiscount}"></ul>
         </th:block>
     </div>
     

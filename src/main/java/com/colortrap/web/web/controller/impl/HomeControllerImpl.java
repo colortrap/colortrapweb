@@ -36,8 +36,8 @@ public class HomeControllerImpl implements HomeController {
         List<WorkshopView> workshops = workshopService.getWorkshopsForIndex();
         List<WorkshopView> kids = workshopService.getWorkshopsForKidsIndex();
         List<WorkshopView> adults = workshopService.getWorkshopsForAdultsIndex();
-        List<WorkshopView> rentItems = workshopService.getRentItemsForIndex();
-        List<WorkshopView> workshopItems = workshopService.getWorkshopItemsForIndex();
+        List<WorkshopView> rentItems = workshopService.getPrivateEventsForIndex();
+        List<WorkshopView> workshopItems = workshopService.getPrivateWorkshopForIndex();
 
         ModelAndView model = new ModelAndView("index");
         model.addObject("workshops", workshops);
@@ -50,12 +50,14 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView promo() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForShare();
+        List<WorkshopView> workshops = workshopService.getDiscountForShare();
         List<WorkshopView> promos = workshopService.getPromosForShare();
+        List<WorkshopView> subscription = workshopService.getSubscriptionForShare();
 
         ModelAndView model =  new ModelAndView("promo");
         model.addObject("workshops", workshops);
         model.addObject("promos", promos);
+        model.addObject("subscriptions", subscription);
         return model;
     }
 
@@ -66,7 +68,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView privateParty() {
-        List<WorkshopView> workshops = workshopService.getWorkshopItems();
+        List<WorkshopView> workshops = workshopService.getPrivateEvents();
 
         ModelAndView model = new ModelAndView("privateParty");
         model.addObject("workshops", workshops);
@@ -74,19 +76,19 @@ public class HomeControllerImpl implements HomeController {
     }
 
     @Override
-    public ModelAndView calendarAll2() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendar2();
+    public ModelAndView calendarAllDiscount() {
+        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendarDiscount();
 
-        ModelAndView model = new ModelAndView("calendar2");
+        ModelAndView model = new ModelAndView("calendarDiscount");
         model.addObject("workshops", workshops);
         return model;
     }
 
     @Override
-    public ModelAndView calendarAll5() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendar5();
+    public ModelAndView calendarAllSubscription() {
+        List<WorkshopView> workshops = workshopService.getWorkshopsForCalendarSubscription();
 
-        ModelAndView model = new ModelAndView("calendar5");
+        ModelAndView model = new ModelAndView("calendarSubscription");
         model.addObject("workshops", workshops);
         return model;
     }
@@ -110,19 +112,19 @@ public class HomeControllerImpl implements HomeController {
     }
 
     @Override
-    public ModelAndView calendarForKids2() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendar();
+    public ModelAndView calendarForKidsDiscount() {
+        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendarDiscount();
 
-        ModelAndView model = new ModelAndView("forkids2");
+        ModelAndView model = new ModelAndView("forkidsDiscount");
         model.addObject("workshops", workshops);
         return model;
     }
 
     @Override
-    public ModelAndView calendarForKids5() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendar();
+    public ModelAndView calendarForKidsSubscription() {
+        List<WorkshopView> workshops = workshopService.getWorkshopsForKidsCalendarSubscription();
 
-        ModelAndView model = new ModelAndView("forkids5");
+        ModelAndView model = new ModelAndView("forkidsSubscription");
         model.addObject("workshops", workshops);
         return model;
     }
@@ -137,19 +139,19 @@ public class HomeControllerImpl implements HomeController {
     }
 
     @Override
-    public ModelAndView calendarForAdults2() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsCalendar();
+    public ModelAndView calendarForAdultsDiscount() {
+        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsCalendarDiscount();
 
-        ModelAndView model = new ModelAndView("foradults2");
+        ModelAndView model = new ModelAndView("foradultsDiscount");
         model.addObject("workshops", workshops);
         return model;
     }
 
     @Override
-    public ModelAndView calendarForAdults5() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsCalendar();
+    public ModelAndView calendarForAdultsSubscription() {
+        List<WorkshopView> workshops = workshopService.getWorkshopsForAdultsSubscription();
 
-        ModelAndView model = new ModelAndView("foradults5");
+        ModelAndView model = new ModelAndView("foradultsSubscription");
         model.addObject("workshops", workshops);
         return model;
     }
@@ -165,7 +167,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public ModelAndView calendarGallery() {
-        List<WorkshopView> workshops = workshopService.getWorkshopsForGalleryCalendar();
+        List<WorkshopView> workshops = workshopService.getAllForGalleryCalendar();
 
         ModelAndView model = new ModelAndView("gallery");
         model.addObject("workshops", workshops);
@@ -175,6 +177,7 @@ public class HomeControllerImpl implements HomeController {
     @Override
     public ModelAndView workshopView(String id) {
         WorkshopView workshop = workshopService.getById(id);
+
         if(workshop.getEventType().equals("Изложба")){
             ModelAndView model = new ModelAndView("exhebit");
             model.addObject("workshop", workshop);
@@ -182,7 +185,7 @@ public class HomeControllerImpl implements HomeController {
         }
 
         if(workshop.getEventType().equals("Частно събитие")){
-            if(workshop.getTitle().contains("Работилница")){                
+            if(workshop.getTitle().contains("Работилница")){             
                 ModelAndView model = new ModelAndView("party");
                 model.addObject("workshop", workshop);
                 return model;
@@ -192,6 +195,12 @@ public class HomeControllerImpl implements HomeController {
         model.addObject("workshop", workshop);
         return model;
         }
+
+       if(workshop.getSubscriptionPrice() != null && !(workshop.getSubscriptionPrice().isEmpty())){
+            ModelAndView model = new ModelAndView("subscription");
+            model.addObject("workshop", workshop);
+            return model;
+        } 
 
         ModelAndView model = new ModelAndView("workshop");
         model.addObject("workshop", workshop);
@@ -211,20 +220,33 @@ public class HomeControllerImpl implements HomeController {
                     .addFlashAttribute("org.springframework.validation.BindingResult.registrationDTO",
                             bindingResult);
         } else {
+
+            if(!workshopService.doSeatReservation(id, registrationDTO.getCount())){
+                redirectAttributes.addFlashAttribute("sent", "Въведете валиден брой места!");
+                return modelAndView;
+            }
+
             WorkshopView workshop = workshopService.getById(id);
+            String date = workshopService.getWorkshopDateById(id);            
+            
             String textTo =  "Здравете "+ registrationDTO.getUsername() + ",\n\n" +
             "Заявката за резервация е успешно подадена. Ще се свържем с вас на предоставения от вас телефон " + registrationDTO.getTel() + " за потвърждаването й.\n\n" + 
-            "За допълнително информация не се колебайте да се свържете с нас на телефон: 0894 793 440 или 032/517 735!\n\n" + 
+            "За допълнителна информация не се колебайте да се свържете с нас на телефон: 0894 793 440 или 032/517 735!\n\n" + 
             "Лек и успешен ден от екипа на COLORTRAP!";
+
             String reportEmail = "colortrap.ltd@gmail.com";
+            if(registrationDTO.getSubscription() == null || registrationDTO.getSubscription().isEmpty()){
+                registrationDTO.setSubscription("Без абонамент");
+            }
             String textReport = "Направена е резервация!\n\n" +
             "На име: " + registrationDTO.getUsername() + "\n\n" + 
             "Телефон: " + registrationDTO.getTel() + "\n\n" + 
             "Емаил: " + registrationDTO.getEmail() + "\n\n" +
             "За: " + workshop.getEventType() + "->" + workshop.getTitle() + "\n\n" + 
             "Заявка за брой участия: " + registrationDTO.getCount() + "\n\n" +  
-            "За дата: " + workshop.getDay() + "." + workshop.getMonth() + "." + workshop.getYear() + "." + "\n\n" +
+            "За дата: " + date + "\n\n" +
             "година, месец, дата" + 
+            "С абонамент: " + registrationDTO.getSubscription() + "\n\n" +
             "Лек и успешен ден!";
             
             try {

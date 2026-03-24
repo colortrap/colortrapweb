@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <title>COLORTRAP - Календар за деца на арт събитията</title>
-    <meta name="description" content="Разгледайте календара за деца на COLORTRAP – арт работилници, рисуванес и вино, творчески вечери и специални събития за всички възрасти. Не пропускайте вдъхновяващи преживявания в Пловдив.">
-    
+    <title>COLORTRAP - Календар за възрастни на арт събитията</title>
+    <meta name="description" content="Разгледайте календара за възрастни на COLORTRAP – арт работилници, рисуванес и вино, творчески вечери и специални събития за всички възрасти. Не пропускайте вдъхновяващи преживявания в Пловдив.">
+
     <link rel="icon" type="image/png" th:href="@{/favicon-96x96.png}" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}" />
     <link rel="shortcut icon" th:href="@{/favicon.ico}" />
@@ -58,26 +58,26 @@
     </th:block>
 
     <div class="main-wraper"> 
-        <!-- Секция: Арт занимания за деца -->
-        <div class="art down">
+        <!-- Секция: Рисуване и вино -->
+        <div class="art">
             <div class="decor-img">
-                <img class="a-title-img" src="pictures/decor/index_kidsWorkshops_image.png" alt="Арт занимания за деца COLORTRAP" onContextMenu="return false;">
+                <img class="a-title-img" src="pictures/decor/index_paintAndSip_image.png" alt="Рисуване и вино COLORTRAP" onContextMenu="return false;">
             </div>
             <div class="decor-des">
                 <div>
-                    <h1 class="a-title center">Арт работилници за деца</h1>
-                    <p class="text-justify no-gab">Децата са най-естествените творци, а в COLORTRAP сме създали арт занимания, където въображението има пълна свобода, а ученето и играта вървят ръка за ръка.</p>
-                    <p class="text-justify mobile">Нашите художници подкрепят и вдъхновяват всяко дете, като насърчават любопитството и творческата му индивидуалност. Децата под 7 години участват задължително с възрастен придружител, за да могат заедно да се забавляват и откриват радостта от творчеството.</p>
-                    <p class="text-justify mobile">Арт заниманията в COLORTRAP са перфектен начин за развитие на креативност, увереност и радост от създаването – преживяване, което остава в сърцето на малките творци.</p>
+                    <h1 class="a-title center">Арт работилници за възрастни</h1>
+                    <p class="text-justify no-gab">Представете си вечер, в която времето спира. Усмивките се оглеждат в цветовете, а ароматът на вино изпълва атмосферата. В арт работилниците за възрастни в COLORTRAP ще се потопите в магията на творчеството – дори да не сте държали четка отдавна.</p>
+                    <p class="text-justify mobile">В уютна и непринудена обстановка ще творите, ще се смеете и ще откривате нови страни от себе си и хората около вас. Виното ще ви помогне да се отпуснете и да позволите на въображението си да води всяка линия и цвят.</p>
+                    <p class="text-justify mobile">Най-хубавото? Вашата творба остава за вас – личен спомен от една вечер, изпълнена с творчество, настроение и истински емоции. Елате сами, с приятел или с компания и се потопете в изживяване, което оставя следа в сърцето.</p>
                     <div class="btn-list">
-                        <div>
-                            <a class="btn" th:href="@{/calendar-ptc-forkids}" >Мсечни абонаменти за деца</a>
-                        </div>
-                        <div>
-                            <a class="btn" th:href="@{/calendar-pfc-forkids}" >Намаления за деца</a>
-                        </div>
-                        <div>
+                       <div>
                             <a class="btn" th:href="@{/calendar-pnc-foradults}" >Работилници за възрастни</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-ptc-foradults}" >Мсечни абонаменти за възрастни</a>
+                        </div>
+                        <div>
+                            <a class="btn" th:href="@{/calendar-pnc-forkids}" >Работилници за деца</a>
                         </div>
                         <div>
                             <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
@@ -94,7 +94,7 @@
         </div>
         
         <th:block>
-            <ul th:replace="~{fragments/itemlist}"></ul>
+            <ul th:replace="~{fragments/itemlistDiscount}"></ul>
         </th:block>
     </div>
     

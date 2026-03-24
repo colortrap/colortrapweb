@@ -1,8 +1,12 @@
 package com.colortrap.web.repository;
 
-import com.colortrap.web.model.entity.Workshop;
+import com.colortrap.web.model.dto.WorkshopDTO;
+import com.colortrap.web.model.entity.BaseWorkshop;
+import com.colortrap.web.model.entity.ExhibitionEvent;
+import com.colortrap.web.model.entity.PrivateEvent;
+import com.colortrap.web.model.entity.WorkshopEvent;
 import com.colortrap.web.repository.jsonReader.JsonReader;
-import com.colortrap.web.repository.util.DefaultContentProvider;
+import com.colortrap.web.repository.util.WorkshopDTOtoEntityMapper;
 
 import org.springframework.stereotype.Component;
 
@@ -11,86 +15,101 @@ import java.util.List;
 
 @Component
 public class WorkshopRepo {
-    private List<Workshop> workshops;
-    private List<Workshop> items;
-    private List<Workshop> stuff;
+    private List<BaseWorkshop> workshops;
+    
     final private JsonReader jsonReader;
-    final private DefaultContentProvider contentProvider;
+    final private WorkshopDTOtoEntityMapper mapper;
 
-    public WorkshopRepo(JsonReader jsonReader, DefaultContentProvider contentProvider) {
+    public WorkshopRepo(JsonReader jsonReader, WorkshopDTOtoEntityMapper mapper) {
         this.jsonReader = jsonReader;
-        this.contentProvider = contentProvider;
-        items = new ArrayList<>();
+        this.mapper = mapper;
         workshops = new ArrayList<>();
     }
 
     public boolean init(){         
-        stuff = jsonReader.readJsonFile().getWorkshops();
+        List<WorkshopDTO> stuff = jsonReader.readJsonFile().getWorkshops();
         
-
         for (int i = 0; i < stuff.size(); i++) {
-            Workshop workshop = stuff.get(i);
-
-            workshop.setId("" + i + workshop.getDay() + workshop.getMonth() + workshop.getYear());
-            if(workshop.getEventType().equals("Частно събитие")){
-                items.add(workshop);
-
-                workshop.setPictureUrl(contentProvider.getPictureUrlByType(workshop.getEventType()));
-            } else {
-                workshops.add(workshop);
-                workshop.setPictureUrl(contentProvider.getPictureUrlByTitle(workshop.getTitle()));
-            }
-
-            if(!(workshop.getEventType().equals("Изложба") || workshop.getEventType().equals("Частно събитие"))){
-            workshop.setDescription(contentProvider.getDescription(workshop.getTitle(), workshop.getEventType()));
-            workshop.setTitle(contentProvider.getTitle(workshop.getTitle(), workshop.getEventType()));
-            }
+            BaseWorkshop workshop = mapper.mapToEntity(stuff.get(i));
+            workshop.setId(workshop.getId() + i);
+            workshops.add(workshop);
         }
         return !stuff.isEmpty();
     }
-
-    public List<Workshop> findAllByIsActive(boolean isActive) {
-        List<Workshop> list = new ArrayList<>();
-        for (Workshop workshop : workshops) {
-            if (workshop.getIsActive() == isActive) {
-                list.add(workshop);
+    
+    public List<WorkshopEvent> findAllByIsActive(boolean isActive) {
+        List<WorkshopEvent> list = new ArrayList<>();
+        for (BaseWorkshop workshop : workshops) {
+            if (workshop.isActive() == isActive && workshop.isWorkshop()) {
+                list.add((WorkshopEvent) workshop);
             }
         }
         return list;
     }
 
-    public List<Workshop> findAllItemsByIsActive(boolean isActive) {
-        List<Workshop> list = new ArrayList<>();
-        for (Workshop workshop : items) {
-            if (workshop.getIsActive() == isActive) {
-                list.add(workshop);
+    public List<ExhibitionEvent> findExhibitionEventsByIsActive(boolean isActive) {
+        List<ExhibitionEvent> list = new ArrayList<>();
+        for (BaseWorkshop workshop : workshops) {
+            if (workshop.isActive() == isActive && workshop.isExhibition()) {
+                list.add((ExhibitionEvent) workshop);
             }
         }
         return list;
     }
 
-    public List<Workshop> findAll() {
+    public List<ExhibitionEvent> findAllExhibitionsByIsActive(boolean isActive) {
+        List<ExhibitionEvent> list = findAllExhibitionEvents();
+        for (int i = 0; i < list.size(); i++) {
+            if (!list.get(i).isActive()) {
+                list.remove((ExhibitionEvent) list.get(i));
+                i--;
+            }
+        }
+        return list;
+    }
+
+    public List<PrivateEvent> findAllPrivateEventsByIsActive(boolean isActive) {
+        List<PrivateEvent> list = findAllPrivateEvent();
+        
+        return list;
+    }
+
+    public List<BaseWorkshop> findAll() {
+        List<WorkshopEvent> list = new ArrayList<>();
+        for (BaseWorkshop baseWorkshop : workshops) {
+            if(baseWorkshop.isWorkshop()){
+                list.add((WorkshopEvent) baseWorkshop);
+            }
+        }
         return workshops;
     }
 
-    public List<Workshop> findAllItems() {
-        return items;
+    public List<PrivateEvent> findAllPrivateEvent() {
+        List<PrivateEvent> list = new ArrayList<>();
+        for (BaseWorkshop workshop : workshops) {
+            if (workshop.isPrivateEvent()) {
+                list.add((PrivateEvent) workshop);
+            }
+        }
+        return list;
     }
 
-    public Workshop findByID(String id) {
+    public List<ExhibitionEvent> findAllExhibitionEvents() {
+        List<ExhibitionEvent> list = new ArrayList<>();
+        for (BaseWorkshop workshop : workshops) {
+            if (workshop.isExhibition()) {
+                list.add((ExhibitionEvent) workshop);
+            }
+        }
+        return list;
+    }
+
+    public BaseWorkshop findByID(String id) {
         if(!workshops.isEmpty()){
-            for (Workshop workshop : workshops) {
+            for (BaseWorkshop workshop : workshops) {
                 String workshopId = workshop.getId();
                 if (workshopId.equals(id)) {
                     return workshop;
-                }
-            }
-        }
-        if(!items.isEmpty()){
-            for (Workshop item : items) {
-                String workshopId = item.getId();
-                if (workshopId.equals(id)) {
-                    return item;
                 }
             }
         }

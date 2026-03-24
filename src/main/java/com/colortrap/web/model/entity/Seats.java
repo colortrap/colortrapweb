@@ -1,4 +1,5 @@
 package com.colortrap.web.model.entity;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -6,7 +7,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class BaseEntity {
+public class Seats {
 
-    private String id;
+    private int seatsCountMax;
+
+    private int seatsToShow;
+    
+    private int takenSeats;
+
 }

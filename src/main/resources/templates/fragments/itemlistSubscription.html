@@ -9,13 +9,12 @@
             </div>
             <div class="workshop">
                 <div>
-                    <h3 class="normal">5+ участия</h3>
-                    <h3 th:text ="${workshop.eventType}" class="normal">Тип събитие</h3>
-                    <h3 th:text ="${workshop.title}" class="normal">Заглавие на събитие</h3>
+                    <h2 th:text ="${workshop.eventType}" class="normal"></h2>
+                    <h3 th:text ="${workshop.subscriptionDescription}" class="normal"></h3>
                 </div>
                 <p th:text = "${workshop.suitableFor}">Подходящо за всички възрасти</p>
-                <p th:text = "${workshop.price}" class="promo">40лв. (20.45 &isin;)</p>
-                <p th:text = "${workshop.price5}">40лв. (20.45 &isin;)</p>
+                <p th:text = "${workshop.subscriptionRealPrice}" class="promo">40лв. (20.45 &isin;)</p>
+                <p th:text = "${workshop.subscriptionPrice}">40лв. (20.45 &isin;)</p>
                 <div class="btn-list">
                     <div>
                         <a class="btn" th:href="@{|/workshop-pncw/${workshop.id}|}" >Виж повече</a>
