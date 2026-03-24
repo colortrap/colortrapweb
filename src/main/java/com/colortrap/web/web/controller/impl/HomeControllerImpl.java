@@ -245,7 +245,7 @@ public class HomeControllerImpl implements HomeController {
             "За: " + workshop.getEventType() + "->" + workshop.getTitle() + "\n\n" + 
             "Заявка за брой участия: " + registrationDTO.getCount() + "\n\n" +  
             "За дата: " + date + "\n\n" +
-            "година, месец, дата" + 
+            "          година, месец, дата\n\n" + 
             "С абонамент: " + registrationDTO.getSubscription() + "\n\n" +
             "Лек и успешен ден!";
             
