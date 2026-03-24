@@ -2,18 +2,12 @@ package com.colortrap.web.repository.util;
 
 import com.colortrap.web.model.enumeration.SuitableForEnum;
 import com.colortrap.web.model.view.WorkshopView;
-import com.colortrap.web.service.util.DateProvider;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
 @Component
 public class DefaultContentProvider {
-    final private DateProvider dateProvider;
-
-    public DefaultContentProvider(DateProvider dateProvider) {
-        this.dateProvider = dateProvider;
-    }
 
     public String getDefaultEventPicUrl(){
         return "pictures/decor/pictureNotFound_image.png";
@@ -37,7 +31,7 @@ public class DefaultContentProvider {
 
     public WorkshopView getDefaultWorkshopVew (String id){
         WorkshopView view = new WorkshopView();
-        LocalDate date = dateProvider.getDate();
+        LocalDate date = LocalDate.now();
 
         view.setId(id);
         view.setStartAt(getDefaultNoContentText());

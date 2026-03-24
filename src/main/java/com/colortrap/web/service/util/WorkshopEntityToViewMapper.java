@@ -94,7 +94,11 @@ public class WorkshopEntityToViewMapper {
             if (workshop.getDiscount().getDiscountDescription() != null){
                 view.setDiscountDescription(workshop.getDiscount().getDiscountDescription());
                 view.setPrice(view.getPromoPrice());
+                if(view.getPromoPrice().isEmpty() || view.getPromoPrice() == null){
                 view.setDiscountedPrice(view.getPromoPrice());
+            } else {
+                view.setDiscountedPrice(view.getDiscountedPrice());
+                }
             } else view.setDiscountDescription("");
         } else {
             view.setPromoPrice("");

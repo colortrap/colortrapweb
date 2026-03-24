@@ -264,7 +264,9 @@ p{
     justify-self: center;
     align-self: center;
     max-width: 60vw;
+    min-width: 75%;
     max-height: 60vw;
+    min-height: 75%;
 }
 
 .view{    

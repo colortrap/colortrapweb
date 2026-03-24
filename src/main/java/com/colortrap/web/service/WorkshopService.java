@@ -7,7 +7,6 @@ import com.colortrap.web.model.entity.WorkshopEvent;
 import com.colortrap.web.model.view.WorkshopView;
 import com.colortrap.web.repository.WorkshopRepo;
 import com.colortrap.web.repository.util.DefaultContentProvider;
-import com.colortrap.web.service.util.DateProvider;
 import com.colortrap.web.service.util.WorkshopEntityToViewMapper;
 import com.colortrap.web.web.error.BadRequestException;
 import org.springframework.stereotype.Service;
@@ -19,23 +18,54 @@ import java.util.List;
 @Service
 public class WorkshopService {
     final private WorkshopRepo workshopRepo;
-    final private DateProvider dateProvider;
     final private WorkshopEntityToViewMapper workshopMapper;
     final private DefaultContentProvider contentProvider;
     private LocalDate upToDate;
+    private int daysToShowInCalendar = 28;
 
-    public WorkshopService(WorkshopRepo workshopRepo, DateProvider dateProvider,
-                           WorkshopEntityToViewMapper workshopMapper, DefaultContentProvider contentProvider){
+    public WorkshopService(WorkshopRepo workshopRepo, WorkshopEntityToViewMapper workshopMapper, DefaultContentProvider contentProvider){
         this.workshopRepo = workshopRepo;
-        this.dateProvider = dateProvider;
         this.workshopMapper = workshopMapper;
         this.contentProvider = contentProvider;
-        this.upToDate = dateProvider.getDate();
+        this.upToDate = LocalDate.now();
+
+    }
+
+    private List<WorkshopEvent> getWorkshopEventsUpToDays(List<WorkshopEvent> workshops){
+        List<WorkshopEvent> list = new ArrayList<>();
+        LocalDate endDateInCalendar = LocalDate.now().plusDays(daysToShowInCalendar);
+        
+        for (int i = 0; i < workshops.size(); i++) {
+            if(endDateInCalendar
+                .isAfter(LocalDate.of(workshops.get(i).getEventDate().getStartYear(),
+                workshops.get(i).getEventDate().getStartMonth(),
+                workshops.get(i).getEventDate().getStartDay()))
+            ){
+                list.add(workshops.get(i));
+            };
+        }
+        return list;
+    }
+
+    private List<ExhibitionEvent> getExhibitionEventsUpToDays(List<ExhibitionEvent> workshops){
+        List<ExhibitionEvent> list = new ArrayList<>();
+        LocalDate endDateInCalendar = LocalDate.now().plusDays(daysToShowInCalendar);
+        
+        for (int i = 0; i < workshops.size(); i++) {
+            LocalDate eventDate = LocalDate.of(workshops.get(i).getEventDate().getStartYear(),
+                workshops.get(i).getEventDate().getStartMonth(),
+                workshops.get(i).getEventDate().getStartDay());
+            if(endDateInCalendar.isAfter(eventDate)
+            ){
+                list.add(workshops.get(i));
+            };
+        }
+        return list;
     }
 
     public List<WorkshopView> getWorkshopsForCalendar(){
         checkIsActiveWorkshopsUpToNow();
-        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getActiveWorkshops()));
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(getWorkshopEventsUpToDays(sortWorkshopsByDate(getActiveWorkshops())));
         if (views.isEmpty()){
             views.add(contentProvider.getDefaultWorkshopVew("notfound"));
         }
@@ -44,47 +74,36 @@ public class WorkshopService {
                 views.get(i).setPrice(views.get(i).getPromoPrice());
             }
         }
-        while (views.size() > 41){
-            views.remove(41);
-        }
         return views;
     }
     
     public List<WorkshopView> getAllForGalleryCalendar(){
-        List<WorkshopView> views = workshopMapper.mapExhibitionEntityToViewList(sortExhibitionsByDate(getActiveExhibitions()));
-        while (views.size() > 41){
-            views.remove(41);
-        }
+        List<WorkshopView> views = workshopMapper.mapExhibitionEntityToViewList(getExhibitionEventsUpToDays(sortExhibitionsByDate(getActiveExhibitions())));
+        
         return views;
     }
 
     public List<WorkshopView> getWorkshopsForCalendarDiscount(){
         checkIsActiveWorkshopsUpToNow();
-        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getDiscountedWorkshops()));
-        while (views.size() > 41){
-            views.remove(41);
-        }
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(getWorkshopEventsUpToDays(sortWorkshopsByDate(getDiscountedWorkshops())));
+
         return views;
     }
     
     public List<WorkshopView> getWorkshopsForCalendarSubscription(){
         checkIsActiveWorkshopsUpToNow();
-        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getSubscriptionWorkshops()));
-        while (views.size() > 41){
-            views.remove(41);
-        }
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(getWorkshopEventsUpToDays(sortWorkshopsByDate(getSubscriptionWorkshops())));
+
         return views;
     }
     
     public List<WorkshopView> getWorkshopsForCalendarPromo(){
         checkIsActiveWorkshopsUpToNow();
-        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(sortWorkshopsByDate(getPromoWorkshops()));
+        List<WorkshopView> views = workshopMapper.mapWorkshopEntityListToView(getWorkshopEventsUpToDays(sortWorkshopsByDate(getPromoWorkshops())));
         for (int i = 0; i < views.size(); i++) {
             views.get(i).setPrice(views.get(i).getPromoPrice());
         }
-        while (views.size() > 41){
-            views.remove(41);
-        }
+
         return views;
     }
     
@@ -118,7 +137,7 @@ public class WorkshopService {
         List<WorkshopView> views = new ArrayList<>();
 
         if(!exhibitionEvents.isEmpty()){
-            LocalDate date = dateProvider.getDate();
+            LocalDate date = LocalDate.now();
             for (ExhibitionEvent event : exhibitionEvents) {
                 LocalDate startDate = LocalDate.of(event.getEventDate().getStartYear(), event.getEventDate().getStartMonth(), event.getEventDate().getStartDay());
                 LocalDate enDate = LocalDate.of(event.getEventDate().getEndYear(), event.getEventDate().getEndMonth(), event.getEventDate().getEndDay());
@@ -130,7 +149,7 @@ public class WorkshopService {
         }
 
         if(!workshops.isEmpty()){
-            LocalDate date = dateProvider.getDate();
+            LocalDate date = LocalDate.now();
             for (WorkshopEvent workshop : workshops) {
                 LocalDate enDate = LocalDate.of(workshop.getEventDate().getStartYear(), workshop.getEventDate().getStartMonth(), workshop.getEventDate().getStartDay());
                 if (date.isEqual(enDate)){
@@ -497,9 +516,9 @@ public class WorkshopService {
     public void checkIsActiveWorkshopsUpToNow(){
         List<WorkshopEvent> workshops = workshopRepo.findAllByIsActive(true);
         List<ExhibitionEvent> exhibitionEvents = workshopRepo.findAllExhibitionEvents();
+        LocalDate date = LocalDate.now();
 
-        if(!workshops.isEmpty() || upToDate.isAfter( dateProvider.getDate())) {
-            LocalDate date = dateProvider.getDate();
+        if(!workshops.isEmpty() || upToDate.isAfter(LocalDate.now())) {
 
             for (WorkshopEvent workshop : workshops) {
                 LocalDate endDate = LocalDate.of(workshop.getEventDate().getEndYear(),workshop.getEventDate().getEndMonth(),workshop.getEventDate().getEndDay());
@@ -509,7 +528,7 @@ public class WorkshopService {
                 LocalDate endDate = LocalDate.of(exhibitionEvent.getEventDate().getEndYear(),exhibitionEvent.getEventDate().getEndMonth(),exhibitionEvent.getEventDate().getEndDay());
                 exhibitionEvent.setActive(!date.isAfter(endDate));
             }
-            upToDate = dateProvider.getDate();
+            upToDate = LocalDate.now();
 
         }
     }
@@ -517,8 +536,8 @@ public class WorkshopService {
     public void checkIsActiveItemsUpToNow(){
         List<WorkshopEvent> workshops = workshopRepo.findAllByIsActive(true);
 
-        if(!workshops.isEmpty() || upToDate.isAfter(dateProvider.getDate())) {
-            LocalDate date = dateProvider.getDate();
+        if(!workshops.isEmpty() || upToDate.isAfter(LocalDate.now())) {
+            LocalDate date = LocalDate.now();
 
             for ( WorkshopEvent workshop : workshops) {
                 LocalDate enDate = LocalDate.of(workshop.getEventDate().getEndYear(), workshop.getEventDate().getEndMonth(), workshop.getEventDate().getEndDay());
@@ -526,7 +545,7 @@ public class WorkshopService {
                 workshop.setActive(!date.isAfter(enDate));
 
             }
-            upToDate = dateProvider.getDate();
+            upToDate = LocalDate.now();
 
         }
     }
