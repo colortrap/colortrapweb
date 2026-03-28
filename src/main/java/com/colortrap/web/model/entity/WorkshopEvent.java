@@ -74,6 +74,7 @@ public class WorkshopEvent extends BaseWorkshop{
 
             if(seats.getSeatsToShow() >= number){
                 seats.setTakenSeats(seats.getTakenSeats() + number); 
+                seats.setSeatsToShow(seats.getSeatsToShow() - number);
                 return true;
             }
         } catch (Exception e){

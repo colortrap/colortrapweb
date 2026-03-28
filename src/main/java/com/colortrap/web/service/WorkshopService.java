@@ -580,8 +580,9 @@ public class WorkshopService {
     }
 
     public boolean doSeatReservation(String id, String count){
-        if(!workshopRepo.findByID(id).isWorkshop()){return false;}
-        WorkshopEvent workshop = (WorkshopEvent) workshopRepo.findByID(id);        
+        BaseWorkshop baseWorkshop = workshopRepo.findByID(id);
+        if(!baseWorkshop.isWorkshop()){return false;}
+        WorkshopEvent workshop = (WorkshopEvent) baseWorkshop;        
         return workshop.doSeatReservation(count);
     }
 }
