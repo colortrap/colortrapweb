@@ -244,11 +244,10 @@ public class HomeControllerImpl implements HomeController {
             "На име: " + registrationDTO.getUsername() + "\n\n" + 
             "Телефон: " + registrationDTO.getTel() + "\n\n" + 
             "Емаил: " + registrationDTO.getEmail() + "\n\n" +
-            "За:" + workshop.getEventType() + "\n\n" + 
+            "За: " + workshop.getEventType() + "\n\n" + 
             "           " + workshop.getTitle() + "\n\n" + 
             "Заявка за брой участия: " + registrationDTO.getCount() + "\n\n" +  
             "За дата: " + date + "\n\n" +
-            "            дата, месец, година\n\n" + 
             "С абонамент: " + registrationDTO.getSubscription() + "\n\n" +
             "Лек и успешен ден!";
             
