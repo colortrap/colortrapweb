@@ -578,7 +578,7 @@ public class WorkshopService {
         if(workshop==null){
             return "Не е намерен такава работилница";
         }
-        final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MMMM uuuu", Locale.forLanguageTag("bg"));
+        final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.LLLL uuuu", Locale.forLanguageTag("bg"));
 
         return dtf.format(workshop.getEventDate().getStartDate()) + "";
     }
