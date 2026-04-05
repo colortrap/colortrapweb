@@ -646,7 +646,7 @@
       "isWorkshop": true,
       "isExhibition": false,
       "seatCountMax": 24,
-      "seatsToShow": 12
+      "seatsToShow": 11
     },
 
     {
@@ -744,14 +744,14 @@
       "price": "8.00 € (15.64 лв.)",
       "promoPrice": "8.00 € (15.64 лв.)",
       "discountedPrice": "6.00 € (11.73 лв.)",
-      "discountDescription": "При закупиване на 20 или повече участия участия",
+      "discountDescription": "При закупиване на 20 или повече участия",
       "subscriptionPrice":"",
       "subscriptionDescription": "",
       "isPrivateEvent": false,
       "isWorkshop": true,
       "isExhibition": false,
       "seatCountMax": 50,
-      "seatsToShow": 30
+      "seatsToShow": 28
     },
 
     {
@@ -924,7 +924,7 @@
       "price": "8.00 € (15.64 лв.)",
       "promoPrice": "8.00 € (15.64 лв.)",
       "discountedPrice": "6.00 € (11.73 лв.)",
-      "discountDescription": "При закупиване на 20 или повече участия участия",
+      "discountDescription": "При закупиване на 20 или повече участия",
       "subscriptionPrice":"",
       "subscriptionDescription": "",
       "isPrivateEvent": false,
@@ -1085,7 +1085,7 @@
       "price": "8.00 € (15.64 лв.)",
       "promoPrice": "8.00 € (15.64 лв.)",
       "discountedPrice": "6.00 € (11.73 лв.)",
-      "discountDescription": "При закупиване на 20 или повече участия участия",
+      "discountDescription": "При закупиване на 20 или повече участия",
       "subscriptionPrice":"",
       "subscriptionDescription": "",
       "isPrivateEvent": false,
@@ -1246,7 +1246,7 @@
       "price": "8.00 € (15.64 лв.)",
       "promoPrice": "8.00 € (15.64 лв.)",
       "discountedPrice": "6.00 € (11.73 лв.)",
-      "discountDescription": "При закупиване на 20 или повече участия участия",
+      "discountDescription": "При закупиване на 20 или повече участия",
       "subscriptionPrice":"",
       "subscriptionDescription": "",
       "isPrivateEvent": false,

@@ -576,7 +576,7 @@ public class WorkshopService {
         if(workshop==null){
             return "Не е намерен такава работилница";
         }
-        return workshop.getEventDate().getStartDate() + "." + workshop.getEventDate().getStartMonth() + "." + workshop.getEventDate().getStartYear() + ".";
+        return workshop.getEventDate().getStartDate() + "";
     }
 
     public boolean doSeatReservation(String id, String count){
