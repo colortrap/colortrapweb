@@ -60,6 +60,9 @@
     <div class="main-wraper">
         <ul class="week">
             <li class="dayVew">
+                <div>
+                    <h4 class="red view-title" th:text = "${sent}"></h4>
+                </div>
                 <div class="view-title">
                     <h1 th:text="${workshop.eventType}" class="normal">Рисуване и вино</h1>
                     <h1 th:text="${workshop.title}" class="normal">Име на картината</h1>
@@ -118,10 +121,7 @@
                             </div>
                         </div>
                     
-                        <form th:action="@{|/workshop-pncw/${id}|}" th:method="POST" th:object="${registrationDTO}">                            
-                            <div>
-                                <p class="red" th:text = "${sent}"></p>
-                            </div>
+                        <form th:action="@{|/workshop-pncw/${id}|}" th:method="POST" th:object="${registrationDTO}">
                             <div>
                                 <div>
                                     <label for="inputUsername" >Име и фамилия</label>
@@ -155,7 +155,7 @@
                                 </div>
                                 <div>
                                     <div>
-                                        <input name="count" th:field="*{count}" required minlength="1" maxlength="2" type="count" id="inputCount" class="form-control" aria-describedby="countHelpInline">
+                                        <input name="count" th:field="*{count}" th:value="1" required minlength="1" maxlength="2" type="count" id="inputCount" class="form-control" aria-describedby="countHelpInline">
                                         <small th:errors="*{tel}" th:class="'invalid-feedback rounded'">error message</small>
                                         <p>*Броя места се въвежда само с цифри и трябва да е по-малък или равен на свободните.</p>
                                     </div>

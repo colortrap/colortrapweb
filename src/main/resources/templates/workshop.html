@@ -60,6 +60,9 @@
     <div class="main-wraper">
         <ul class="week">
             <li class="dayVew">
+                <div>
+                    <h4 class="red view-title" th:text = "${sent}"></h4>
+                </div>
                 <div class="view-title">
                     <h1 th:text="${workshop.eventType}" class="normal">Рисуване и вино</h1>
                     <h1 th:text="${workshop.title}" class="normal">Име на картината</h1>
@@ -118,10 +121,7 @@
                             </div>
                         </div>
                     
-                        <form th:action="@{|/workshop-pncw/${id}|}" th:method="POST" th:object="${registrationDTO}">                            
-                            <div>
-                                <p class="red" th:text = "${sent}"></p>
-                            </div>
+                        <form th:action="@{|/workshop-pncw/${id}|}" th:method="POST" th:object="${registrationDTO}">  
                             <div>
                                 <div>
                                     <label for="inputUsername" >Име и фамилия</label>
