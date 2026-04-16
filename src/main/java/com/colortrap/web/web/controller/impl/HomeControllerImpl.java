@@ -178,6 +178,12 @@ public class HomeControllerImpl implements HomeController {
     public ModelAndView workshopView(String id) {
         WorkshopView workshop = workshopService.getById(id);
 
+        if(!workshopService.isActive(id)){
+            ModelAndView model = new ModelAndView("old");
+            model.addObject("workshop", workshop);
+            return model;
+        }
+
         if(workshop.getEventType().equals("Изложба")){
             ModelAndView model = new ModelAndView("exhebit");
             model.addObject("workshop", workshop);

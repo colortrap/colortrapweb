@@ -118,7 +118,8 @@
                             </div>
                         </div>
                     
-                        <form th:action="@{|/workshop-pncw/${id}|}" th:method="POST" th:object="${registrationDTO}">                            
+                        <form th:action="@{|/workshop-pncw/${id}|}" th:method="POST" th:object="${registrationDTO}">
+                            <p>Необходима е предварителна резервация.</p>                          
                             <div>
                                 <p class="red" th:text = "${sent}"></p>
                             </div>

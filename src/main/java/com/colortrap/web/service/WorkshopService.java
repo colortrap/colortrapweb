@@ -21,7 +21,7 @@ public class WorkshopService {
     final private WorkshopEntityToViewMapper workshopMapper;
     final private DefaultContentProvider contentProvider;
     private LocalDate upToDate;
-    private int daysToShowInCalendar = 28;
+    private int daysToShowInCalendar = 21;
 
     public WorkshopService(WorkshopRepo workshopRepo, WorkshopEntityToViewMapper workshopMapper, DefaultContentProvider contentProvider){
         this.workshopRepo = workshopRepo;
@@ -399,7 +399,7 @@ public class WorkshopService {
 
         if(!views.isEmpty()){
             for (WorkshopView workshopView : views) {
-                if (workshopView.getTitle().startsWith("Работилница")
+                if (workshopView.getTitle().startsWith("Творческа работилница")
                 ){
                     view.add(workshopView);
                     if (view.size() >= 3){
@@ -540,9 +540,13 @@ public class WorkshopService {
             LocalDate date = LocalDate.now();
 
             for ( WorkshopEvent workshop : workshops) {
-                LocalDate enDate = LocalDate.of(workshop.getEventDate().getEndYear(), workshop.getEventDate().getEndMonth(), workshop.getEventDate().getEndDay());
-
-                workshop.setActive(!date.isAfter(enDate));
+                if(workshop.getEventType().equals("Частно събитие")) {
+                    workshop.setActive(true);
+                } else {
+                    LocalDate enDate = LocalDate.of(workshop.getEventDate().getEndYear(), workshop.getEventDate().getEndMonth(), workshop.getEventDate().getEndDay());
+                
+                    workshop.setActive(!date.isAfter(enDate));
+                }
 
             }
             upToDate = LocalDate.now();
@@ -552,16 +556,16 @@ public class WorkshopService {
 
     public WorkshopView getById(String id) {
         BaseWorkshop workshop = workshopRepo.findByID(id);
-        
-        if (workshop.isWorkshop()){
-            return workshopMapper.mapWorkshopEntityToView((WorkshopEvent) workshop);
-        } else if(workshop.isExhibition()){
-            return workshopMapper.mapExhibitionEntityToView((ExhibitionEvent) workshop);
-        } else if (workshop.isPrivateEvent()){
-            return workshopMapper.mapPrivateEventEntityToView((PrivateEvent) workshop);
-        }
-        
 
+        if(workshop != null){
+            if (workshop.isWorkshop()){
+                return workshopMapper.mapWorkshopEntityToView((WorkshopEvent) workshop);
+            } else if(workshop.isExhibition()){
+                return workshopMapper.mapExhibitionEntityToView((ExhibitionEvent) workshop);
+            } else if (workshop.isPrivateEvent()){
+                return workshopMapper.mapPrivateEventEntityToView((PrivateEvent) workshop);
+            }
+        }
         return contentProvider.getDefaultWorkshopVew(id);
     }
 
@@ -584,5 +588,15 @@ public class WorkshopService {
         if(!baseWorkshop.isWorkshop()){return false;}
         WorkshopEvent workshop = (WorkshopEvent) baseWorkshop;        
         return workshop.doSeatReservation(count);
+    }
+
+    public boolean isActive (String id){
+        checkIsActiveItemsUpToNow();
+        BaseWorkshop baseWorkshop = workshopRepo.findByID(id);
+        if(baseWorkshop != null){
+            return baseWorkshop.isActive();
+        }
+
+        return false;
     }
 }
