@@ -235,8 +235,10 @@ public class HomeControllerImpl implements HomeController {
             WorkshopView workshop = workshopService.getById(id);
             String date = workshopService.getWorkshopDateById(id);            
             
-            String textTo =  "Здравете "+ registrationDTO.getUsername() + ",\n\n" +
-            "Заявката за резервация е успешно подадена. Ще се свържем с вас на предоставения от вас телефон " + registrationDTO.getTel() + " за потвърждаването й.\n\n" + 
+            String textTo =  "Здравете " + registrationDTO.getUsername() + ",\n\n" +
+            "Заявката ви за резервация на " + registrationDTO.getCount() + " място/места за " + workshop.getEventType() + " - " +  workshop.getTitle() +
+            " на дата " + date + " е успешно подадена!\n\n" + 
+            "Ще се свържем с вас на предоставения от вас телефон " + registrationDTO.getTel() + " за потвърждаването й.\n\n" + 
             "За допълнителна информация не се колебайте да се свържете с нас на телефон: 0894 793 440 или 032/517 735!\n\n" + 
             "Лек и успешен ден от екипа на COLORTRAP!";
 
@@ -248,10 +250,10 @@ public class HomeControllerImpl implements HomeController {
             "На име: " + registrationDTO.getUsername() + "\n\n" + 
             "Телефон: " + registrationDTO.getTel() + "\n\n" + 
             "Емаил: " + registrationDTO.getEmail() + "\n\n" +
-            "За: " + workshop.getEventType() + "->" + workshop.getTitle() + "\n\n" + 
+            "За: " + workshop.getEventType() + "\n\n" + 
+            "           " + workshop.getTitle() + "\n\n" + 
             "Заявка за брой участия: " + registrationDTO.getCount() + "\n\n" +  
             "За дата: " + date + "\n\n" +
-            "          година, месец, дата\n\n" + 
             "С абонамент: " + registrationDTO.getSubscription() + "\n\n" +
             "Лек и успешен ден!";
             

@@ -12,8 +12,10 @@ import com.colortrap.web.web.error.BadRequestException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Service
 public class WorkshopService {
@@ -580,7 +582,9 @@ public class WorkshopService {
         if(workshop==null){
             return "Не е намерен такава работилница";
         }
-        return workshop.getEventDate().getStartDate() + "." + workshop.getEventDate().getStartMonth() + "." + workshop.getEventDate().getStartYear() + ".";
+        final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.LLLL uuuu", Locale.forLanguageTag("bg"));
+
+        return dtf.format(workshop.getEventDate().getStartDate()) + "";
     }
 
     public boolean doSeatReservation(String id, String count){

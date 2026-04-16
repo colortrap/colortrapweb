@@ -646,7 +646,7 @@
       "isWorkshop": true,
       "isExhibition": false,
       "seatCountMax": 24,
-      "seatsToShow": 12
+      "seatsToShow": 11
     },
 
     {
@@ -744,14 +744,18 @@
       "price": "8.00 € (15.64 лв.)",
       "promoPrice": "8.00 € (15.64 лв.)",
       "discountedPrice": "6.00 € (11.73 лв.)",
+<<<<<<< HEAD
       "discountDescription": "При закупиване на 15 или повече участия",
+=======
+      "discountDescription": "При закупиване на 20 или повече участия",
+>>>>>>> 931a39ebec40e67b8dee520890d83f4d806ae8e7
       "subscriptionPrice":"",
       "subscriptionDescription": "",
       "isPrivateEvent": false,
       "isWorkshop": true,
       "isExhibition": false,
       "seatCountMax": 50,
-      "seatsToShow": 30
+      "seatsToShow": 28
     },
 
     {
@@ -924,7 +928,11 @@
       "price": "8.00 € (15.64 лв.)",
       "promoPrice": "8.00 € (15.64 лв.)",
       "discountedPrice": "6.00 € (11.73 лв.)",
+<<<<<<< HEAD
       "discountDescription": "При закупиване на 15 или повече участия",
+=======
+      "discountDescription": "При закупиване на 20 или повече участия",
+>>>>>>> 931a39ebec40e67b8dee520890d83f4d806ae8e7
       "subscriptionPrice":"",
       "subscriptionDescription": "",
       "isPrivateEvent": false,
@@ -1095,7 +1103,11 @@
       "price": "8.00 € (15.64 лв.)",
       "promoPrice": "8.00 € (15.64 лв.)",
       "discountedPrice": "6.00 € (11.73 лв.)",
+<<<<<<< HEAD
       "discountDescription": "При закупиване на 15 или повече участия",
+=======
+      "discountDescription": "При закупиване на 20 или повече участия",
+>>>>>>> 931a39ebec40e67b8dee520890d83f4d806ae8e7
       "subscriptionPrice":"",
       "subscriptionDescription": "",
       "isPrivateEvent": false,
@@ -1258,7 +1270,11 @@
       "price": "8.00 € (15.64 лв.)",
       "promoPrice": "8.00 € (15.64 лв.)",
       "discountedPrice": "6.00 € (11.73 лв.)",
+<<<<<<< HEAD
       "discountDescription": "При закупиване на 15 или повече участия",
+=======
+      "discountDescription": "При закупиване на 20 или повече участия",
+>>>>>>> 931a39ebec40e67b8dee520890d83f4d806ae8e7
       "subscriptionPrice":"",
       "subscriptionDescription": "",
       "isPrivateEvent": false,
