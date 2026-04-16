@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="bg-BG" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      class="sr js_active vc_desktop vc_transform vc_transform ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <title>COLORTRAP – Арт работилници в COLORTRAP</title>
+    <meta name="description" content="Арт вечери на COLORTRAP. Разгледайте предстоящите събития, рисуване и вино, работилници, изложби и специални вечери за творчество.">
+
+    <link rel="icon" type="image/png" th:href="@{/favicon-96x96.png}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}" />
+    <link rel="shortcut icon" th:href="@{/favicon.ico}" />
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/apple-touch-icon.png}" />
+    <link rel="manifest" th:href="@{/site.webmanifest}" />
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/mobile.css}">
+    <link rel="stylesheet" th:href="@{/js/stile.js}">
+    <script th:src="@{/js/stile.js}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "COLORTRAP",
+      "image": "pictures/logo/loge_with_name.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Петко Каравелов 20",
+        "addressLocality": "Пловдив",
+        "addressCountry": "BG"
+      },
+      "email": "colortrap.ltd@gmail.com",
+      "telephone": "032/557735",
+      "url": "https://www.colortrap.azurewebsites.net",
+      "sameAs": ["https://www.facebook.com/people/Colortrap/61583353547226/"]
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="main">
+    <th:block>
+        <div th:replace="~{fragments/nav}"></div>
+    </th:block>
+
+    <div class="main-wraper">
+        <ul class="week">
+            <li class="dayVew">
+                <div class="view-title">
+                    <h1 th:text="${workshop.eventType}" class="normal">Рисуване и вино</h1>
+                    <h1 th:text="${workshop.title}" class="normal">Име на картината</h1>
+                </div>
+                <div class="view-title">
+                    <h3>Подходящо:</h3>
+                    <p th:text = "${workshop.suitableFor}"></p>
+                </div>
+                <section>
+                    <div>
+                        <img class="calendar-date2" th:src="|/${workshop.datePicUrl}|" alt="Дата на арт събитие COLORTRAP" onContextMenu="return false;">
+                        <div class="picture">
+                            <img class="img" th:src="|/${workshop.pictureUrl}|" alt="Изображение на събитие COLORTRAP" onContextMenu="return false;">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="view">
+                            <p class="text-justify" th:text="${workshop.description}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description1}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description2}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description3}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description4}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description5}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <p class="text-justify" th:text="${workshop.description6}">Colortrap ви кани да нарисуваме заедно "име на картината..."</p>
+                            <div>
+                                <p>Място: арт галерия COLORTRAP</p>
+                                <p>Пловдив, ул. Петко Каравелов 20</p>
+                            </div>
+                            <div>
+                                <p>Организатор</p>
+                                <p>COLORTRAP</p>
+                            </div>
+                            <h3>Разгледайте календара ни за предстоящите събития или се свържете с нас за да организираме такова специално за вас!</h3>
+                        </div>
+                    </div>
+                </section>
+            </li>
+        </ul>
+        <div class="btn-list">
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-forkids}" >Работилници за деца</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-foradults}" >Работилници за възрастни</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-gallery}" >Изложбена зала</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/calendar-pnc-all}" >Разгледай календара</a>
+            </div>
+            <div>
+                <a class="btn" th:href="@{/promo}" >Специални предложения</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+</div>
+
+<th:block>
+    <div th:replace="~{fragments/foot}"></div>
+</th:block>
+</body>
+</html>
